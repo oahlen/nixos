@@ -44,9 +44,11 @@
       nix-direnv.enable = true;
     };
 
-    "bat/themes/iceberg.tmTheme" = {
-      source = builtins.fetchurl {
-        url = "https://raw.githubusercontent.com/oahlen/iceberg.tmTheme/1.0.0/iceberg.tmTheme";
+    home.file = {
+      "bat/themes/iceberg.tmTheme" = {
+        source = builtins.fetchurl {
+          url = "https://raw.githubusercontent.com/oahlen/iceberg.tmTheme/1.0.0/iceberg.tmTheme";
+        };
       };
     };
   };
