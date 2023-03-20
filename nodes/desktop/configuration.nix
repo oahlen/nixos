@@ -11,6 +11,7 @@
     ./../../lib/home.nix
     ./../../lib/sway.nix
     ./../../lib/system.nix
+    ./../../local/factorio.nix
   ];
 
   networking.hostName = "desktop";
@@ -45,7 +46,9 @@
       "video"
       "wheel"
     ];
-    packages = with pkgs; [];
+    packages = with pkgs; [
+      factorio
+    ];
   };
 
   # Copy the NixOS configuration file and link it from the resulting system
