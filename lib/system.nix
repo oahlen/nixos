@@ -25,17 +25,19 @@
   };
 
   # Replace sudo with doas
-  security.doas = {
-    enable = true;
-    extraRules = [
-      {
-        users = ["oahlen"];
-        keepEnv = true;
-        persist = true;
-      }
-    ];
+  security = {
+    sudo.enable = false;
+    doas = {
+      enable = true;
+      extraRules = [
+        {
+          users = ["oahlen"];
+          keepEnv = true;
+          persist = true;
+        }
+      ];
+    };
   };
-  security.sudo.enable = false;
 
   # Limit journald log size
   services.journald.extraConfig = "SystemMaxUse=100M";
