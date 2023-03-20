@@ -58,6 +58,7 @@
     keepassxc
     kmon
     lowdown
+    mpv
     neofetch
     neovim
     onefetch
