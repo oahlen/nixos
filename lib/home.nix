@@ -254,8 +254,6 @@
         .git
         .mozilla
       '';
-
-      "ttyper/config.toml".source = ./../config/ttyper/config.toml;
     };
   };
 }
