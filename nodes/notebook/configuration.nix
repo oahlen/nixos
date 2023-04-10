@@ -6,17 +6,22 @@
   imports = [
     <home-manager/nixos>
     ./hardware-configuration.nix
-    ./../../lib/applications.nix
     ./../../lib/development.nix
     ./../../lib/home.nix
     ./../../lib/intel.nix
+    ./../../lib/network.nix
     ./../../lib/sway.nix
     ./../../lib/system.nix
+    ./../../lib/yubikey.nix
   ];
 
   networking.hostName = "notebook";
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
+
+  environment.systemPackages = with pkgs; [
+    libimobiledevice
+  ];
 
   users.users.oahlen = {
     uid = 1000;
@@ -24,10 +29,10 @@
     initialPassword = "password";
     extraGroups = [
       "audio"
+      "networkmanager"
       "video"
       "wheel"
     ];
-    packages = with pkgs; [];
   };
 
   # Copy the NixOS configuration file and link it from the resulting system

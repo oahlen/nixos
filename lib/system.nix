@@ -45,32 +45,6 @@
   # Set your time zone
   time.timeZone = "Europe/Stockholm";
 
-  # Networking configuration
-  networking = {
-    useDHCP = false;
-    useNetworkd = true;
-    firewall.enable = false;
-    wireless.iwd.enable = true;
-  };
-
-  systemd.network = {
-    enable = true;
-    networks = {
-      "80-wired" = {
-        matchConfig = {Name = "enp*s*";};
-        DHCP = "yes";
-      };
-      "90-wireless" = {
-        matchConfig = {Name = "wlan*";};
-        DHCP = "yes";
-      };
-    };
-    wait-online.anyInterface = true;
-  };
-
-  # networking.networkmanager.enable = true;
-  # networking.networkmanager.wifi.backend = "iwd";
-
   # Internationalisation settings
   i18n.defaultLocale = "en_US.UTF-8";
   i18n.extraLocaleSettings = {
@@ -99,12 +73,14 @@
 
   fonts.fonts = with pkgs; [
     dejavu_fonts
-    jetbrains-mono
     liberation_ttf
+    (nerdfonts.override {fonts = ["JetBrainsMono"];})
     noto-fonts-emoji
   ];
 
+  programs.ssh.startAgent = true;
+
   environment.systemPackages = with pkgs; [
-    libimobiledevice
+    firefox
   ];
 }

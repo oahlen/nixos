@@ -6,11 +6,12 @@
   imports = [
     <home-manager/nixos>
     ./hardware-configuration.nix
-    ./../../lib/applications.nix
     ./../../lib/development.nix
     ./../../lib/home.nix
+    ./../../lib/network.nix
     ./../../lib/sway.nix
     ./../../lib/system.nix
+    ./../../lib/yubikey.nix
     ./../../local/factorio.nix
   ];
 
@@ -43,11 +44,16 @@
     initialPassword = "password";
     extraGroups = [
       "audio"
+      "networkmanager"
       "video"
       "wheel"
     ];
     packages = with pkgs; [
+      bitwarden
+      bitwarden-cli
       factorio
+      keepassxc
+      mpv
     ];
   };
 

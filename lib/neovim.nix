@@ -26,6 +26,7 @@
         nvim-dap-virtual-text
         nvim-lspconfig
         nvim-tree-lua
+        nvim-web-devicons
         omnisharp-extended-lsp-nvim
         plenary-nvim
         popup-nvim
@@ -34,11 +35,10 @@
         telescope-nvim
         (nvim-treesitter.withPlugins (plugins:
           with plugins; [
-            tree-sitter-nix
             c
-            c_sharp
             cmake
             comment
+            c_sharp
             css
             dockerfile
             fish
@@ -59,11 +59,36 @@
             sql
             svelte
             toml
+            tree-sitter-nix
             typescript
             vim
             yaml
           ]))
       ];
+    };
+
+    xdg.configFile = {
+      "nvim/ftdetect/avsc.vim".source = ./../config/nvim/ftdetect/avsc.vim;
+      "nvim/ftdetect/axaml.vim".source = ./../config/nvim/ftdetect/axaml.vim;
+
+      "nvim/init.lua".source = ./../config/nvim/init.lua;
+
+      "nvim/lua/statusline/init.lua".source = ./../config/nvim/lua/statusline/init.lua;
+
+      "nvim/lua/user/autopairs.lua".source = ./../config/nvim/lua/user/autopairs.lua;
+      "nvim/lua/user/cmp.lua".source = ./../config/nvim/lua/user/cmp.lua;
+      "nvim/lua/user/colorizer.lua".source = ./../config/nvim/lua/user/colorizer.lua;
+      "nvim/lua/user/comment.lua".source = ./../config/nvim/lua/user/comment.lua;
+      "nvim/lua/user/dap.lua".source = ./../config/nvim/lua/user/dap.lua;
+      "nvim/lua/user/indentline.lua".source = ./../config/nvim/lua/user/indentline.lua;
+      "nvim/lua/user/keymaps.lua".source = ./../config/nvim/lua/user/keymaps.lua;
+      "nvim/lua/user/leap.lua".source = ./../config/nvim/lua/user/leap.lua;
+      "nvim/lua/user/lsp.lua".source = ./../config/nvim/lua/user/lsp.lua;
+      "nvim/lua/user/mason.lua".source = ./../config/nvim/lua/user/mason.lua;
+      "nvim/lua/user/nvim-tree.lua".source = ./../config/nvim/lua/user/nvim-tree.lua;
+      "nvim/lua/user/options.lua".source = ./../config/nvim/lua/user/options.lua;
+      "nvim/lua/user/telescope.lua".source = ./../config/nvim/lua/user/telescope.lua;
+      "nvim/lua/user/treesitter.lua".source = ./../config/nvim/lua/user/treesitter.lua;
     };
 
     home.file = {
