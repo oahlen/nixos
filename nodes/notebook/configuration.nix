@@ -10,7 +10,7 @@
     ./../../lib/home.nix
     ./../../lib/intel.nix
     ./../../lib/network.nix
-    ./../../lib/sway.nix
+    ./../../lib/sway/sway.nix
     ./../../lib/system.nix
     ./../../lib/yubikey.nix
   ];

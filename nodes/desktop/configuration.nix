@@ -9,7 +9,7 @@
     ./../../lib/development.nix
     ./../../lib/home.nix
     ./../../lib/network.nix
-    ./../../lib/sway.nix
+    ./../../lib/sway/sway.nix
     ./../../lib/system.nix
     ./../../lib/yubikey.nix
     ./../../local/factorio.nix
