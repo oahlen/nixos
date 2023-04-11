@@ -18,3 +18,4 @@ set -gx PGPASSFILE $XDG_CONFIG_HOME/pg/pgpass
 set -gx PSQL_HISTORY $XDG_DATA_HOME/psql_history
 set -gx PYENV_ROOT $XDG_DATA_HOME/pyenv 
 set -gx PYTHONSTARTUP $XDG_CONFIG_HOME/python/pythonrc
+set -gx _ZO_FZF_OPTS $FZF_DEFAULT_OPTS ''
