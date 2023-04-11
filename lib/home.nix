@@ -42,6 +42,9 @@
     ];
   };
 
+  home-manager.useUserPackages = true;
+  home-manager.useGlobalPkgs = true;
+
   home-manager.users.oahlen = {
     home.username = "oahlen";
     home.homeDirectory = "/home/oahlen";
