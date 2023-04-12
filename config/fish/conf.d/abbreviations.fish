@@ -7,3 +7,4 @@ abbr -ag gi gitui
 abbr -ag kmon kmon -c DarkGray
 abbr -ag ps procs
 abbr -ag sudo doas
+abbr -ag vi nvim
