@@ -1,43 +1,31 @@
 {
-  config,
+  username,
   pkgs,
   ...
 }: {
   imports = [
-    <home-manager/nixos>
     ./hardware-configuration.nix
-    ./../../lib/development.nix
-    ./../../lib/home.nix
-    ./../../lib/intel.nix
-    ./../../lib/network.nix
-    ./../../lib/sway/sway.nix
-    ./../../lib/system.nix
-    ./../../lib/yubikey.nix
+    ./packages.nix
+    ./../../devices
+    ./../../system
   ];
 
   networking.hostName = "notebook";
+  networking.networkmanager.enable = true;
+  networking.networkmanager.wifi.backend = "iwd";
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
 
-  fileSystems."/".options = ["noatime" "nodiratime" "discard"];
-
-  environment.systemPackages = with pkgs; [
-    libimobiledevice
-  ];
-
-  users.users.oahlen = {
-    uid = 1000;
-    isNormalUser = true;
-    initialPassword = "password";
-    extraGroups = [
-      "audio"
-      "networkmanager"
-      "video"
-      "wheel"
-    ];
+  boot.kernel.sysctl = {
+    "vm.swappiness" = 0;
+    "vm.vfs_cache_pressure" = 50;
   };
 
-  # Intel video
+  hardware.enableRedistributableFirmware = true;
+  hardware.cpu.intel.updateMicrocode = true;
+
   nixpkgs.config.packageOverrides = pkgs: {
     vaapiIntel = pkgs.vaapiIntel.override {
       enableHybridCodec = true;
@@ -53,16 +41,25 @@
     ];
   };
 
-  # Copy the NixOS configuration file and link it from the resulting system
-  # (/run/current-system/configuration.nix). This is useful in case you
-  # accidentally delete configuration.nix.
-  # system.copySystemConfiguration = true;
+  time.timeZone = "Europe/Stockholm";
 
-  # This value determines the NixOS release from which the default
-  # settings for stateful data, like file locations and database versions
-  # on your system were taken. It's perfectly fine and recommended to leave
-  # this value at the release version of the first install of this system.
-  # Before changing this value read the documentation for this option
-  # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "22.11"; # Did you read the comment?
+  fileSystems."/".options = ["noatime" "nodiratime" "discard"];
+
+  services.journald.extraConfig = "SystemMaxUse=100M";
+
+  programs.ssh.startAgent = true;
+
+  users.users.${username} = {
+    uid = 1000;
+    isNormalUser = true;
+    initialPassword = "password";
+    extraGroups = [
+      "audio"
+      "networkmanager"
+      "video"
+      "wheel"
+    ];
+  };
+
+  system.stateVersion = "22.11";
 }

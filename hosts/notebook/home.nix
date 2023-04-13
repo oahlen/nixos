@@ -14,12 +14,8 @@
   home.packages = with pkgs; [
     bitwarden
     bitwarden-cli
-    docker-compose
-    # factorio
     firefox
     keepassxc
-    mpv
-    nodejs
   ];
 
   home.stateVersion = "22.11";

@@ -14,5 +14,8 @@
     curl
     git
     neovim
+    unzip
+    wget
+    zip
   ];
 }

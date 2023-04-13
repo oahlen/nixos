@@ -70,6 +70,10 @@
     '';
   };
 
+  home.packages = with pkgs; [
+    sumneko-lua-language-server
+  ];
+
   xdg.configFile = {
     "nvim/ftdetect/avsc.vim".source = ./ftdetect/avsc.vim;
     "nvim/ftdetect/axaml.vim".source = ./ftdetect/axaml.vim;

@@ -48,6 +48,32 @@ in {
     zoxide.enable = true;
   };
 
+  home.packages = with pkgs; [
+    alejandra
+    bandwhich
+    calc
+    dog
+    dos2unix
+    du-dust
+    duf
+    fd
+    figlet
+    gping
+    hexyl
+    hyperfine
+    jless
+    kmon
+    lowdown
+    neofetch
+    onefetch
+    procs
+    rage
+    ripgrep
+    sd
+    tokei
+    xsv
+  ];
+
   xdg.configFile = {
     "fd/ignore".text = ''
       .cache
