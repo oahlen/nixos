@@ -6,6 +6,5 @@
     ./locale.nix
     ./sway.nix
     ./tailscale.nix
-    ./yubikey.nix
   ];
 }
