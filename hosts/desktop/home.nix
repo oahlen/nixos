@@ -20,6 +20,8 @@
     keepassxc
     mpv
     nodejs
+    xfce.mousepad
+    xfce.ristretto
   ];
 
   home.stateVersion = "22.11";

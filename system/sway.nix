@@ -24,8 +24,6 @@
       swaylock
       wf-recorder
       wl-clipboard
-      xfce.mousepad
-      xfce.ristretto
     ];
   };
 
@@ -36,32 +34,7 @@
 
   services.dbus.enable = true;
 
-  services.pipewire = {
-    enable = true;
-    audio.enable = true;
-    wireplumber.enable = true;
-    alsa.enable = true;
-    pulse.enable = true;
-  };
-
-  security.rtkit.enable = true;
-
-  sound.mediaKeys.enable = true;
+  sound.mediaKeys.enable = true; # Should not be enabled in Gnome, KDE, etc
 
   programs.xwayland.enable = true;
-
-  programs.thunar = {
-    enable = true;
-
-    plugins = with pkgs.xfce; [
-      thunar-archive-plugin
-      thunar-volman
-    ];
-  };
-
-  programs.file-roller.enable = true;
-
-  services.gvfs.enable = true;
-
-  services.tumbler.enable = true;
 }

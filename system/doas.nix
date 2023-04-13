@@ -1,4 +1,4 @@
-{username, ...}: {
+{...}: {
   security = {
     sudo.enable = false;
 
@@ -7,7 +7,7 @@
 
       extraRules = [
         {
-          users = ["${username}"];
+          users = ["wheel"];
           keepEnv = true;
           persist = true;
         }

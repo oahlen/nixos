@@ -5,8 +5,10 @@
     ./fonts.nix
     ./locale.nix
     ./nix.nix
+    ./pipewire.nix
     ./sway.nix
     ./tailscale.nix
+    ./thunar.nix
   ];
 
   # Very important system packages
