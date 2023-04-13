@@ -2,6 +2,7 @@
   hostname = nixosConfig.networking.hostName;
 in {
   imports = [
+    ./fish
     ./neovim
     ./scripts
     ./sway
@@ -9,7 +10,6 @@ in {
     ./bash.nix
     ./bat.nix
     ./bottom.nix
-    ./fish.nix
     ./fzf.nix
     ./git.nix
     ./jq.nix
