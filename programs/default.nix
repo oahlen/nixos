@@ -1,4 +1,8 @@
-{nixosConfig, ...}: let
+{
+  nixosConfig,
+  pkgs,
+  ...
+}: let
   hostname = nixosConfig.networking.hostName;
 in {
   imports = [
