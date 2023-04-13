@@ -10,15 +10,6 @@
     ./../../system
   ];
 
-  nix = {
-    extraOptions = ''
-      experimental-features = nix-command flakes
-      keep-outputs = true
-      keep-derivations = true
-    '';
-    settings.auto-optimise-store = true;
-  };
-
   networking.hostName = "desktop";
   networking.networkmanager.enable = true;
   networking.networkmanager.wifi.backend = "iwd";
