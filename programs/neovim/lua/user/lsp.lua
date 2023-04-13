@@ -1,21 +1,15 @@
 local lsp_config = require "lspconfig"
 
--- Mappings.
--- See `:help vim.diagnostic.*` for documentation on any of the below functions
 vim.keymap.set("n", "gn", vim.diagnostic.goto_next)
 vim.keymap.set("n", "gN", vim.diagnostic.goto_prev)
 vim.keymap.set("n", "<leader>l", vim.diagnostic.setloclist)
 
--- Use an on_attach function to only map the following keys
--- after the language server attaches to the current buffer
 local on_attach = function(_, bufnr)
-    -- Enable completion triggered by <c-x><c-o>
     vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
 
     local telescope = require('telescope.builtin')
-    -- Mappings.
-    -- See `:help vim.lsp.*` for documentation on any of the below functions
     local opts = { noremap = true, silent = true, buffer = bufnr }
+
     vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
     vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
     vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)

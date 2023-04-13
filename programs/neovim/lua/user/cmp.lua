@@ -7,10 +7,38 @@ local check_backspace = function()
     return col == 0 or vim.fn.getline("."):sub(col, col):match "%s"
 end
 
+local kind_icons = {
+    Text = "",
+    Method = "",
+    Function = "",
+    Constructor = "",
+    Field = "",
+    Variable = "",
+    Class = "ﴯ",
+    Interface = "",
+    Module = "",
+    Property = "ﰠ",
+    Unit = "",
+    Value = "",
+    Enum = "",
+    Keyword = "",
+    Snippet = "",
+    Color = "",
+    File = "",
+    Reference = "",
+    Folder = "",
+    EnumMember = "",
+    Constant = "",
+    Struct = "",
+    Event = "",
+    Operator = "",
+    TypeParameter = ""
+}
+
 cmp.setup {
     snippet = {
         expand = function(args)
-            luasnip.lsp_expand(args.body) -- For luasnip users.
+            luasnip.lsp_expand(args.body)
         end
     },
     mapping = cmp.mapping.preset.insert {
@@ -19,10 +47,8 @@ cmp.setup {
         ["<C-b>"] = cmp.mapping.scroll_docs(-4),
         ["<C-f>"] = cmp.mapping.scroll_docs(4),
         ["<C-Space>"] = cmp.mapping.complete(),
-        ["<C-y>"] = cmp.config.disable, -- Specify `cmp.config.disable` if you want to remove the default `<C-y>` mapping.
+        ["<C-y>"] = cmp.config.disable,
         ["<C-e>"] = cmp.mapping.abort(),
-        -- Accept currently selected item. If none selected, `select` first item.
-        -- Set `select` to `false` to only confirm explicitly selected items.
         ["<CR>"] = cmp.mapping.confirm { select = true },
         ["<Tab>"] = cmp.mapping(function(fallback)
             if cmp.visible() then
@@ -46,6 +72,19 @@ cmp.setup {
                 fallback()
             end
         end, { "i", "s" }),
+    },
+    formatting = {
+        format = function(entry, vim_item)
+            vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind)
+            vim_item.menu = ({
+                buffer = "[Buffer]",
+                nvim_lsp = "[LSP]",
+                luasnip = "[LuaSnip]",
+                nvim_lua = "[Lua]",
+                latex_symbols = "[LaTeX]",
+            })[entry.source.name]
+            return vim_item
+        end
     },
     sources = cmp.config.sources {
         { name = "nvim_lsp" },
