@@ -1,8 +1,4 @@
-{
-  config,
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   fonts.fonts = with pkgs; [
     dejavu_fonts
     liberation_ttf

@@ -1,6 +1,7 @@
 {...}: {
   programs.zathura = {
     enable = true;
+
     options = {
       selection-clipboard = "clipboard";
       font = "JetBrainsMono Nerd Font normal 11";

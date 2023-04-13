@@ -15,6 +15,7 @@
 
   wayland.windowManager.sway = {
     enable = true;
+
     extraSessionCommands = ''
       export SDL_VIDEODRIVER=wayland
       export QT_QPA_PLATFORM=wayland
@@ -22,17 +23,22 @@
       export _JAVA_AWT_WM_NONREPARENTING=1
       export MOZ_ENABLE_WAYLAND=1
     '';
+
     systemdIntegration = true;
+
     wrapperFeatures = {
       base = true;
       gtk = true;
     };
+
     xwayland = true;
+
     config = {
       fonts = {
         names = ["JetBrainsMono Nerd Font"];
         size = 11.0;
       };
+
       input = {
         "type:keyboard" = {
           xkb_layout = "se,us";
@@ -40,17 +46,20 @@
           repeat_delay = "250";
           repeat_rate = "40";
         };
+
         "type:touchpad" = {
           tap = "enabled";
           natural_scroll = "enabled";
           dwt = "enabled";
         };
       };
+
       output = {
         "*" = {
           bg = "~/Pictures/Wallpapers/archlinux.png fit #161821";
         };
       };
+
       startup = [
         {
           command = "${pkgs.foot}/bin/foot --server";
@@ -59,12 +68,17 @@
           command = "${pkgs.mako}/bin/mako";
         }
       ];
+
       modifier = "Mod4";
+
       terminal = "${pkgs.foot}/bin/footclient";
+
       menu = "${pkgs.fuzzel}/bin/fuzzel";
+
       window = {
         border = 1;
         hideEdgeBorders = "smart";
+
         commands = [
           {
             command = "resize set 1000 600";
@@ -74,6 +88,7 @@
           }
         ];
       };
+
       keybindings = let
         modifier = config.wayland.windowManager.sway.config.modifier;
       in
@@ -84,14 +99,17 @@
           "${modifier}+Print" = "exec grim ~/Downloads/$(date +\"%Y-%m-%d-%H-%M-%S\").png";
           "${modifier}+Shift+Print" = "exec slurp | grim -g - ~/Downloads/$(date +\"%Y-%m-%d-%H-%M-%S\").png";
         };
+
       floating = {
         titlebar = false;
+
         criteria = [
           {
             app_id = "pavucontrol";
           }
         ];
       };
+
       modes = {
         resize = {
           Left = "resize shrink width 32 px";
@@ -106,6 +124,7 @@
           Escape = "mode default";
         };
       };
+
       colors = {
         focused = {
           border = "#84a0c6";
@@ -114,6 +133,7 @@
           indicator = "#91acd1";
           childBorder = "#84a0c6";
         };
+
         focusedInactive = {
           border = "#818596";
           background = "#818596";
@@ -121,6 +141,7 @@
           indicator = "#9a9ca5";
           childBorder = "#8a8596";
         };
+
         unfocused = {
           border = "#1e2132";
           background = "#1e2132";
@@ -129,15 +150,18 @@
           childBorder = "#1e2132";
         };
       };
+
       bars = [
         {
           command = "${pkgs.sway}/bin/swaybar";
           statusCommand = "${pkgs.i3status-rust}/bin/i3status-rs ~/.config/i3status-rust/config-default.toml";
           position = "top";
+
           fonts = {
             names = ["JetBrainsMono Nerd Font"];
             size = 11.0;
           };
+
           extraConfig = ''
             position top
             height 24
@@ -145,30 +169,36 @@
             status_padding 0
             status_edge_padding 0
           '';
+
           colors = {
             background = "#0f1117";
             statusline = "#818596";
             separator = "#818596";
+
             focusedWorkspace = {
               border = "#84a0c6";
               background = "#84a0c6";
               text = "#1e2132";
             };
+
             activeWorkspace = {
               border = "#818596";
               background = "#818596";
               text = "#1e2132";
             };
+
             inactiveWorkspace = {
               border = "#1e2132";
               background = "#1e2132";
               text = "#6b7089";
             };
+
             urgentWorkspace = {
               border = "#e27878";
               background = "#e27878";
               text = "#1e2132";
             };
+
             bindingMode = {
               border = "#e2a478";
               background = "#e2a478";
@@ -178,6 +208,7 @@
         }
       ];
     };
+
     extraConfig = ''
       # Screen brightness
       bindsym --locked XF86MonBrightnessUp exec brightnessctl set +5%
@@ -196,8 +227,10 @@
 
       titlebar_padding 10 2
     '';
+
     swaynag = {
       enable = true;
+
       settings = {
         "<config>" = {
           font = "JetBrainsMono Nerd Font 11";

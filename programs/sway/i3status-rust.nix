@@ -1,9 +1,11 @@
 {...}: {
   programs.i3status-rust = {
     enable = true;
+
     bars = {
       default = {
         icons = "none";
+
         settings = {
           theme = {
             overrides = {
@@ -23,6 +25,7 @@
             };
           };
         };
+
         blocks = [
           {
             block = "keyboard_layout";

@@ -1,13 +1,10 @@
-{
-  config,
-  pkgs,
-  ...
-}: {
+{...}: {
   console = {
     keyMap = "sv-latin1";
   };
 
   i18n.defaultLocale = "en_US.UTF-8";
+
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "sv_SE.UTF-8";
     LC_IDENTIFICATION = "sv_SE.UTF-8";

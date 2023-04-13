@@ -1,6 +1,7 @@
 {...}: {
   services.kanshi = {
     enable = true;
+
     profiles = {
       nomad = {
         outputs = [
@@ -10,6 +11,7 @@
           }
         ];
       };
+
       home = {
         outputs = [
           {
@@ -24,6 +26,7 @@
           }
         ];
       };
+
       work = {
         outputs = [
           {

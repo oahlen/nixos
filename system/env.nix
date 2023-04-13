@@ -1,8 +1,4 @@
-{
-  config,
-  pkgs,
-  ...
-}: {
+{...}: {
   environment.variables = {
     BROWSER = "firefox";
     EDITOR = "nvim";

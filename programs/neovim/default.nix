@@ -4,6 +4,7 @@
     vimAlias = true;
     defaultEditor = true;
     withNodeJs = true;
+
     plugins = with pkgs.vimPlugins; [
       cmp-buffer
       cmp_luasnip
@@ -63,6 +64,7 @@
           yaml
         ]))
     ];
+
     extraConfig = ''
       :source ${./init.lua}
     '';

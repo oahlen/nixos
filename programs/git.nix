@@ -1,25 +1,31 @@
 {...}: {
   programs.git = {
     enable = true;
+
     userName = "Oscar Ahlén";
+
     extraConfig = {
       core = {
         editor = "nvim";
         eol = "lf";
         autocrlf = "input";
       };
+
       init = {
         defaultBranch = "main";
       };
     };
+
     aliases = {
       gc = "git commit";
       gp = "git push --origin";
       gs = "git status";
       gtree = "git log --graph --decorate --oneline";
     };
+
     delta = {
       enable = true;
+
       options = {
         navigate = "true";
         side-by-side = "true";
@@ -49,6 +55,7 @@
 
   programs.gitui = {
     enable = true;
+
     keyConfig = ''
       (
           focus_right: Some(( code: Char('l'), modifiers: ( bits: 0,),)),
@@ -86,6 +93,7 @@
           abort_merge: Some(( code: Char('M'), modifiers: ( bits: 1,),))
       )
     '';
+
     theme = ''
       (
           selected_tab: Gray,

@@ -1,6 +1,7 @@
 {...}: {
   programs.jq = {
     enable = true;
+
     colors = {
       arrays = "0;37";
       false = "0;35";

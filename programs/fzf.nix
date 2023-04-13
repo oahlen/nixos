@@ -1,7 +1,9 @@
 {...}: {
   programs.fzf = {
     enable = true;
+
     defaultCommand = "fd --type f --hidden --follow";
+
     colors = {
       fg = "#c6c8d1";
       bg = "#161821";

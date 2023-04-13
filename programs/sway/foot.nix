@@ -5,6 +5,7 @@
 }: {
   programs.foot = {
     enable = true;
+
     settings = {
       main = {
         shell = "${lib.getExe pkgs.fish}";
@@ -19,6 +20,7 @@
       cursor = {
         style = "beam";
       };
+
       colors = {
         alpha = "1";
 

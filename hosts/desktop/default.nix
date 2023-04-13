@@ -6,6 +6,7 @@
 }:
 nixpkgs.lib.nixosSystem {
   system = "x86_64-linux";
+
   modules = [
     ./configuration.nix
     inputs.home-manager.nixosModules.home-manager
@@ -17,5 +18,6 @@ nixpkgs.lib.nixosSystem {
       home-manager.extraSpecialArgs = {inherit username;};
     }
   ];
+
   specialArgs = {inherit inputs username;};
 }
