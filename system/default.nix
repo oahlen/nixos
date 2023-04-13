@@ -8,4 +8,11 @@
     ./sway.nix
     ./tailscale.nix
   ];
+
+  # Very important system packages
+  environment.systemPackages = with pkgs; [
+    curl
+    git
+    neovim
+  ];
 }

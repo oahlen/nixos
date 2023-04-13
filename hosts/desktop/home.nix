@@ -22,7 +22,6 @@
     bitwarden
     bitwarden-cli
     calc
-    curl
     docker-compose
     dog
     dos2unix
