@@ -62,18 +62,16 @@ TODO
 ### Install NixOS
 
 ```bash
-sudo nix-channel --add https://github.com/nix-community/home-manager/archive/release-22.11.tar.gz home-manager
-sudo nix-channel --add https://nixos.org/channels/nixos-unstable nixos-unstable
-sudo nix-channel --update
-
 cd /mnt
 sudo nixos-install
 ```
 
 ## Common commands
 
-* Build a new generation: `sudo nixos-rebuild switch`
-* Build a new generation and upgrade packages on next reboot `sudo nixos-rebuild --upgrade-all boot`
+* Build a new generation: `doas nixos-rebuild switch --flake .`
+* Build a new generation with a specified hostname: `doas nixos-rebuild switch --flake .#HOSTNAME`
+* Update flake lock file: `nix flake update`
+* Build a new generation and activate on next reboot `sudo nixos-rebuild boot --flake`
 * List system generations: `sudo nix-env --list-generations --profile /nix/var/nix/profiles/system`
 * Delete generations older than 7 days: `nix-collect-garbage --delete-older-than 7d`
 
