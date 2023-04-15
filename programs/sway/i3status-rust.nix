@@ -49,7 +49,7 @@
             minimum = 5;
             maximum = 100;
             step_width = 5;
-            cycle = "[100, 50, 5, 50]";
+            cycle = [100 50 5 50];
           }
           {
             block = "sound";
