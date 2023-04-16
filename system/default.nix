@@ -13,9 +13,13 @@
 
   # Very important system packages
   environment.systemPackages = with pkgs; [
+    calc
     curl
+    fd
     git
+    dos2unix
     neovim
+    ripgrep
     unzip
     wget
     zip

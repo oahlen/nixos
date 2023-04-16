@@ -55,12 +55,9 @@ in {
   home.packages = with pkgs; [
     alejandra
     bandwhich
-    calc
     dog
-    dos2unix
     du-dust
     duf
-    fd
     figlet
     gping
     hexyl
@@ -72,7 +69,6 @@ in {
     onefetch
     procs
     rage
-    ripgrep
     sd
     tokei
     xsv
