@@ -1,5 +1,12 @@
 local M = {}
 
+M.symbols = {
+    error = " ",
+    warn = " ",
+    info = " ",
+    hint = " ",
+}
+
 function M.lsp_diagnostics()
     if vim.api.nvim_get_mode()["mode"] ~= "n" then
         return ""
@@ -9,12 +16,12 @@ function M.lsp_diagnostics()
 
     local num_errors = #vim.diagnostic.get(0, { severity = vim.diagnostic.severity.ERROR })
     if num_errors > 0 then
-        table.insert(parts, "E:" .. num_errors)
+        table.insert(parts, M.symbols.error .. num_errors)
     end
 
     local num_warnings = #vim.diagnostic.get(0, { severity = vim.diagnostic.severity.WARN })
     if num_warnings > 0 then
-        table.insert(parts, "W:" .. num_warnings)
+        table.insert(parts, M.symbols.warn .. num_warnings)
     end
 
     return table.concat(parts, " ")
@@ -26,9 +33,9 @@ function active()
     end
 
     local parts = {
-        " %f [%n] %m",
-        [[%{luaeval("require'user.statusline'.lsp_diagnostics()")}]],
+        " %t [%n] %m",
         "%=",
+        [[%{luaeval("require'user.statusline'.lsp_diagnostics()")}]],
         "%{&fenc?&fenc:&enc}",
         "%{&ff}",
         "%{&ft!=#''?&ft:'none'}",
