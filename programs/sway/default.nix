@@ -89,6 +89,16 @@
         ];
       };
 
+      floating = {
+        titlebar = false;
+
+        criteria = [
+          {
+            app_id = "pavucontrol";
+          }
+        ];
+      };
+
       keybindings = let
         modifier = config.wayland.windowManager.sway.config.modifier;
       in
@@ -99,16 +109,6 @@
           "${modifier}+Print" = "exec grim ~/Downloads/$(date +\"%Y-%m-%d-%H-%M-%S\").png";
           "${modifier}+Shift+Print" = "exec slurp | grim -g - ~/Downloads/$(date +\"%Y-%m-%d-%H-%M-%S\").png";
         };
-
-      floating = {
-        titlebar = false;
-
-        criteria = [
-          {
-            app_id = "pavucontrol";
-          }
-        ];
-      };
 
       modes = {
         resize = {
