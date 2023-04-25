@@ -14,6 +14,10 @@
     escapeTime = 50;
     mouse = true;
 
+    plugins = with pkgs.tmuxPlugins; [
+      vim-tmux-navigator
+    ];
+
     extraConfig = ''
       # 256 color support
       set -ga terminal-overrides ",xterm-256color:Tc"
@@ -88,5 +92,14 @@
       set -g status-right "#[fg=blue,bold]#(whoami)#[fg=default]@#[fg=cyan,bold]#H #[fg=white,nobold]in #[fg=blue,bold]#T "
       set -g status-right-length 200
     '';
+  };
+
+  home.packages = with pkgs; [
+    tmuxp
+  ];
+
+  xdg.configFile = {
+    "tmuxp/dev-session.yaml".source = ./dev-session.yaml;
+    "tmuxp/nixos.yaml".source = ./nixos.yaml;
   };
 }

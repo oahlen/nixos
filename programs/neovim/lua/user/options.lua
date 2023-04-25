@@ -15,7 +15,7 @@ vim.o.scrolloff = 10
 vim.o.shiftwidth = 4
 vim.o.showmatch = true
 vim.o.showmode = true
-vim.o.shortmess = "atI"
+vim.o.shortmess = "IF"
 vim.o.smartcase = true
 vim.o.softtabstop = 4
 vim.o.swapfile = false
@@ -50,9 +50,6 @@ vim.g.loaded_vimball = 1
 vim.g.loaded_vimballPlugin = 1
 vim.g.loaded_zip = 1
 vim.g.loaded_zipPlugin = 1
-
--- Set colorscheme
-vim.cmd.colorscheme("iceberg")
 
 -- Fix cursor in terminal on exiting
 vim.cmd [[

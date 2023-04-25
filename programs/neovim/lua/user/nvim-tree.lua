@@ -13,3 +13,21 @@ require "nvim-tree".setup {
         signcolumn = "no"
     }
 }
+
+require("nvim-web-devicons").setup {
+    override_by_extension = {
+        ["csproj"] = {
+            name = "CSProj",
+            icon = "",
+            color = "#017bcd"
+        },
+        ["rs"] = {
+            name = "Rust",
+            icon = "",
+            color = "#f74c00"
+        }
+    }
+}
+
+vim.keymap.set("n", "<leader>e", "<CMD>NvimTreeToggle<CR>")
+vim.keymap.set("n", "<leader>E", "<CMD>NvimTreeFindFile<CR>")

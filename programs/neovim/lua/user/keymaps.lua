@@ -43,7 +43,3 @@ vim.keymap.set("t", "<ESC>", "<C-\\><C-n>")
 
 -- Format json
 vim.keymap.set("n", "<leader>jf", "<CMD>%! jq<CR>")
-
--- Nvim Tree
-vim.keymap.set("n", "<leader>e", "<CMD>NvimTreeToggle<CR>")
-vim.keymap.set("n", "<leader>E", "<CMD>NvimTreeFindFile<CR>")

@@ -4,7 +4,7 @@
 
     bars = {
       default = {
-        icons = "none";
+        icons = "awesome6";
 
         settings = {
           theme = {
@@ -58,7 +58,7 @@
           }
           {
             block = "net";
-            format = "{ip}";
+            format = " {ip}";
             format_alt = " {ssid} ({signal_strength})";
             interval = 10;
           }
@@ -75,7 +75,6 @@
             block = "time";
             interval = 10;
             format = "%Y-%m-%d %R";
-            icons_format = " ";
           }
         ];
       };

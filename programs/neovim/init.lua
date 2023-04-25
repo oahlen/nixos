@@ -1,3 +1,5 @@
+vim.cmd.colorscheme("iceberg")
+
 require "user.options"
 require "user.keymaps"
 require "user.telescope"

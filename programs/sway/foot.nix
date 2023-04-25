@@ -17,6 +17,7 @@
         pad = "10x10";
         initial-window-size-chars = "150x50";
       };
+
       cursor = {
         style = "beam";
       };

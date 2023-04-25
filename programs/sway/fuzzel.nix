@@ -19,7 +19,7 @@
       text=c6c8d1ff
       match=e2a478ff
       selection=272c42ff
-      selection-text=c6c8d1ff
+      selection-text=d2d4deff
       selection-match=e2a478ff
       border=6b7089ff
 

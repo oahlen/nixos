@@ -27,6 +27,8 @@
     ];
   };
 
+  programs.xwayland.enable = true;
+
   xdg.portal = {
     enable = true;
     wlr.enable = true;
@@ -35,6 +37,4 @@
   services.dbus.enable = true;
 
   sound.mediaKeys.enable = true; # Should not be enabled in Gnome, KDE, etc
-
-  programs.xwayland.enable = true;
 }

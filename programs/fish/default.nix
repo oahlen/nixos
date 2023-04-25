@@ -7,12 +7,16 @@
     '';
 
     shellAbbrs = {
-      cat = "bat";
       compress = "tar -zcvf";
+      extract = "tar -zxvf";
+    };
+
+    shellAliases = {
+      cat = "bat";
       df = "duf --theme ansi";
       du = "dust";
-      extract = "tar -zxvf";
       gi = "gitui";
+      nixedit = "tmuxp load -y nixos";
       ps = "procs";
       sudo = "doas";
       vi = "nvim";
@@ -31,7 +35,7 @@
   };
 
   xdg.configFile = {
-    "fish/conf.d/bindigns.fish".source = ./bindings.fish;
+    "fish/conf.d/bindings.fish".source = ./bindings.fish;
     "fish/conf.d/theme.fish".source = ./theme.fish;
     "fish/conf.d/variables.fish".source = ./variables.fish;
 

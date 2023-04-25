@@ -6,17 +6,18 @@
   hostname = nixosConfig.networking.hostName;
 in {
   imports = [
+    ./bash.nix
+    ./bat.nix
+    ./bottom.nix
     ./fish
+    ./fzf.nix
+    ./git.nix
+    ./jq.nix
+    ./lf
     ./neovim
     ./scripts
     ./sway
     ./tmux
-    ./bash.nix
-    ./bat.nix
-    ./bottom.nix
-    ./fzf.nix
-    ./git.nix
-    ./jq.nix
     ./zathura.nix
   ];
 
@@ -34,15 +35,6 @@ in {
     direnv = {
       enable = true;
       nix-direnv.enable = true;
-    };
-
-    lf = {
-      enable = true;
-      settings = {
-        drawbox = true;
-        hidden = true;
-        icons = true;
-      };
     };
 
     man.enable = true;

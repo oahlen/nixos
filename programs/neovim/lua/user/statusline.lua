@@ -1,10 +1,10 @@
 local M = {}
 
 M.symbols = {
-    error = " ",
-    warn = " ",
-    info = " ",
-    hint = " ",
+    error = ' ',
+    warn = ' ',
+    info = ' ',
+    hint = ' '
 }
 
 function M.lsp_diagnostics()
@@ -27,15 +27,26 @@ function M.lsp_diagnostics()
     return table.concat(parts, " ")
 end
 
-function active()
+function M.lsp_client()
+    local clients = vim.lsp.get_active_clients({ bufnr = vim.api.nvim_get_current_buf() })
+
+    if #(clients) > 0 then
+        return " " .. clients[1].name
+    end
+
+    return ""
+end
+
+function M.active()
     if vim.bo.filetype == "NvimTree" then
         return " %{fnamemodify(getcwd(), ':~')}"
     end
 
     local parts = {
         " %t [%n] %m",
-        "%=",
+        [[%{luaeval("require'user.statusline'.lsp_client()")}]],
         [[%{luaeval("require'user.statusline'.lsp_diagnostics()")}]],
+        "%=",
         "%{&fenc?&fenc:&enc}",
         "%{&ff}",
         "%{&ft!=#''?&ft:'none'}",
@@ -46,7 +57,7 @@ function active()
     return table.concat(parts, "    ")
 end
 
-function inactive()
+function M.inactive()
     return vim.bo.filetype == "NvimTree"
         and " %{fnamemodify(getcwd(), ':~')}"
         or " %t [%n] %m%=[%3l:%-2v]    [%3P] "
@@ -57,7 +68,7 @@ local group = vim.api.nvim_create_augroup("statusline", { clear = true })
 vim.api.nvim_create_autocmd({ "WinEnter", "BufEnter" }, {
     pattern = "*",
     callback = function()
-        vim.wo.statusline = active()
+        vim.wo.statusline = M.active()
     end,
     group = group
 })
@@ -65,7 +76,7 @@ vim.api.nvim_create_autocmd({ "WinEnter", "BufEnter" }, {
 vim.api.nvim_create_autocmd({ "WinLeave", "BufLeave" }, {
     pattern = "*",
     callback = function()
-        vim.wo.statusline = inactive()
+        vim.wo.statusline = M.inactive()
     end,
     group = group
 })
