@@ -32,6 +32,7 @@
       telescope-fzf-native-nvim
       telescope-ui-select-nvim
       telescope-nvim
+      vim-tmux-navigator
       (nvim-treesitter.withPlugins (plugins:
         with plugins; [
           c
