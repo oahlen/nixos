@@ -36,5 +36,7 @@
 
   services.dbus.enable = true;
 
+  services.gnome.gnome-keyring.enable = true;
+
   sound.mediaKeys.enable = true; # Should not be enabled in Gnome, KDE, etc
 }

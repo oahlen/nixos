@@ -46,8 +46,6 @@
 
   virtualisation.docker.enable = true;
 
-  programs.ssh.startAgent = true;
-
   users.users.${username} = {
     uid = 1000;
     isNormalUser = true;

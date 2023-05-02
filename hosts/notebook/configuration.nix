@@ -47,8 +47,6 @@
 
   services.journald.extraConfig = "SystemMaxUse=100M";
 
-  programs.ssh.startAgent = true;
-
   users.users.${username} = {
     uid = 1000;
     isNormalUser = true;

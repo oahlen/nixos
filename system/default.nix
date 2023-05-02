@@ -2,6 +2,7 @@
   imports = [
     ./doas.nix
     ./env.nix
+    ./flatpak.nix
     ./fonts.nix
     ./locale.nix
     ./nix.nix
