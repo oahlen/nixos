@@ -7,6 +7,6 @@
 
   environment.systemPackages = with pkgs; [
     yubikey-touch-detector
-    yubioath-desktop
+    yubioath-flutter
   ];
 }

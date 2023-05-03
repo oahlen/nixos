@@ -23,6 +23,7 @@
     "vm.vfs_cache_pressure" = 50;
   };
 
+  hardware.enableAllFirmware = true;
   hardware.enableRedistributableFirmware = true;
   hardware.cpu.intel.updateMicrocode = true;
 

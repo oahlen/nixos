@@ -72,8 +72,7 @@ lsp_config.svelte.setup {
     on_attach = on_attach
 }
 
--- lsp_config.lua_ls.setup
-lsp_config.sumneko_lua.setup {
+lsp_config.lua_ls.setup {
     on_attach = on_attach,
     settings = {
         Lua = {

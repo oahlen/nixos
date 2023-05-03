@@ -44,7 +44,6 @@
           fish
           gitignore
           go
-          help
           html
           javascript
           json

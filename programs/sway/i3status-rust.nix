@@ -53,19 +53,28 @@
           }
           {
             block = "sound";
-            on_click = "pavucontrol";
             headphones_indicator = true;
+            click = [
+              {
+                button = "left";
+                cmd = "pavucontrol";
+              }
+            ];
           }
           {
             block = "net";
-            format = " {ip}";
-            format_alt = " {ssid} ({signal_strength})";
+            format = " $icon  $ip ";
+            format_alt = " $icon  $device ";
+            missing_format = " NA ";
             interval = 10;
           }
           {
             block = "battery";
+            device = "BAT0";
             if_command = "test -e /sys/class/power_supply/BAT0";
-            hide_missing = true;
+            format = " $icon  $percentage ";
+            full_format = "";
+            missing_format = "";
             good = 75;
             warning = 50;
             critical = 25;
@@ -74,7 +83,7 @@
           {
             block = "time";
             interval = 10;
-            format = "%Y-%m-%d %R";
+            format = " $icon $timestamp.datetime(f:'%Y-%m-%d %R') ";
           }
         ];
       };
