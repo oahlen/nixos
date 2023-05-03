@@ -39,7 +39,12 @@ in {
 
     man.enable = true;
 
-    ssh.enable = true;
+    ssh = {
+      enable = true;
+      extraConfig = ''
+        AddKeysToAgent yes
+      '';
+    };
 
     zoxide.enable = true;
   };
