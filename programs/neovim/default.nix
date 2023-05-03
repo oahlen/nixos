@@ -61,6 +61,7 @@
           tree-sitter-nix
           typescript
           vim
+          vimdoc
           yaml
         ]))
     ];
@@ -94,7 +95,7 @@
     ".local/share/nvim/site/pack/plugins/start/iceberg.nvim".source = builtins.fetchGit {
       url = "https://github.com/oahlen/iceberg.nvim";
       ref = "main";
-      rev = "7c8886db6aa07dee8152246099dc680689d41884";
+      rev = "451508cc1e891179d224e48efcc1c94e87b6ffb5";
     };
 
     ".local/share/nvim/site/pack/plugins/start/mason.nvim".source = builtins.fetchGit {
