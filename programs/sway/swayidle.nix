@@ -16,9 +16,8 @@
       }
       {
         timeout = 1800;
-        # Idle configuration (for Sway 1.7 and lower use dpms instead of power)
-        command = "${pkgs.sway}/bin/swaymsg 'output * dpms off'";
-        resumeCommand = "${pkgs.sway}/bin/swaymsg 'output * dpms on'";
+        command = "${pkgs.sway}/bin/swaymsg 'output * power off'";
+        resumeCommand = "${pkgs.sway}/bin/swaymsg 'output * power on'";
       }
     ];
   };
