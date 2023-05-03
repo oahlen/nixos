@@ -1,10 +1,10 @@
 local M = {}
 
 M.symbols = {
-    error = ' ',
-    warn = ' ',
-    info = ' ',
-    hint = ' '
+    error = " ",
+    warn = " ",
+    info = " ",
+    hint = " "
 }
 
 function M.lsp_diagnostics()
