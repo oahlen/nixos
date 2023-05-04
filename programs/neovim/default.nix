@@ -16,7 +16,7 @@
       indent-blankline-nvim
       leap-nvim
       luasnip
-      # mason-nvim - enable in 23.05
+      mason-nvim
       nvim-autopairs
       nvim-cmp
       nvim-colorizer-lua
@@ -95,12 +95,6 @@
       url = "https://github.com/oahlen/iceberg.nvim";
       ref = "main";
       rev = "451508cc1e891179d224e48efcc1c94e87b6ffb5";
-    };
-
-    ".local/share/nvim/site/pack/plugins/start/mason.nvim".source = builtins.fetchGit {
-      url = "https://github.com/williamboman/mason.nvim";
-      ref = "main";
-      rev = "5c3cf2f134d8cc6798e6e3177025fb2f103a4053";
     };
   };
 }
