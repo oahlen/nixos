@@ -14,9 +14,7 @@
     escapeTime = 50;
     mouse = true;
 
-    plugins = with pkgs.tmuxPlugins; [
-      vim-tmux-navigator
-    ];
+    plugins = with pkgs.tmuxPlugins; [];
 
     extraConfig = ''
       # 256 color support
