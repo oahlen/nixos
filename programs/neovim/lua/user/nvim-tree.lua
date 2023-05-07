@@ -1,3 +1,18 @@
+require("nvim-web-devicons").setup {
+    override_by_extension = {
+        ["csproj"] = {
+            name = "CSProj",
+            icon = "",
+            color = "#017bcd"
+        },
+        ["rs"] = {
+            name = "Rust",
+            icon = "",
+            color = "#f74c00"
+        }
+    }
+}
+
 require "nvim-tree".setup {
     sync_root_with_cwd = true,
     renderer = {
@@ -11,21 +26,6 @@ require "nvim-tree".setup {
     view = {
         width = 40,
         signcolumn = "no"
-    }
-}
-
-require("nvim-web-devicons").setup {
-    override_by_extension = {
-        ["csproj"] = {
-            name = "CSProj",
-            icon = "",
-            color = "#017bcd"
-        },
-        ["rs"] = {
-            name = "Rust",
-            icon = "",
-            color = "#f74c00"
-        }
     }
 }
 
