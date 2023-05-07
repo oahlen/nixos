@@ -32,8 +32,8 @@
 
       # Global alt keys
       bind -n M-c new-window
-      bind -n M-l select-window -n
-      bind -n M-h select-window -p
+      bind -n M-L select-window -n
+      bind -n M-H select-window -p
       bind -n M-v split-window -h
       bind -n M-b split-window
 
