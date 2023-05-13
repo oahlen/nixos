@@ -31,6 +31,11 @@
       bind b split-window
 
       # Global alt keys
+      bind -n M-h select-pane -L
+      bind -n M-j select-pane -D
+      bind -n M-k select-pane -U
+      bind -n M-l select-pane -R
+
       bind -n M-c new-window
       bind -n M-L select-window -n
       bind -n M-H select-window -p
@@ -60,7 +65,7 @@
       set-option -g pane-border-style fg=brightblack
       set-option -g pane-active-border-style fg=blue
 
-      set-window-option -g clock-mode-colour cyan
+      set-window-option -g clock-mode-colour green
 
       # Status bar
       set -g status-position bottom
