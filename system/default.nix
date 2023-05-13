@@ -4,6 +4,7 @@
     ./env.nix
     ./flatpak.nix
     ./fonts.nix
+    ./kernel.nix
     ./locale.nix
     ./nix.nix
     ./pipewire.nix

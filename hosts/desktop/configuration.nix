@@ -19,11 +19,6 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  boot.kernel.sysctl = {
-    "vm.swappiness" = 0;
-    "vm.vfs_cache_pressure" = 50;
-  };
-
   hardware.enableRedistributableFirmware = true;
   hardware.cpu.intel.updateMicrocode = true;
 
