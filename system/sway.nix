@@ -13,7 +13,6 @@
     extraPackages = with pkgs; [
       brightnessctl
       fuzzel
-      gammastep
       glib
       gnome3.adwaita-icon-theme
       grim
@@ -25,6 +24,7 @@
       swaylock
       wf-recorder
       wl-clipboard
+      wlsunset
       xdg-utils
     ];
   };

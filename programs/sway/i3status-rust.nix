@@ -37,7 +37,7 @@
           }
           {
             block = "hueshift";
-            hue_shifter = "gammastep";
+            hue_shifter = "wlsunset";
             min_temp = 2000;
             max_temp = 6500;
             click_temp = 5000;
