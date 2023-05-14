@@ -14,6 +14,7 @@
       brightnessctl
       fuzzel
       gammastep
+      glib
       gnome3.adwaita-icon-theme
       grim
       pavucontrol
@@ -24,6 +25,7 @@
       swaylock
       wf-recorder
       wl-clipboard
+      xdg-utils
     ];
   };
 
@@ -32,6 +34,7 @@
   xdg.portal = {
     enable = true;
     wlr.enable = true;
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   };
 
   services.dbus.enable = true;
