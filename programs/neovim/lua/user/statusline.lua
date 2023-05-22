@@ -1,10 +1,10 @@
 local M = {}
 
 M.symbols = {
-    error = " ",
-    warn = " ",
-    info = " ",
-    hint = " "
+    error = "󰅚 ",
+    warn = "󰀪 ",
+    info = "󰋽 ",
+    hint = "󰌶 "
 }
 
 function M.lsp_diagnostics()
@@ -37,6 +37,14 @@ function M.lsp_client()
     return ""
 end
 
+function M.branch()
+    if vim.b.gitsigns_head ~= nil then
+        return " " .. vim.b.gitsigns_head
+    end
+
+    return ""
+end
+
 function M.active()
     if vim.bo.filetype == "NvimTree" then
         return " %{fnamemodify(getcwd(), ':~')}"
@@ -44,6 +52,7 @@ function M.active()
 
     local parts = {
         " %t [%n] %m",
+        [[%{luaeval("require'statusline'.branch()")}]],
         [[%{luaeval("require'user.statusline'.lsp_client()")}]],
         [[%{luaeval("require'user.statusline'.lsp_diagnostics()")}]],
         "%=",
