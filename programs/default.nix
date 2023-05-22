@@ -63,6 +63,7 @@ in {
     kmon
     lowdown
     neofetch
+    nil
     onefetch
     procs
     rage

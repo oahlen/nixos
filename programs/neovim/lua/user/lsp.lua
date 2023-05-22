@@ -43,6 +43,10 @@ local on_attach = function(_, bufnr)
     vim.keymap.set("n", "==", function() vim.lsp.buf.format { async = true } end, opts)
 end
 
+lsp_config.nil_ls.setup {
+    on_attach = on_attach
+}
+
 lsp_config.omnisharp.setup {
     handlers = {
         ["textDocument/definition"] = require('omnisharp_extended').handler,
