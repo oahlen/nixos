@@ -36,14 +36,6 @@
             };
           }
           {
-            block = "hueshift";
-            hue_shifter = "wlsunset";
-            min_temp = 2000;
-            max_temp = 6500;
-            click_temp = 5000;
-            step = 500;
-          }
-          {
             block = "backlight";
             if_command = "test -e /sys/class/backlight/*backlight/";
             minimum = 5;

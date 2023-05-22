@@ -19,12 +19,10 @@
       pavucontrol
       playerctl
       slurp
-      swayidle
       swayimg
       swaylock
       wf-recorder
       wl-clipboard
-      wlsunset
       xdg-utils
     ];
   };
@@ -34,7 +32,7 @@
   xdg.portal = {
     enable = true;
     wlr.enable = true;
-    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+    extraPortals = [pkgs.xdg-desktop-portal-gtk];
   };
 
   services.dbus.enable = true;

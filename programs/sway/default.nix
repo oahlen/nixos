@@ -11,6 +11,7 @@
     ./mako.nix
     ./swayidle.nix
     ./swaylock.nix
+    ./wl-sunset.nix
   ];
 
   wayland.windowManager.sway = {
