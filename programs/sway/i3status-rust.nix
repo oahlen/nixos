@@ -4,7 +4,7 @@
 
     bars = {
       default = {
-        icons = "awesome6";
+        icons = "material-nf";
 
         settings = {
           theme = {
