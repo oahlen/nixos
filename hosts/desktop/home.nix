@@ -14,7 +14,7 @@
   home.packages = with pkgs; [
     bitwarden
     bitwarden-cli
-    docker-compose
+    podman-compose
     # factorio
     firefox
     keepassxc

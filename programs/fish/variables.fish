@@ -8,7 +8,6 @@ set -gx AWS_CONFIG_FILE $XDG_CONFIG_HOME/aws/config
 set -gx ASPNETCORE_ENVIRONMENT Development
 set -gx CALCHISTFILE $XDG_CACHE_HOME/calc_history
 set -gx CARGO_HOME $XDG_DATA_HOME/cargo
-set -gx DOCKER_CONFIG $XDG_CONFIG_HOME/docker
 set -gx LESSHISTFILE $XDG_DATA_HOME/less/history
 set -gx MANPAGER 'less' '-R' '--use-color' '-Dd+b' '-Du+G' '-DP+kb' '-DS+ky'
 set -gx NPM_CONFIG_USERCONFIG $XDG_CONFIG_HOME/npm/npmrc

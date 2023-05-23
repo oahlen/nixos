@@ -45,7 +45,6 @@
     initialPassword = "password";
     extraGroups = [
       "audio"
-      "docker"
       "libvirtd"
       "networkmanager"
       "video"
