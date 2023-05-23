@@ -109,6 +109,9 @@
           "${modifier}+y" = "exec ~/.config/scripts/emoji-picker.sh";
           "${modifier}+Print" = "exec grim ~/Downloads/$(date +\"%Y-%m-%d-%H-%M-%S\").png";
           "${modifier}+Shift+Print" = "exec slurp | grim -g - ~/Downloads/$(date +\"%Y-%m-%d-%H-%M-%S\").png";
+          "${modifier}+x" = "split none";
+          "${modifier}+Tab" = "workspace next";
+          "${modifier}+Shift+Tab" = "workspace prev";
         };
 
       modes = {
@@ -140,7 +143,7 @@
           background = "#818596";
           text = "#1e2132";
           indicator = "#9a9ca5";
-          childBorder = "#8a8596";
+          childBorder = "#818596";
         };
 
         unfocused = {
