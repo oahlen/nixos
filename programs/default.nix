@@ -13,7 +13,7 @@ in {
     ./fzf.nix
     ./git.nix
     ./jq.nix
-    ./lf
+    ./lf.nix
     ./neovim
     ./scripts
     ./sway
