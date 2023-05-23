@@ -39,7 +39,6 @@
     "fish/conf.d/variables.fish".source = ./variables.fish;
 
     "fish/functions/colors.fish".source = ./functions/colors.fish;
-    "fish/functions/dev-session.fish".source = ./functions/dev-session.fish;
     "fish/functions/fish_prompt.fish".source = ./functions/fish_prompt.fish;
   };
 }
