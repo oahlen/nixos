@@ -9,6 +9,7 @@ require "user.treesitter"
 require "user.nvim-tree"
 require "user.gitsigns"
 require "user.autopairs"
+require "user.commands"
 require "user.statusline"
 
 require "mason".setup()

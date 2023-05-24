@@ -81,6 +81,7 @@
 
     "nvim/lua/user/autopairs.lua".source = ./lua/user/autopairs.lua;
     "nvim/lua/user/cmp.lua".source = ./lua/user/cmp.lua;
+    "nvim/lua/user/commands.lua".source = ./lua/user/commands.lua;
     "nvim/lua/user/dap.lua".source = ./lua/user/dap.lua;
     "nvim/lua/user/gitsigns.lua".source = ./lua/user/gitsigns.lua;
     "nvim/lua/user/keymaps.lua".source = ./lua/user/keymaps.lua;
