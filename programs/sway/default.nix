@@ -63,16 +63,13 @@
 
       startup = [
         {
-          command = "${pkgs.foot}/bin/foot --server";
-        }
-        {
           command = "${pkgs.mako}/bin/mako";
         }
       ];
 
       modifier = "Mod4";
 
-      terminal = "${pkgs.foot}/bin/footclient";
+      terminal = "${pkgs.foot}/bin/foot";
 
       menu = "${pkgs.fuzzel}/bin/fuzzel";
 

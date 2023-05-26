@@ -2,7 +2,7 @@
   xdg.configFile = {
     "fuzzel/fuzzel.ini".text = ''
       font="JetBrainsMono Nerd Font:size=11"
-      terminal=footclient -e
+      terminal=foot -e
       launch-prefix=swaymsg exec --
       icons-enabled=no
       dpi-aware=no
