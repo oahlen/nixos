@@ -1,5 +1,11 @@
 # NixOS
 
+## Resources
+* [Nix packages](https://search.nixos.org/packages)
+* [Wiki](https://nixos.wiki/)
+* [Home-manager manual](https://nix-community.github.io/home-manager/)
+* [Home-manager options](https://nix-community.github.io/home-manager/options.html)
+
 ## Installation
 
 ### Connect to a wireless network
@@ -72,17 +78,17 @@ sudo nixos-install
 * Build a new generation with a specified hostname: `doas nixos-rebuild switch --flake .#HOSTNAME`
 * Update flake lock file: `nix flake update`
 * Build a new generation and activate on next reboot `sudo nixos-rebuild boot --flake`
-* List system generations: `sudo nix-env --list-generations --profile /nix/var/nix/profiles/system`
-* Delete generations older than 7 days: `nix-collect-garbage --delete-older-than 7d`
+* List system generations: `doas nix-env --list-generations --profile /nix/var/nix/profiles/system`
+* Delete generations older than 7 days: `doas nix-collect-garbage --delete-older-than 7d`
 
 ## Development shells
 
-Copy one of the shell config templates to your source repo and name it 'shell.nix'
+Copy one of the shell flake config templates to your source repo and name it 'flake.nix'
 
 ### Nix direnv
 To use with direnv run the follow commands:
 
 ```bash
-echo "use nix" >> .envrc
+echo "use flake ." >> .envrc
 direnv allow
 ```
