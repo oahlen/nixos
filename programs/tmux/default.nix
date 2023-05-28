@@ -5,6 +5,7 @@
 }: {
   programs.tmux = {
     enable = true;
+    tmuxp.enable = true;
 
     shell = "${lib.getExe pkgs.fish}";
     terminal = "tmux-256color";
@@ -13,8 +14,6 @@
     clock24 = true;
     escapeTime = 50;
     mouse = true;
-
-    plugins = with pkgs.tmuxPlugins; [];
 
     extraConfig = ''
       # 256 color support
@@ -89,10 +88,6 @@
       set -g status-right-length 200
     '';
   };
-
-  home.packages = with pkgs; [
-    tmuxp
-  ];
 
   xdg.configFile = {
     "tmuxp/dev-session.yaml".source = ./dev-session.yaml;
