@@ -16,6 +16,7 @@
       df = "duf --theme ansi";
       du = "dust";
       gi = "gitui";
+      nixedit = "tmuxp load -y nixos";
       ping = "gping";
       ps = "procs";
       sudo = "doas";

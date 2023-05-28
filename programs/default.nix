@@ -17,6 +17,7 @@ in {
     ./neovim
     ./scripts
     ./sway
+    ./tmux
     ./zathura.nix
   ];
 
