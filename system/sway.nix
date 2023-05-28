@@ -12,7 +12,6 @@
 
     extraPackages = with pkgs; [
       brightnessctl
-      fuzzel
       glib
       gnome3.adwaita-icon-theme
       grim
