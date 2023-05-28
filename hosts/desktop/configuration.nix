@@ -22,15 +22,6 @@
   hardware.enableRedistributableFirmware = true;
   hardware.cpu.intel.updateMicrocode = true;
 
-  security.pam.loginLimits = [
-    {
-      domain = "*";
-      type = "-";
-      item = "nofile";
-      value = "8192";
-    }
-  ];
-
   hardware.opengl = {
     enable = true;
     driSupport = true;
