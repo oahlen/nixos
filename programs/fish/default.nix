@@ -34,10 +34,7 @@
   };
 
   xdg.configFile = {
-    "fish/conf.d/bindings.fish".source = ./bindings.fish;
     "fish/conf.d/theme.fish".source = ./theme.fish;
-    "fish/conf.d/variables.fish".source = ./variables.fish;
-
     "fish/functions/colors.fish".source = ./functions/colors.fish;
     "fish/functions/fish_prompt.fish".source = ./functions/fish_prompt.fish;
   };
