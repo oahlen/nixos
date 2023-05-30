@@ -27,6 +27,7 @@
       OMNISHARPHOME = "$XDG_CONFIG_HOME/omnisharp";
       PGPASSFILE = "$XDG_CONFIG_HOME/pg/pgpass";
       PSQL_HISTORY = "$XDG_DATA_HOME/psql_history";
+      ZK_NOTEBOOK_DIR = "$HOME/notes";
       _ZO_FZF_OPTS = "$FZF_DEFAULT_OPTS";
     };
 

@@ -51,35 +51,6 @@ lsp_config.nil_ls.setup {
     on_attach = on_attach
 }
 
-lsp_config.omnisharp.setup {
-    handlers = {
-        ["textDocument/definition"] = require('omnisharp_extended').handler,
-    },
-    cmd = {
-        "OmniSharp",
-        "--languageserver",
-        "--hostPID",
-        tostring(vim.fn.getpid())
-    },
-    on_attach = on_attach
-}
-
-lsp_config.rust_analyzer.setup {
-    on_attach = on_attach
-}
-
-lsp_config.pyright.setup {
-    on_attach = on_attach
-}
-
-lsp_config.tsserver.setup {
-    on_attach = on_attach
-}
-
-lsp_config.svelte.setup {
-    on_attach = on_attach
-}
-
 lsp_config.lua_ls.setup {
     on_attach = on_attach,
     settings = {
@@ -103,4 +74,45 @@ lsp_config.lua_ls.setup {
             }
         }
     }
+}
+
+lsp_config.zk.setup {
+    cmd = {
+        "zk",
+        "lsp"
+    },
+    filetypes = { "markdown" },
+    root_dir = function()
+        return vim.loop.cwd()
+    end,
+    on_attach = on_attach
+}
+
+lsp_config.rust_analyzer.setup {
+    on_attach = on_attach
+}
+
+lsp_config.pyright.setup {
+    on_attach = on_attach
+}
+
+lsp_config.tsserver.setup {
+    on_attach = on_attach
+}
+
+lsp_config.svelte.setup {
+    on_attach = on_attach
+}
+
+lsp_config.omnisharp.setup {
+    handlers = {
+        ["textDocument/definition"] = require('omnisharp_extended').handler,
+    },
+    cmd = {
+        "OmniSharp",
+        "--languageserver",
+        "--hostPID",
+        tostring(vim.fn.getpid())
+    },
+    on_attach = on_attach
 }

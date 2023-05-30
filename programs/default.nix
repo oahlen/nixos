@@ -70,6 +70,7 @@ in {
     sd
     tokei
     xsv
+    zk
   ];
 
   xdg.configFile = {
