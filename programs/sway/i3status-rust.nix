@@ -55,7 +55,7 @@
           }
           {
             block = "net";
-            format = " $icon {$ssid |}$ip";
+            format = " $icon  {$ssid|Wired}";
             missing_format = " NA ";
             interval = 10;
           }
