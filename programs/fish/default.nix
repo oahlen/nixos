@@ -31,6 +31,7 @@
       tree = "exa --tree";
       vio = "fzf --preview='bat {} --color=always --style=numbers' | xargs -r nvim";
       weather = "curl wttr.in";
+      zki = "zk edit --interactive";
     };
   };
 
