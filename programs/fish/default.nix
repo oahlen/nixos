@@ -37,7 +37,9 @@
 
   xdg.configFile = {
     "fish/conf.d/theme.fish".source = ./theme.fish;
+
     "fish/functions/colors.fish".source = ./functions/colors.fish;
+    "fish/functions/dev-session.fish".source = ./functions/dev-session.fish;
     "fish/functions/fish_prompt.fish".source = ./functions/fish_prompt.fish;
   };
 }
