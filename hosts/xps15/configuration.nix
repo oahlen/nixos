@@ -51,8 +51,6 @@
       "wheel"
     ];
     packages = with pkgs; [
-      bitwarden
-      bitwarden-cli
       chromium
       dbeaver
       libreoffice-fresh

@@ -12,14 +12,13 @@
   };
 
   home.packages = with pkgs; [
-    bitwarden
-    bitwarden-cli
-    podman-compose
     # factorio
     firefox
     keepassxc
     mpv
     nodejs
+    podman-compose
+    rbw
     xfce.mousepad
     xfce.ristretto
   ];

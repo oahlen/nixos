@@ -12,8 +12,6 @@
   };
 
   home.packages = with pkgs; [
-    bitwarden
-    bitwarden-cli
     firefox
     keepassxc
     xfce.mousepad
