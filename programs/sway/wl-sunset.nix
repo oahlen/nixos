@@ -5,8 +5,8 @@
     longitude = "17.64";
     systemdTarget = "sway-session.target";
     temperature = {
-      day = 6500;
-      night = 4500;
+      day = 5000;
+      night = 4000;
     };
   };
 }
