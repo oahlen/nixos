@@ -4,10 +4,11 @@
 
     bars = {
       default = {
-        icons = "material-nf";
+        icons = "none";
 
         settings = {
           theme = {
+            theme = "native";
             overrides = {
               idle_bg = "auto";
               idle_fg = "#818596";
@@ -55,8 +56,8 @@
           }
           {
             block = "net";
-            format = " $icon  {$ssid|Wired}";
-            missing_format = " NA ";
+            format = " {$ssid|Wired}";
+            missing_format = " No network ";
             interval = 10;
           }
           {
@@ -74,7 +75,7 @@
           {
             block = "time";
             interval = 10;
-            format = " $icon $timestamp.datetime(f:'%Y-%m-%d %R') ";
+            format = " $timestamp.datetime(f:'%Y-%m-%d %R') ";
           }
         ];
       };

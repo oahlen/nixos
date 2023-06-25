@@ -7,6 +7,7 @@
     defaultOptions = [
       "--layout=reverse"
       "--height=40%"
+      "--scrollbar '▌'"
     ];
 
     colors = {

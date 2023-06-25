@@ -1,18 +1,20 @@
-{pkgs, ...}: {
+{pkgs, ...}: let
+  swaylock = "${pkgs.swaylock}/bin/swaylock -f";
+in {
   services.swayidle = {
     enable = true;
 
     events = [
       {
         event = "before-sleep";
-        command = "${pkgs.swaylock}/bin/swaylock -f";
+        command = swaylock;
       }
     ];
 
     timeouts = [
       {
         timeout = 900;
-        command = "${pkgs.swaylock}/bin/swaylock -f";
+        command = swaylock;
       }
       {
         timeout = 1800;
