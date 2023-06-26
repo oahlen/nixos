@@ -3,7 +3,7 @@
     enable = true;
 
     config = {
-      theme = "iceberg";
+      theme = "base16";
     };
 
     themes = {

@@ -9,7 +9,7 @@
       };
 
       colors = {
-        table_header_color = "Cyan";
+        table_header_color = "Blue";
         widget_title_color = "White";
         avg_cpu_color = "Gray";
         cpu_core_colors = ["Red" "Green" "Yellow" "Blue" "Magenta" "Cyan" "LightRed" "LightGreen" "LightYellow" "LightBlue" "LightMagenta" "LightCyan"];

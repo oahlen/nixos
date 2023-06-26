@@ -6,6 +6,11 @@
   hostname = nixosConfig.networking.hostName;
 in {
   imports = [
+    ./neovim
+    ./scripts
+    ./sway
+    ./tmux
+    ./wallpapers
     ./bash.nix
     ./bat.nix
     ./bottom.nix
@@ -14,10 +19,6 @@ in {
     ./git.nix
     ./jq.nix
     ./lf.nix
-    ./neovim
-    ./scripts
-    ./sway
-    ./tmux
     ./zathura.nix
   ];
 

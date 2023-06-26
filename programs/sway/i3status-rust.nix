@@ -10,19 +10,11 @@
           theme = {
             theme = "native";
             overrides = {
-              idle_bg = "auto";
-              idle_fg = "#818596";
-              info_bg = "auto";
-              info_fg = "#89b8c2";
-              good_bg = "auto";
-              good_fg = "#b4be82";
-              warning_bg = "auto";
-              warning_fg = "#e2a478";
-              critical_bg = "auto";
-              critical_fg = "#e27878";
+              info_fg = "#5079be";
+              good_fg = "#608e32";
+              warning_fg = "#be7e05";
+              critical_fg = "#d05858";
               separator = " ";
-              separator_bg = "auto";
-              separator_fg = "auto";
             };
           };
         };

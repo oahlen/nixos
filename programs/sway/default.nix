@@ -57,7 +57,7 @@
 
       output = {
         "*" = {
-          bg = "~/Pictures/Wallpapers/archlinux.png fit #161821";
+          bg = "~/Pictures/Wallpapers/tree.jpg fit #ffffff";
         };
       };
 
@@ -128,27 +128,27 @@
 
       colors = {
         focused = {
-          border = "#84a0c6";
-          background = "#84a0c6";
-          text = "#1e2132";
-          indicator = "#91acd1";
-          childBorder = "#84a0c6";
+          border = "#5079be";
+          background = "#5079be";
+          text = "#fafafa";
+          indicator = "#5079be";
+          childBorder = "#5079be";
         };
 
         focusedInactive = {
-          border = "#818596";
-          background = "#818596";
-          text = "#1e2132";
-          indicator = "#9a9ca5";
-          childBorder = "#818596";
+          border = "#8790a0";
+          background = "#8790a0";
+          text = "#fafafa";
+          indicator = "#8790a0";
+          childBorder = "#8790a0";
         };
 
         unfocused = {
-          border = "#1e2132";
-          background = "#1e2132";
-          text = "#6b7089";
-          indicator = "#272c42";
-          childBorder = "#1e2132";
+          border = "#bac3cb";
+          background = "#bac3cb";
+          text = "#4b505b";
+          indicator = "#bac3cb";
+          childBorder = "#bac3cb";
         };
       };
 
@@ -172,38 +172,38 @@
           '';
 
           colors = {
-            background = "#0f1117";
-            statusline = "#818596";
-            separator = "#818596";
+            background = "#dde2e7";
+            statusline = "#4b505b";
+            separator = "#4b505b";
 
             focusedWorkspace = {
-              border = "#84a0c6";
-              background = "#84a0c6";
-              text = "#1e2132";
+              border = "#5079be";
+              background = "#5079be";
+              text = "#fafafa";
             };
 
             activeWorkspace = {
-              border = "#818596";
-              background = "#818596";
-              text = "#1e2132";
+              border = "#8790a0";
+              background = "#8790a0";
+              text = "#fafafa";
             };
 
             inactiveWorkspace = {
-              border = "#1e2132";
-              background = "#1e2132";
-              text = "#6b7089";
+              border = "#bac3cb";
+              background = "#bac3cb";
+              text = "#4b505b";
             };
 
             urgentWorkspace = {
-              border = "#e27878";
-              background = "#e27878";
-              text = "#1e2132";
+              border = "#d05858";
+              background = "#d05858";
+              text = "#fafafa";
             };
 
             bindingMode = {
-              border = "#e2a478";
-              background = "#e2a478";
-              text = "#1e2132";
+              border = "#b05ccc";
+              background = "#b05ccc";
+              text = "#fafafa";
             };
           };
         }
@@ -248,25 +248,25 @@
           button-dismiss-gap = 0;
         };
         info = {
-          text = "1e2132";
-          background = "84a0c6";
-          button-text = "1e2132";
-          button-background = "84a0c6";
-          details-background = "c6c8d1";
+          text = "5079be";
+          background = "eef1f4";
+          button-text = "5079be";
+          button-background = "eef1f4";
+          details-background = "fafafa";
         };
         warning = {
-          text = "1e2132";
-          background = "e2a478";
-          button-text = "1e2132";
-          button-background = "e2a478";
-          details-background = "c6c8d1";
+          text = "be7e05";
+          background = "eef1f4";
+          button-text = "be7e05";
+          button-background = "eef1f4";
+          details-background = "fafafa";
         };
         error = {
-          text = "1e2132";
-          background = "e27878";
-          button-text = "1e2132";
-          button-background = "e27878";
-          details-background = "c6c8d1";
+          text = "d05858";
+          background = "eef1f4";
+          button-text = "d05858";
+          button-background = "eef1f4";
+          details-background = "fafafa";
         };
       };
     };
