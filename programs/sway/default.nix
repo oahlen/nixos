@@ -25,7 +25,7 @@
       export MOZ_ENABLE_WAYLAND=1
     '';
 
-    systemdIntegration = true;
+    systemd.enable = true;
 
     wrapperFeatures = {
       base = true;
@@ -148,7 +148,7 @@
           background = "#bac3cb";
           text = "#4b505b";
           indicator = "#bac3cb";
-          childBorder = "#ffffff00";
+          childBorder = "#bac3cb";
         };
       };
 
