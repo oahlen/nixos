@@ -51,6 +51,7 @@
           make
           markdown
           nix
+          proto
           python
           query
           rust
@@ -61,6 +62,7 @@
           tree-sitter-nix
           typescript
           vim
+          vimdoc
           vimdoc
           yaml
         ]))
