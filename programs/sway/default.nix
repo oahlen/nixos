@@ -128,8 +128,8 @@
 
       colors = {
         focused = {
-          border = "#5079be";
-          background = "#5079be";
+          border = "#6996e0";
+          background = "#6996e0";
           text = "#fafafa";
           indicator = "#5079be";
           childBorder = "#5079be";
@@ -148,7 +148,7 @@
           background = "#bac3cb";
           text = "#4b505b";
           indicator = "#bac3cb";
-          childBorder = "#bac3cb";
+          childBorder = "#ffffff00";
         };
       };
 
@@ -177,8 +177,8 @@
             separator = "#4b505b";
 
             focusedWorkspace = {
-              border = "#5079be";
-              background = "#5079be";
+              border = "#6996e0";
+              background = "#6996e0";
               text = "#fafafa";
             };
 
@@ -195,14 +195,14 @@
             };
 
             urgentWorkspace = {
-              border = "#d05858";
-              background = "#d05858";
+              border = "#e17373";
+              background = "#e17373";
               text = "#fafafa";
             };
 
             bindingMode = {
-              border = "#b05ccc";
-              background = "#b05ccc";
+              border = "#bf75d6";
+              background = "#bf75d6";
               text = "#fafafa";
             };
           };
