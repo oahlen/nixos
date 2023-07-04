@@ -10,10 +10,10 @@
           theme = {
             theme = "native";
             overrides = {
-              info_fg = "#5079be";
-              good_fg = "#608e32";
-              warning_fg = "#be7e05";
-              critical_fg = "#d05858";
+              info_fg = "#89b8c2";
+              good_fg = "#b4be82";
+              warning_fg = "#e2a478";
+              critical_fg = "#e27878";
               separator = " ";
             };
           };
