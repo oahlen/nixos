@@ -18,6 +18,10 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  boot.initrd.secrets = {
+    "/crypto_keyfile.bin" = null;
+  };
+
   hardware.enableAllFirmware = true;
   hardware.enableRedistributableFirmware = true;
   hardware.cpu.intel.updateMicrocode = true;
@@ -55,5 +59,5 @@
     ];
   };
 
-  system.stateVersion = "22.11";
+  system.stateVersion = "23.05";
 }
