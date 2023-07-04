@@ -96,10 +96,10 @@
   };
 
   home.file = {
-    ".local/share/nvim/site/pack/plugins/start/edge.nvim".source = builtins.fetchGit {
-      url = "https://github.com/oahlen/edge.nvim";
+    ".local/share/nvim/site/pack/plugins/start/iceberg.nvim".source = builtins.fetchGit {
+      url = "https://github.com/oahlen/iceberg.nvim";
       ref = "main";
-      rev = "23a3c3067f06aab7791ebdf19b19e6359df97da1";
+      rev = "451508cc1e891179d224e48efcc1c94e87b6ffb5";
     };
   };
 }

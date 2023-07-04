@@ -17,13 +17,13 @@
         line-height = 16;
       };
       colors = {
-        background = "e8ebf0ff";
-        text = "4b505bff";
-        match = "5079beff";
-        selection = "6996e0ff";
-        selection-text = "fafafaff";
-        selection-match = "fafafaff";
-        border = "8790a0ff";
+        background = "161821ff";
+        text = "c6c8d1ff";
+        match = "e2a478ff";
+        selection = "272c42ff";
+        selection-text = "d2d4deff";
+        selection-match = "e2a478ff";
+        border = "6b7089ff";
       };
       border = {
         width = 2;

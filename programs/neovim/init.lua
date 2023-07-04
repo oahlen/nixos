@@ -1,3 +1,5 @@
+vim.cmd.colorscheme("iceberg")
+
 require "user.options"
 require "user.keymaps"
 require "user.telescope"
@@ -22,5 +24,3 @@ require "indent_blankline".setup {
 
 require "Comment".setup()
 require "colorizer".setup()
-
-vim.cmd.colorscheme("edge")

@@ -11,22 +11,22 @@
     ];
 
     colors = {
-      fg = "#4b505b";
-      "fg+" = "#4b505b";
-      bg = "#fafafa";
-      "bg+" = "#e3eaf6";
-      hl = "#5079be";
-      "hl+" = "#5079be";
-      header = "#5079be";
-      info = "#8790a0";
-      border = "#8790a0";
-      separator = "#8790a0";
-      gutter = "#eef1f4";
-      prompt = "#608e32";
-      pointer = "#be7e05";
-      marker = "#3a8b84";
-      spinner = "#b05ccc";
-      scrollbar = "#5079be";
+      fg = "#c6c8d1";
+      "fg+" = "#d2d4de";
+      bg = "#161821";
+      "bg+" = "#242940";
+      hl = "#e2a478";
+      "hl+" = "#e9b189";
+      header = "#84a0c6";
+      info = "#444b71";
+      border = "#444b71";
+      separator = "#444b71";
+      gutter = "#1e2132";
+      prompt = "#b4be82";
+      pointer = "#e2a478";
+      marker = "#89b8c2";
+      spinner = "#a093c7";
+      scrollbar = "#84a0c6";
     };
   };
 }

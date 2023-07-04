@@ -98,10 +98,10 @@
       (
           selected_tab: Gray,
           command_fg: Gray,
-          selection_bg: Black,
+          selection_bg: Rgb(39, 44, 66),
           selection_fg: Reset,
-          cmdbar_bg: Black,
-          cmdbar_extra_lines_bg: Black,
+          cmdbar_bg: Rgb(39, 44, 66),
+          cmdbar_extra_lines_bg: Rgb(39, 44, 66),
           disabled_fg: DarkGray,
           diff_line_add: Green,
           diff_line_delete: Red,

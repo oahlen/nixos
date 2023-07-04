@@ -1,5 +1,4 @@
 vim.o.autoindent = true
-vim.o.background = "light"
 vim.o.backup = false
 vim.o.clipboard = "unnamedplus"
 vim.o.cursorline = true

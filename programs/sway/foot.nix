@@ -20,35 +20,34 @@
 
       cursor = {
         style = "beam";
-        color = "f8f6f5 4f5e68";
       };
 
       colors = {
         alpha = "1";
 
-        foreground = "4b505b";
-        background = "fafafa";
+        foreground = "c6c8d1";
+        background = "161821";
 
-        selection-foreground = "4b505b";
-        selection-background = "e8ebf0";
+        selection-foreground = "1e2132";
+        selection-background = "c6c8d1";
 
-        regular0 = "dde2e7";
-        regular1 = "d05858";
-        regular2 = "608e32";
-        regular3 = "be7e05";
-        regular4 = "5079be";
-        regular5 = "b05ccc";
-        regular6 = "3a8b84";
-        regular7 = "4b505b";
+        regular0 = "1e2132";
+        regular1 = "e27878";
+        regular2 = "b4be82";
+        regular3 = "e2a478";
+        regular4 = "84a0c6";
+        regular5 = "a093c7";
+        regular6 = "89b8c2";
+        regular7 = "c6c8d1";
 
-        bright0 = "8790a0";
-        bright1 = "d05858";
-        bright2 = "608e32";
-        bright3 = "be7e05";
-        bright4 = "5079be";
-        bright5 = "b05ccc";
-        bright6 = "3a8b84";
-        bright7 = "4b505b";
+        bright0 = "6b7089";
+        bright1 = "e98989";
+        bright2 = "c0ca8e";
+        bright3 = "e9b189";
+        bright4 = "91acd1";
+        bright5 = "ada0d3";
+        bright6 = "95c4ce";
+        bright7 = "d2d4de";
       };
     };
   };

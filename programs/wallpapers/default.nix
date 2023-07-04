@@ -1,5 +1,5 @@
 {...}: {
   home.file = {
-    "Pictures/Wallpapers/tree.jpg".source = ./tree.jpg;
+    "Pictures/Wallpapers/archlinux.png".source = ./archlinux.png;
   };
 }

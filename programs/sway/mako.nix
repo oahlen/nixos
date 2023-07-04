@@ -7,10 +7,10 @@
     defaultTimeout = 10000;
     ignoreTimeout = true;
 
-    textColor = "#4b505b";
-    backgroundColor = "#e8ebf0";
-    borderColor = "#8790a0";
-    progressColor = "#5079be";
+    textColor = "#c6c8d1";
+    backgroundColor = "#161821";
+    borderColor = "#6b7089";
+    progressColor = "#84a0c6";
 
     borderSize = 2;
     borderRadius = 4;
