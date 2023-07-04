@@ -249,24 +249,24 @@
         };
         info = {
           text = "1e2132";
-          background = "84a0c6";
+          background = "#91acd1";
           button-text = "1e2132";
           button-background = "84a0c6";
-          details-background = "c6c8d1";
+          details-background = "84a0c6";
         };
         warning = {
           text = "1e2132";
-          background = "e2a478";
+          background = "e9b189";
           button-text = "1e2132";
           button-background = "e2a478";
-          details-background = "c6c8d1";
+          details-background = "e2a478";
         };
         error = {
           text = "1e2132";
-          background = "e27878";
+          background = "e98989";
           button-text = "1e2132";
           button-background = "e27878";
-          details-background = "c6c8d1";
+          details-background = "e27878";
         };
       };
     };

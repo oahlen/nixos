@@ -42,7 +42,7 @@
     text-wrong-color = "e27878";
 
     layout-bg-color = "00000000";
-    layout-border-color = "6b7089";
+    layout-border-color = "00000000";
     layout-text-color = "c6c8d1";
   };
 }
