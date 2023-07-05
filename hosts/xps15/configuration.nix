@@ -62,7 +62,7 @@
   # Virtualisation with libvirt
   virtualisation.libvirtd = {
     enable = true;
-    ovmf.enable = true;
+    qemu.ovmf.enable = true;
   };
   programs.dconf.enable = true;
 
