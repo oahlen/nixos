@@ -76,6 +76,7 @@
       window = {
         border = 1;
         hideEdgeBorders = "smart";
+        titlebar = false;
 
         commands = [
           {
