@@ -56,7 +56,7 @@
             block = "battery";
             device = "BAT0";
             if_command = "test -e /sys/class/power_supply/BAT0";
-            format = " $icon  $percentage ";
+            format = " $icon $percentage ";
             full_format = "";
             missing_format = "";
             good = 75;
