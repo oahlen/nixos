@@ -23,10 +23,7 @@ in {
   ];
 
   programs = {
-    chromium = {
-      enable = hostname == "xps15";
-      commandLineArgs = ["--enable-features=UseOzonePlatform" "-ozone-platform=wayland" "--gtk-version=4"];
-    };
+    chromium.enable = hostname == "xps15";
 
     exa = {
       enable = true;
