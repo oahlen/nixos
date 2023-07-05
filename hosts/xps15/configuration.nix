@@ -25,7 +25,7 @@
   # Enable swap on luks
   boot.initrd.luks.devices."luks-c0f7c1eb-a5fe-499d-b9f5-8dc04118559f" = {
     device = "/dev/disk/by-uuid/c0f7c1eb-a5fe-499d-b9f5-8dc04118559f";
-    keyfile = "/crypto_keyfile.bin";
+    keyFile = "/crypto_keyfile.bin";
   };
 
   hardware.enableAllFirmware = true;
