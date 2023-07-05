@@ -1,21 +1,50 @@
 {
-  config,
+  username,
   pkgs,
   ...
 }: {
   imports = [
-    <home-manager/nixos>
     ./hardware-configuration.nix
-    ./../../lib/development.nix
-    ./../../lib/home.nix
-    ./../../lib/intel.nix
-    ./../../lib/network.nix
-    ./../../lib/sway/sway.nix
-    ./../../lib/system.nix
-    ./../../lib/yubikey.nix
+    ./packages.nix
+    ./../../devices
+    ./../../system
   ];
 
   networking.hostName = "xps15";
+  networking.networkmanager.enable = true;
+  networking.networkmanager.wifi.backend = "iwd";
+
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
+
+  boot.initrd.secrets = {
+    "/crypto_keyfile.bin" = null;
+  };
+
+  hardware.enableAllFirmware = true;
+  hardware.enableRedistributableFirmware = true;
+  hardware.cpu.intel.updateMicrocode = true;
+
+  nixpkgs.config.packageOverrides = pkgs: {
+    vaapiIntel = pkgs.vaapiIntel.override {
+      enableHybridCodec = true;
+    };
+  };
+
+  hardware.opengl = {
+    enable = true;
+    extraPackages = with pkgs; [
+      intel-media-driver # LIBVA_DRIVER_NAME=iHD
+      vaapiVdpau
+      libvdpau-va-gl
+    ];
+  };
+
+  time.timeZone = "Europe/Stockholm";
+
+  fileSystems."/".options = ["noatime" "nodiratime" "discard"];
+
+  services.journald.extraConfig = "SystemMaxUse=100M";
 
   # Enable thunderbolt
   services.hardware.bolt.enable = true;
@@ -30,16 +59,7 @@
   };
   programs.dconf.enable = true;
 
-  # Make chromium run in Wayland mode
-  nixpkgs.config = {
-    chromium.commandLineArgs = "--enable-features=UseOzonePlatform --ozone-platform=wayland";
-  };
-
-  environment.systemPackages = with pkgs; [
-    libimobiledevice
-  ];
-
-  users.users.oahlen = {
+  users.users.${username} = {
     uid = 1000;
     isNormalUser = true;
     initialPassword = "password";
@@ -49,14 +69,6 @@
       "networkmanager"
       "video"
       "wheel"
-    ];
-    packages = with pkgs; [
-      chromium
-      dbeaver
-      libreoffice-fresh
-      pqrs
-      quickemu
-      virt-manager
     ];
   };
 
@@ -71,5 +83,5 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "22.11"; # Did you read the comment?
+  system.stateVersion = "23.05"; # Did you read the comment?
 }

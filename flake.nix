@@ -24,5 +24,9 @@
     nixosConfigurations.notebook = import ./hosts/notebook {
       inherit self nixpkgs inputs username;
     };
+
+    nixosConfigurations.xps15 = import ./hosts/xps15 {
+      inherit self nixpkgs inputs username;
+    };
   };
 }
