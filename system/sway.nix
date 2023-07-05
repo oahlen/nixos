@@ -15,6 +15,7 @@
       glib
       gnome3.adwaita-icon-theme
       grim
+      hyprpicker
       pavucontrol
       playerctl
       polkit_gnome
