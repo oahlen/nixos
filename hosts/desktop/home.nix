@@ -14,6 +14,7 @@
   home.packages = with pkgs; [
     # factorio
     firefox
+    gnome-multi-writer
     keepassxc
     mpv
     nodejs
