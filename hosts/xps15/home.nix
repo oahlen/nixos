@@ -23,6 +23,7 @@
 
   home.packages = with pkgs; [
     dbeaver
+    dotnet-sdk_7
     firefox
     keepassxc
     libreoffice-fresh
