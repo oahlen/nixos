@@ -22,6 +22,7 @@
       slurp
       swayimg
       swaylock
+      wdisplays
       wf-recorder
       wl-clipboard
       xdg-utils
