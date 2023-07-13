@@ -11,7 +11,7 @@
     };
   };
 
-  chromium.enable = true;
+  programs.chromium.enable = true;
 
   home.pointerCursor = {
     name = "Adwaita";

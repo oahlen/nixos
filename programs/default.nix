@@ -1,10 +1,4 @@
-{
-  nixosConfig,
-  pkgs,
-  ...
-}: let
-  hostname = nixosConfig.networking.hostName;
-in {
+{pkgs, ...}: {
   imports = [
     ./neovim
     ./scripts
