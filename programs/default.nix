@@ -23,8 +23,6 @@ in {
   ];
 
   programs = {
-    chromium.enable = hostname == "xps15";
-
     exa = {
       enable = true;
       enableAliases = true;

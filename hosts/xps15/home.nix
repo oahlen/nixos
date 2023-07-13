@@ -11,6 +11,8 @@
     };
   };
 
+  chromium.enable = true;
+
   home.pointerCursor = {
     name = "Adwaita";
     package = pkgs.gnome.adwaita-icon-theme;
