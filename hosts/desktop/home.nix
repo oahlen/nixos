@@ -19,6 +19,7 @@
     keepassxc
     mpv
     nodejs
+    pinentry
     podman-compose
     rbw
     xfce.mousepad

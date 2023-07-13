@@ -105,6 +105,7 @@
           "${modifier}+Alt+l" = "exec ${pkgs.swaylock}/bin/swaylock -f";
           "Ctrl+Alt+Delete" = "exec ~/.config/scripts/exit.sh";
           "${modifier}+y" = "exec ~/.config/scripts/emoji-picker.sh";
+          "${modifier}+p" = "exec ~/.config/scripts/password-picker.sh";
           "${modifier}+Print" = "exec grim ~/Downloads/$(date +\"%Y-%m-%d-%H-%M-%S\").png";
           "${modifier}+Shift+Print" = "exec slurp | grim -g - ~/Downloads/$(date +\"%Y-%m-%d-%H-%M-%S\").png";
           "${modifier}+x" = "split none";

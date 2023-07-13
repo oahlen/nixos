@@ -34,6 +34,7 @@
     libreoffice-fresh
     mpv
     nodejs
+    pinentry
     pqrs
     quickemu
     rbw
