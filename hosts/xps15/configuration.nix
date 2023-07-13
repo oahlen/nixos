@@ -59,6 +59,9 @@
   # Enable printing
   services.printing.enable = true;
 
+  # Docker
+  virtualisation.docker.enable = true;
+
   # Virtualisation with libvirt
   virtualisation.libvirtd = {
     enable = true;
@@ -72,6 +75,7 @@
     initialPassword = "password";
     extraGroups = [
       "audio"
+      "docker"
       "libvirtd"
       "networkmanager"
       "video"

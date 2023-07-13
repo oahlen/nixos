@@ -25,6 +25,7 @@
 
   home.packages = with pkgs; [
     dbeaver
+    docker-compose
     dotnet-sdk_7
     firefox
     iwgtk
