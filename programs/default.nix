@@ -37,6 +37,11 @@ in {
 
     man.enable = true;
 
+    nix-index = {
+      enable = true;
+      enableFishIntegration = true;
+    };
+
     ssh = {
       enable = true;
       extraConfig = ''
