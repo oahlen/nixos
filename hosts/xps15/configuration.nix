@@ -11,8 +11,6 @@
   ];
 
   networking.hostName = "xps15";
-  networking.networkmanager.enable = true;
-  networking.networkmanager.wifi.backend = "iwd";
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -77,7 +75,6 @@
       "audio"
       "docker"
       "libvirtd"
-      "networkmanager"
       "video"
       "wheel"
     ];

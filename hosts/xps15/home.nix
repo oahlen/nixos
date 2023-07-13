@@ -13,6 +13,7 @@
 
   programs.chromium.enable = true;
 
+  # hidpi cursor setting
   home.pointerCursor = {
     name = "Adwaita";
     package = pkgs.gnome.adwaita-icon-theme;

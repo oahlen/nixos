@@ -6,6 +6,7 @@
     ./fonts.nix
     ./kernel.nix
     ./locale.nix
+    ./network.nix
     ./nix.nix
     ./pipewire.nix
     ./sway.nix

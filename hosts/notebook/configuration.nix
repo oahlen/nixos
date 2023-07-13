@@ -11,8 +11,6 @@
   ];
 
   networking.hostName = "notebook";
-  networking.networkmanager.enable = true;
-  networking.networkmanager.wifi.backend = "iwd";
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.loader.systemd-boot.enable = true;
@@ -54,7 +52,6 @@
     initialPassword = "password";
     extraGroups = [
       "audio"
-      "networkmanager"
       "video"
       "wheel"
     ];

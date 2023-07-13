@@ -11,8 +11,6 @@
   ];
 
   networking.hostName = "desktop";
-  networking.networkmanager.enable = true;
-  networking.networkmanager.wifi.backend = "iwd";
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.initrd.kernelModules = ["amdgpu"];
@@ -52,7 +50,6 @@
     initialPassword = "password";
     extraGroups = [
       "audio"
-      "networkmanager"
       "video"
       "wheel"
     ];
