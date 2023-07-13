@@ -15,6 +15,7 @@
     # factorio
     firefox
     gnome-multi-writer
+    iwgtk
     keepassxc
     mpv
     nodejs

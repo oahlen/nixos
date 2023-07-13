@@ -25,6 +25,7 @@
     dbeaver
     dotnet-sdk_7
     firefox
+    iwgtk
     keepassxc
     libreoffice-fresh
     mpv

@@ -13,6 +13,7 @@
 
   home.packages = with pkgs; [
     firefox
+    iwgtk
     keepassxc
     xfce.mousepad
     xfce.ristretto
