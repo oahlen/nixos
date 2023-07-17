@@ -21,6 +21,7 @@
     nodejs
     pinentry
     podman-compose
+    prismlauncher
     rbw
     xfce.mousepad
     xfce.ristretto

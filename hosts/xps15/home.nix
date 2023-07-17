@@ -36,6 +36,7 @@
     nodejs
     pinentry
     pqrs
+    prismlauncher
     quickemu
     rbw
     virt-manager
