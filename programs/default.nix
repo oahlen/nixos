@@ -28,7 +28,11 @@
       nix-direnv.enable = true;
     };
 
+    firefox.enable = true;
+
     man.enable = true;
+
+    mpv.enable = true;
 
     nix-index = {
       enable = true;

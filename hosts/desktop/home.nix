@@ -13,11 +13,9 @@
 
   home.packages = with pkgs; [
     # factorio
-    firefox
     gnome-multi-writer
     iwgtk
     keepassxc
-    mpv
     nodejs
     podman-compose
     prismlauncher

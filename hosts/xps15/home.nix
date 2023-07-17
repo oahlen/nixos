@@ -28,11 +28,9 @@
     dbeaver
     docker-compose
     dotnet-sdk_7
-    firefox
     iwgtk
     keepassxc
     libreoffice-fresh
-    mpv
     nodejs
     pqrs
     prismlauncher
