@@ -13,6 +13,7 @@
     ./git.nix
     ./jq.nix
     ./lf.nix
+    ./rbw.nix
     ./zathura.nix
   ];
 

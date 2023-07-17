@@ -34,11 +34,9 @@
     libreoffice-fresh
     mpv
     nodejs
-    pinentry
     pqrs
     prismlauncher
     quickemu
-    rbw
     virt-manager
     xfce.mousepad
     xfce.ristretto
