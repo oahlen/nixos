@@ -17,6 +17,7 @@
     iwgtk
     keepassxc
     nodejs
+    pinta
     podman-compose
     prismlauncher
     xfce.mousepad
