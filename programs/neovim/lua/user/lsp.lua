@@ -109,7 +109,7 @@ lsp_config.omnisharp.setup {
         ["textDocument/definition"] = require('omnisharp_extended').handler,
     },
     cmd = {
-        "OmniSharp",
+        "omnisharp",
         "--languageserver",
         "--hostPID",
         tostring(vim.fn.getpid())
