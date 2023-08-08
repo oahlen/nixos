@@ -11,8 +11,8 @@
     ./fish
     ./fzf.nix
     ./git.nix
+    ./joshuto.nix
     ./jq.nix
-    ./lf.nix
     ./rbw.nix
     ./zathura.nix
   ];
