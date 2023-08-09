@@ -80,6 +80,7 @@ sudo nixos-install
 * Build a new generation and activate on next reboot `sudo nixos-rebuild boot --flake`
 * List system generations: `doas nix-env --list-generations --profile /nix/var/nix/profiles/system`
 * Delete generations older than 7 days: `doas nix-collect-garbage --delete-older-than 7d`
+* Show nix store roots: `nix-store --gc --print-roots`
 
 ## Development shells
 
