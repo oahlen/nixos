@@ -4,6 +4,7 @@
   ...
 }: {
   imports = [
+    ../../../misc/wallpapers
     ./scripts
     ./dconf.nix
     ./fuzzel.nix

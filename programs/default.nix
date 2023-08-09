@@ -3,7 +3,6 @@
     ./fish
     ./neovim
     ./tmux
-    ./wallpapers
     ./bash.nix
     ./bat.nix
     ./bottom.nix
