@@ -16,8 +16,11 @@
     in {
       devShells.default = pkgs.mkShell {
         packages = with pkgs; [
-          dotnet-sdk
-          dotnet-sdk_7
+          (with dotnetCorePackages;
+            combinePackages [
+              sdk_7_0
+              sdk_6_0
+            ])
           omnisharp-roslyn
         ];
 
