@@ -37,10 +37,27 @@
     extraPortals = [pkgs.xdg-desktop-portal-gtk];
   };
 
+  programs.dconf.enable = true;
   services.dbus.enable = true;
+
+  # Pipewire config
+  security.rtkit.enable = true;
+
+  services.pipewire = {
+    enable = true;
+    alsa = {
+      enable = true;
+      support32Bit = true;
+    };
+    pulse.enable = true;
+    jack.enable = true;
+  };
+
+  sound.enable = false;
 
   sound.mediaKeys.enable = true; # Should not be enabled in Gnome, KDE, etc
 
+  # Security settings
   security.polkit.enable = true;
 
   systemd = {
@@ -62,4 +79,14 @@
   services.gnome.gnome-keyring.enable = true;
 
   programs.ssh.startAgent = true;
+
+  # File manager
+  environment.systemPackages = with pkgs; [
+    gnome.nautilus
+  ];
+
+  programs.file-roller.enable = true;
+
+  services.gvfs.enable = true;
+  services.tumbler.enable = true;
 }

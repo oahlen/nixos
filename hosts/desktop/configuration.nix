@@ -8,6 +8,7 @@
     ./packages.nix
     ./../../devices
     ./../../system
+    ./../../profiles/sway
   ];
 
   networking.hostName = "desktop";
@@ -37,6 +38,8 @@
   fileSystems."/".options = ["noatime" "nodiratime" "discard"];
 
   services.journald.extraConfig = "SystemMaxUse=100M";
+
+  services.flatpak.enable = true;
 
   virtualisation.podman = {
     enable = true;

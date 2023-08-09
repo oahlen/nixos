@@ -2,13 +2,6 @@
   programs.bash = {
     enable = true;
 
-    profileExtra = ''
-      # If running from tty1 start sway
-      if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
-          exec sway
-      fi
-    '';
-
     sessionVariables = {
       XDG_CONFIG_HOME = "$HOME/.config";
       XDG_CACHE_HOME = "$HOME/.cache";

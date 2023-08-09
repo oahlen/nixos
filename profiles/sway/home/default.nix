@@ -4,7 +4,8 @@
   ...
 }: {
   imports = [
-    ./foot.nix
+    ./scripts
+    ./dconf.nix
     ./fuzzel.nix
     ./i3status-rust.nix
     ./kanshi.nix
@@ -12,7 +13,19 @@
     ./swayidle.nix
     ./swaylock.nix
     ./wl-sunset.nix
+    ./zathura.nix
   ];
+
+  programs.bash = {
+    enable = true;
+
+    profileExtra = ''
+      # If running from tty1 start sway
+      if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
+          exec sway
+      fi
+    '';
+  };
 
   wayland.windowManager.sway = {
     enable = true;

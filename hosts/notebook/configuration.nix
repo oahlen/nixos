@@ -8,6 +8,7 @@
     ./packages.nix
     ./../../devices
     ./../../system
+    ./../../profiles/sway
   ];
 
   networking.hostName = "notebook";

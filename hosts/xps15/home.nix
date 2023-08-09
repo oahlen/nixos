@@ -1,5 +1,6 @@
 {pkgs, ...}: {
   imports = [
+    ../../profiles/sway/home
     ../../programs
   ];
 

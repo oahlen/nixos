@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{...}: {
   programs.rbw = {
     enable = true;
     settings = {

@@ -8,6 +8,7 @@
     ./packages.nix
     ./../../devices
     ./../../system
+    ./../../profiles/sway
   ];
 
   networking.hostName = "xps15";
@@ -66,6 +67,8 @@
     qemu.ovmf.enable = true;
   };
   programs.dconf.enable = true;
+
+  services.flatpak.enable = true;
 
   users.users.${username} = {
     uid = 1000;

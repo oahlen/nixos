@@ -1,20 +1,18 @@
 {pkgs, ...}: {
   imports = [
+    ./fish
     ./neovim
-    ./scripts
-    ./sway
     ./tmux
     ./wallpapers
     ./bash.nix
     ./bat.nix
     ./bottom.nix
-    ./fish
+    ./foot.nix
     ./fzf.nix
     ./git.nix
     ./joshuto.nix
     ./jq.nix
     ./rbw.nix
-    ./zathura.nix
   ];
 
   programs = {
@@ -36,6 +34,7 @@
 
     nix-index = {
       enable = true;
+      enableBashIntegration = true;
       enableFishIntegration = true;
     };
 
@@ -72,16 +71,6 @@
     xsv
     zk
   ];
-
-  dconf.settings = {
-    "org/gnome/desktop/interface" = {
-      color-scheme = "prefer-dark";
-    };
-    "org/gnome/desktop/peripherals/keyboard" = {
-      delay = 250;
-      repeat-interval = 40;
-    };
-  };
 
   xdg.configFile = {
     "fd/ignore".text = ''
