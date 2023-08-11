@@ -26,6 +26,7 @@
   };
 
   home.packages = with pkgs; [
+    awscli2
     dbeaver
     docker-compose
     dotnet-sdk_7

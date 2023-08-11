@@ -6,6 +6,7 @@
     ./bash.nix
     ./bat.nix
     ./bottom.nix
+    ./env.nix
     ./foot.nix
     ./fzf.nix
     ./git.nix
