@@ -29,6 +29,7 @@
       options = {
         navigate = "true";
         side-by-side = "true";
+        syntax-theme = "iceberg";
         file-modified-label = "changed:";
         file-style = "cyan";
         file-decoration-style = "brightblack ul";
