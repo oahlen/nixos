@@ -16,6 +16,13 @@
   ];
 
   programs = {
+    atuin = {
+      enable = true;
+      flags = [
+        "--disable-up-arrow"
+      ];
+    };
+
     exa = {
       enable = true;
       enableAliases = true;
