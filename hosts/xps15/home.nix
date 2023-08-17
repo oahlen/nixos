@@ -28,12 +28,12 @@
   home.packages = with pkgs; [
     awscli2
     dbeaver
-    docker-compose
     dotnet-sdk_7
     iwgtk
     keepassxc
     libreoffice-fresh
     nodejs
+    podman-compose
     pqrs
     prismlauncher
     quickemu

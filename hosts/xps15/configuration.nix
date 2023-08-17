@@ -52,16 +52,16 @@
 
   services.journald.extraConfig = "SystemMaxUse=100M";
 
-  # Enable thunderbolt
   services.hardware.bolt.enable = true;
 
-  # Enable printing
   services.printing.enable = true;
 
-  # Docker
-  virtualisation.docker.enable = true;
+  virtualisation.podman = {
+    enable = true;
+    dockerCompat = true;
+    defaultNetwork.settings.dns_enabled = true;
+  };
 
-  # Virtualisation with libvirt
   virtualisation.libvirtd = {
     enable = true;
     qemu.ovmf.enable = true;
@@ -76,7 +76,6 @@
     initialPassword = "password";
     extraGroups = [
       "audio"
-      "docker"
       "libvirtd"
       "video"
       "wheel"
