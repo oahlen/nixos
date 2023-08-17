@@ -28,6 +28,7 @@
   home.packages = with pkgs; [
     awscli2
     dbeaver
+    distrobox
     dotnet-sdk_7
     iwgtk
     keepassxc
