@@ -17,7 +17,6 @@
       indent-blankline-nvim
       leap-nvim
       luasnip
-      mason-nvim
       nvim-autopairs
       nvim-cmp
       nvim-colorizer-lua

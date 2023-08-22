@@ -12,7 +12,6 @@ require "user.autopairs"
 require "user.commands"
 require "user.statusline"
 
-require "mason".setup()
 require "leap".add_default_mappings()
 require "nvim-surround".setup()
 
