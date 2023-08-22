@@ -14,6 +14,7 @@
 
   home.packages = with pkgs; [
     # factorio
+    cargo
     (with dotnetCorePackages;
       combinePackages [
         sdk_7_0
@@ -27,6 +28,9 @@
     pinta
     podman-compose
     prismlauncher
+    rust-analyzer
+    rustc
+    rustfmt
     xfce.mousepad
     xfce.ristretto
   ];

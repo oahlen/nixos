@@ -28,22 +28,11 @@
       enableAliases = true;
     };
 
-    direnv = {
-      enable = true;
-      nix-direnv.enable = true;
-    };
-
     firefox.enable = true;
 
     man.enable = true;
 
     mpv.enable = true;
-
-    nix-index = {
-      enable = true;
-      enableBashIntegration = true;
-      enableFishIntegration = true;
-    };
 
     ssh = {
       enable = true;
