@@ -12,6 +12,8 @@
     };
   };
 
+  mpv.enable = true;
+
   home.packages = with pkgs; [
     # factorio
     cargo

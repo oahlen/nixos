@@ -28,15 +28,23 @@
   home.packages = with pkgs; [
     awscli2
     dbeaver
-    dotnet-sdk_7
+    cargo
+    (with dotnetCorePackages;
+      combinePackages [
+        sdk_7_0
+        sdk_6_0
+      ])
     iwgtk
     keepassxc
     libreoffice-fresh
     nodejs
+    omnisharp-roslyn
     podman-compose
     pqrs
     prismlauncher
-    quickemu
+    rust-analyzer
+    rustc
+    rustfmt
     steam-run
     virt-manager
     xfce.mousepad

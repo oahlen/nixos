@@ -32,8 +32,6 @@
 
     man.enable = true;
 
-    mpv.enable = true;
-
     ssh = {
       enable = true;
       extraConfig = ''
