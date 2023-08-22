@@ -28,7 +28,6 @@
   home.packages = with pkgs; [
     awscli2
     dbeaver
-    distrobox
     dotnet-sdk_7
     iwgtk
     keepassxc
@@ -38,6 +37,7 @@
     pqrs
     prismlauncher
     quickemu
+    steam-run
     virt-manager
     xfce.mousepad
     xfce.ristretto
