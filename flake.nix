@@ -35,7 +35,7 @@
       inherit self nixpkgs inputs username;
     };
 
-    devShells.system.default = let
+    devShells.x86_64-linux.rust = let
       overlays = [
         (import rust-overlay)
         (self: super: {
