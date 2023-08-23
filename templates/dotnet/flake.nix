@@ -23,11 +23,6 @@
             ])
           omnisharp-roslyn
         ];
-
-        shellHook = ''
-          Using dotnet version:
-          ${pkgs.dotnet-sdk_7}/bin/dotnet --version
-        '';
       };
     });
 }

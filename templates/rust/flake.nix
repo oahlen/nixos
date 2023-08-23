@@ -20,11 +20,9 @@
           rustToolchain = let
             rust = super.rust-bin;
           in
-            if builtins.pathExists ./rust-toolchain.toml
-            then rust.fromRustupToolchainFile ./rust-toolchain.toml
-            else if builtins.pathExists ./rust-toolchain
-            then rust.fromRustupToolchainFile ./rust-toolchain
-            else rust.stable.latest.default;
+            rust.stable.latest.default.override {
+              targets = ["x86_64-unknown-linux-musl"];
+            };
         })
       ];
 
@@ -41,11 +39,6 @@
           rust-analyzer
           rustToolchain
         ];
-
-        shellHook = ''
-          Using rust version:
-          ${pkgs.rustToolchain}/bin/cargo --version
-        '';
       };
     });
 }

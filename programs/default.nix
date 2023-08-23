@@ -28,6 +28,11 @@
       enableAliases = true;
     };
 
+    direnv = {
+      enable = true;
+      nix-direnv.enable = true;
+    };
+
     firefox.enable = true;
 
     man.enable = true;

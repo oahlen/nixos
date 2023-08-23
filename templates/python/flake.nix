@@ -18,11 +18,6 @@
         packages = with pkgs;
           [python virtualenv]
           ++ (with pkgs.python311Packages; [pip]);
-
-        shellHook = ''
-          Using python version:
-          ${pkgs.python}/bin/python --version
-        '';
       };
     });
 }
