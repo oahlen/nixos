@@ -21,17 +21,17 @@
     username = "oahlen";
     system = "x86_64-linux";
   in {
-    # nixosConfigurations.desktop = import ./hosts/desktop {
-    #   inherit self nixpkgs inputs username;
-    # };
-    #
-    # nixosConfigurations.notebook = import ./hosts/notebook {
-    #   inherit self nixpkgs inputs username;
-    # };
-    #
-    # nixosConfigurations.xps15 = import ./hosts/xps15 {
-    #   inherit self nixpkgs inputs username;
-    # };
+    nixosConfigurations.desktop = import ./hosts/desktop {
+      inherit self nixpkgs inputs username;
+    };
+
+    nixosConfigurations.notebook = import ./hosts/notebook {
+      inherit self nixpkgs inputs username;
+    };
+
+    nixosConfigurations.xps15 = import ./hosts/xps15 {
+      inherit self nixpkgs inputs username;
+    };
 
     devShells.x86_64-linux = {
       dotnet = import ./shells/dotnet {
