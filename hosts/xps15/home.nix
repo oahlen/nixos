@@ -28,6 +28,7 @@
   home.packages = with pkgs; [
     awscli2
     dbeaver
+    dotnet-sdk_7
     iwgtk
     keepassxc
     libreoffice-fresh

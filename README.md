@@ -82,14 +82,11 @@ sudo nixos-install
 * Delete generations older than 7 days: `doas nix-collect-garbage --delete-older-than 7d`
 * Show nix store roots: `nix-store --gc --print-roots`
 
-## Development shells
+## Development shells with direnv
 
-Copy one of the shell flake config templates to your source repo and name it 'flake.nix'
-
-### Nix direnv
 To use with direnv run the follow commands:
 
 ```bash
-echo "use flake ." >> .envrc
+echo "use flake github:oahlen/nixos#{SHELL}" >> .envrc
 direnv allow
 ```

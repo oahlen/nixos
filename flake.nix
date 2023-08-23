@@ -21,20 +21,28 @@
     username = "oahlen";
     system = "x86_64-linux";
   in {
-    nixosConfigurations.desktop = import ./hosts/desktop {
-      inherit self nixpkgs inputs username;
-    };
+    # nixosConfigurations.desktop = import ./hosts/desktop {
+    #   inherit self nixpkgs inputs username;
+    # };
+    #
+    # nixosConfigurations.notebook = import ./hosts/notebook {
+    #   inherit self nixpkgs inputs username;
+    # };
+    #
+    # nixosConfigurations.xps15 = import ./hosts/xps15 {
+    #   inherit self nixpkgs inputs username;
+    # };
 
-    nixosConfigurations.notebook = import ./hosts/notebook {
-      inherit self nixpkgs inputs username;
-    };
-
-    nixosConfigurations.xps15 = import ./hosts/xps15 {
-      inherit self nixpkgs inputs username;
-    };
-
-    devShells.x86_64-linux.rust = import ./shells/rust {
-      inherit self nixpkgs rust-overlay system;
+    devShells.x86_64-linux = {
+      dotnet = import ./shells/dotnet {
+        inherit self nixpkgs system;
+      };
+      python = import ./shells/python {
+        inherit self nixpkgs system;
+      };
+      rust = import ./shells/rust {
+        inherit self nixpkgs rust-overlay system;
+      };
     };
   };
 }
