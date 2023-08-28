@@ -56,6 +56,8 @@
 
   services.hardware.bolt.enable = true;
 
+  services.fwupd.enable = true;
+
   services.printing.enable = true;
 
   virtualisation.podman = {
