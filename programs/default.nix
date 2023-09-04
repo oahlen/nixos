@@ -50,6 +50,7 @@
   home.packages = with pkgs; [
     alejandra
     bandwhich
+    cargo-make
     dog
     du-dust
     duf

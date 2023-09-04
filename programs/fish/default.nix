@@ -18,7 +18,7 @@
       fetch = "fastfetch";
       gi = "gitui";
       lf = "joshuto";
-      nixedit = "tmuxp load -y nixos";
+      nix-edit = "tmuxp load -y nixos";
       ping = "gping";
       ps = "procs";
       sudo = "doas";

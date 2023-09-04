@@ -6,6 +6,9 @@ windows:
       - shell_command:
           - nvim
         focus: true
+  - window_name: Terminal
+    panes:
+      - shell_command:
   - window_name: Git
     panes:
       - shell_command:
