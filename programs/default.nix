@@ -53,6 +53,7 @@
     dog
     du-dust
     duf
+    fastfetch
     figlet
     gping
     hexyl
@@ -60,7 +61,6 @@
     jless
     kmon
     lowdown
-    neofetch
     nil
     onefetch
     procs

@@ -15,6 +15,7 @@
       cat = "bat";
       df = "duf --theme ansi";
       du = "dust";
+      fetch = "fastfetch";
       gi = "gitui";
       lf = "joshuto";
       nixedit = "tmuxp load -y nixos";
