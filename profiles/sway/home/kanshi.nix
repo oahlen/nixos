@@ -27,23 +27,18 @@
         ];
       };
 
-      work = {
+      op-rum-1 = {
         outputs = [
           {
             criteria = "eDP-1";
             status = "disable";
           }
           {
-            criteria = "Dell Inc. DELL U2722D J965X83";
+            criteria = "Samsung Electric Company SAMSUNG 0x00000F00";
             status = "enable";
-            mode = "2560x1440";
+            mode = "3840x2160";
+            scale = 2.0;
             position = "0,0";
-          }
-          {
-            criteria = "Dell Inc. DELL U2722D JKWBS83";
-            status = "enable";
-            mode = "2560x1440";
-            position = "2560,0";
           }
         ];
       };
