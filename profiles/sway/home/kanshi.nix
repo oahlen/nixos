@@ -42,6 +42,22 @@
           }
         ];
       };
+
+      op-rum-gul = {
+        outputs = [
+          {
+            criteria = "eDP-1";
+            status = "disable";
+          }
+          {
+            criteria = "TBD";
+            status = "enable";
+            mode = "3840x2160";
+            scale = 2.0;
+            position = "0,0";
+          }
+        ];
+      };
     };
   };
 }

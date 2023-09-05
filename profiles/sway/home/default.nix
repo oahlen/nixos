@@ -9,7 +9,6 @@
     ./dconf.nix
     ./fuzzel.nix
     ./i3status-rust.nix
-    ./kanshi.nix
     ./mako.nix
     ./swayidle.nix
     ./swaylock.nix

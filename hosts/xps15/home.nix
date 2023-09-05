@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   imports = [
     ../../profiles/sway/home
+    ../../profiles/sway/home/kanshi.nix
     ../../programs
   ];
 
