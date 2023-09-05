@@ -26,6 +26,7 @@
       wdisplays
       wf-recorder
       wl-clipboard
+      wl-mirror
       xdg-utils
     ];
   };
