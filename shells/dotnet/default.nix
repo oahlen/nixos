@@ -12,6 +12,7 @@ in
           sdk_7_0
           sdk_6_0
         ])
+      netcoredbg
       omnisharp-roslyn
     ];
   }
