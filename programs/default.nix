@@ -51,7 +51,7 @@
     alejandra
     bandwhich
     cargo-make
-    dog
+    dogdns
     du-dust
     duf
     fastfetch
