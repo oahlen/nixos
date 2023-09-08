@@ -10,6 +10,7 @@ in
       [
         python311
         virtualenv
+        postgresql
       ]
       ++ (with pkgs.python311Packages; [pip])
       ++ (
