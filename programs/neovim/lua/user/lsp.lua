@@ -22,11 +22,7 @@ vim.keymap.set("n", "gn", vim.diagnostic.goto_next)
 vim.keymap.set("n", "gN", vim.diagnostic.goto_prev)
 vim.keymap.set("n", "<leader>l", vim.diagnostic.setloclist)
 
-local on_attach = function(client, bufnr)
-    if client.name == "omnisharp" then
-        client.server_capabilities.semanticTokensProvider = nil
-    end
-
+local on_attach = function(_, bufnr)
     vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
 
     local telescope = require('telescope.builtin')
