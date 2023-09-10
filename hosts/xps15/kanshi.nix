@@ -8,6 +8,9 @@
           {
             criteria = "eDP-1";
             status = "enable";
+            mode = "3840x2400@59.994Hz";
+            scale = 2.0;
+            position = "0,0";
           }
         ];
       };
