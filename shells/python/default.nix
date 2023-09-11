@@ -10,13 +10,13 @@ in
       [
         python311
         virtualenv
-        postgresql
       ]
-      ++ (with pkgs.python311Packages; [pip])
+      ++ (with pkgs.python311Packages; [
+        pip
+      ])
       ++ (
         with pkgs.nodePackages; [
           nodePackages.pyright
-          nodePackages.vscode-langservers-extracted
         ]
       );
   }
