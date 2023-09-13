@@ -22,6 +22,7 @@
             criteria = "LG Electronics LG HDR WQHD 006NTKFGZ397";
             status = "enable";
             mode = "3440x1440";
+            scale = 1.0;
             position = "0,0";
           }
         ];
@@ -33,6 +34,7 @@
             criteria = "Dell Inc. DELL U3423WE CV9MMP3";
             status = "enable";
             mode = "3440x1440";
+            scale = 1.0;
             position = "0,0";
           }
           {
