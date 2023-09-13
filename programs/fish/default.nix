@@ -7,6 +7,7 @@
     '';
 
     shellAbbrs = {
+      bash = "/run/current-system/sw/bin/bash";
       compress = "tar -zcvf";
       extract = "tar -zxvf";
     };
