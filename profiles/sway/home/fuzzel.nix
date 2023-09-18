@@ -5,7 +5,7 @@
       main = {
         font = "JetBrainsMono Nerd Font:size=11";
         terminal = "${pkgs.foot}/bin/foot -e";
-        launch-prefix = "swaymsg exec --";
+        launch-prefix = "${pkgs.sway}/bin/swaymsg exec --";
         icons-enabled = "no";
         dpi-aware = "no";
         prompt = "> ";
