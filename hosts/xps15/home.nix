@@ -31,6 +31,7 @@
     dbeaver
     dotnet-sdk_7
     iwgtk
+    jetbrains.rider
     keepassxc
     libreoffice-fresh
     nodejs
