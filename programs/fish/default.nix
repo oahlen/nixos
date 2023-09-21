@@ -10,6 +10,9 @@
       bash = "/run/current-system/sw/bin/bash";
       compress = "tar -zcvf";
       extract = "tar -zxvf";
+      so = "swaymsg output";
+      soi = "swaymsg output eDP-1";
+      fullhd = "swaymsg -- output eDP-1 mode --custom 1920x1200@59.997Hz scale 1";
     };
 
     shellAliases = {

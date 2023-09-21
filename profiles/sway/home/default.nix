@@ -124,8 +124,6 @@
           "${modifier}+x" = "split none";
           "${modifier}+Tab" = "workspace next";
           "${modifier}+Shift+Tab" = "workspace prev";
-          "${modifier}+Shift+n" = "exec ${pkgs.sway}/bin/swaymsg output eDP-1 disable";
-          "${modifier}+Shift+m" = "exec ${pkgs.sway}/bin/swaymsg output eDP-1 enable";
         };
 
       modes = {
