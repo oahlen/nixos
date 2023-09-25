@@ -16,7 +16,7 @@ in
       ])
       ++ (
         with pkgs.nodePackages; [
-          nodePackages.pyright
+          pyright
         ]
       );
   }
