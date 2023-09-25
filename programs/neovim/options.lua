@@ -1,3 +1,5 @@
+vim.cmd.colorscheme("iceberg")
+
 vim.o.autoindent = true
 vim.o.backup = false
 vim.o.clipboard = "unnamedplus"

@@ -48,7 +48,6 @@
   };
 
   home.packages = with pkgs; [
-    alejandra
     bandwhich
     cargo-make
     dogdns
@@ -62,7 +61,6 @@
     jless
     kmon
     lowdown
-    nil
     onefetch
     procs
     rage

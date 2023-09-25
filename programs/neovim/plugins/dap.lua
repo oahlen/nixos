@@ -18,11 +18,11 @@ dap.configurations.cs = {
     }
 }
 
-vim.keymap.set("n", "<leader>db", function() dap.toggle_breakpoint() end)
-vim.keymap.set("n", "<leader>dc", function() dap.continue() end)
-vim.keymap.set("n", "<leader>dl", function() dap.run_last() end)
-vim.keymap.set("n", "<leader>ds", function() dap.step_over() end)
-vim.keymap.set("n", "<leader>di", function() dap.step_into() end)
-vim.keymap.set("n", "<leader>do", function() dap.step_out() end)
+vim.keymap.set("n", "<space>db", function() dap.toggle_breakpoint() end)
+vim.keymap.set("n", "<space>dc", function() dap.continue() end)
+vim.keymap.set("n", "<space>dl", function() dap.run_last() end)
+vim.keymap.set("n", "<space>ds", function() dap.step_over() end)
+vim.keymap.set("n", "<space>di", function() dap.step_into() end)
+vim.keymap.set("n", "<space>do", function() dap.step_out() end)
 
 require "nvim-dap-virtual-text".setup()

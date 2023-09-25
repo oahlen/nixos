@@ -52,9 +52,9 @@ function M.active()
 
     local parts = {
         " %t [%n] %m",
-        [[%{luaeval("require'user.statusline'.branch()")}]],
-        [[%{luaeval("require'user.statusline'.lsp_client()")}]],
-        [[%{luaeval("require'user.statusline'.lsp_diagnostics()")}]],
+        [[%{luaeval("require'statusline'.branch()")}]],
+        [[%{luaeval("require'statusline'.lsp_client()")}]],
+        [[%{luaeval("require'statusline'.lsp_diagnostics()")}]],
         "%=",
         "%{&fenc?&fenc:&enc}",
         "%{&ff}",

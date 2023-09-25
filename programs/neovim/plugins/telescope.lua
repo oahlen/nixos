@@ -31,8 +31,8 @@ telescope.load_extension("fzf")
 local builtin = require("telescope.builtin")
 local opts = { noremap = true, silent = true }
 
-vim.keymap.set("n", "<leader>f", builtin.find_files, opts)
-vim.keymap.set("n", "<leader>g", builtin.live_grep, opts)
-vim.keymap.set("n", "<leader>b", builtin.buffers, opts)
-vim.keymap.set("n", "<leader>s", builtin.treesitter, opts)
-vim.keymap.set("n", "<leader>d", builtin.diagnostics, opts)
+vim.keymap.set("n", "<space>f", builtin.find_files, opts)
+vim.keymap.set("n", "<space>g", builtin.live_grep, opts)
+vim.keymap.set("n", "<space>b", builtin.buffers, opts)
+vim.keymap.set("n", "<space>s", builtin.treesitter, opts)
+vim.keymap.set("n", "<space>d", builtin.diagnostics, opts)
