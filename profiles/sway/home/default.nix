@@ -119,8 +119,9 @@
           "Ctrl+Alt+Delete" = "exec ~/.config/scripts/exit.sh";
           "${modifier}+y" = "exec ~/.config/scripts/emoji-picker.sh";
           "${modifier}+p" = "exec ~/.config/scripts/password-picker.sh";
-          "${modifier}+Print" = "exec grim ~/Pictures/$(date +\"%Y-%m-%d-%H-%M-%S\").png";
-          "${modifier}+Shift+Print" = "exec slurp | grim -g - ~/Pictures/$(date +\"%Y-%m-%d-%H-%M-%S\").png";
+          "Print" = "exec ${pkgs.grim}/bin/grim ~/Pictures/$(date +\"%Y-%m-%d-%H-%M-%S\").png";
+          "${modifier}+Print" = "exec ${pkgs.slurp}/bin/slurp | ${pkgs.grim}/bin/grim -g - ~/Pictures/$(date +\"%Y-%m-%d-%H-%M-%S\").png";
+          "${modifier}+Shift+Print" = "exec ${pkgs.hyprpicker}/bin/hyprpicker | ${pkgs.wl-clipboard}/bin/wl-copy";
           "${modifier}+x" = "split none";
           "${modifier}+Tab" = "workspace next";
           "${modifier}+Shift+Tab" = "workspace prev";
