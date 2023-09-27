@@ -13,6 +13,7 @@
     };
   };
 
+  programs.firefox.enable = true;
   programs.chromium.enable = true;
 
   # hidpi cursor setting

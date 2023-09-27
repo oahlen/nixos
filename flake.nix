@@ -23,35 +23,35 @@
     rust-overlay,
     ...
   } @ inputs: let
+    system = "x86_64-linux";
     username = "oahlen";
-    forAllSystems = nixpkgs.lib.genAttrs [
-      "x86_64-linux"
-    ];
   in {
     nixosConfigurations.desktop = import ./hosts/desktop {
-      inherit self nixpkgs inputs username;
+      inherit self nixpkgs inputs system username;
     };
 
     nixosConfigurations.notebook = import ./hosts/notebook {
-      inherit self nixpkgs inputs username;
+      inherit self nixpkgs inputs system username;
     };
 
     nixosConfigurations.xps15 = import ./hosts/xps15 {
-      inherit self nixpkgs inputs username;
+      inherit self nixpkgs inputs system username;
     };
 
-    devShells = forAllSystems (
-      system: {
-        dotnet = import ./shells/dotnet {
-          inherit self nixpkgs system;
-        };
-        python = import ./shells/python {
-          inherit self nixpkgs system;
-        };
-        rust = import ./shells/rust {
-          inherit self nixpkgs rust-overlay system;
-        };
-      }
-    );
+    homeConfigurations."${username}@debian" = import ./hosts/generic {
+      inherit self nixpkgs inputs system username;
+    };
+
+    devShells = {
+      dotnet = import ./shells/dotnet {
+        inherit self nixpkgs system;
+      };
+      python = import ./shells/python {
+        inherit self nixpkgs system;
+      };
+      rust = import ./shells/rust {
+        inherit self nixpkgs inputs system;
+      };
+    };
   };
 }

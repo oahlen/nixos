@@ -1,11 +1,11 @@
 {
   nixpkgs,
-  rust-overlay,
+  inputs,
   system,
   ...
 }: let
   overlays = [
-    (import rust-overlay)
+    (import inputs.rust-overlay)
     (self: super: {
       rustToolchain = let
         rust = super.rust-bin;

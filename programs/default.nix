@@ -10,7 +10,6 @@
     ./foot.nix
     ./fzf.nix
     ./git.nix
-    ./joshuto.nix
     ./jq.nix
     ./rbw.nix
   ];
@@ -32,8 +31,6 @@
       enable = true;
       nix-direnv.enable = true;
     };
-
-    firefox.enable = true;
 
     man.enable = true;
 
