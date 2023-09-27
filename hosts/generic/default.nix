@@ -13,10 +13,6 @@ inputs.home-manager.lib.homeManagerConfiguration {
     };
   };
 
-  system = system;
-  homeDirectory = "/home/${username}";
-  username = username;
-
   modules = [
     ./home.nix
   ];

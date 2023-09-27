@@ -1,4 +1,4 @@
-{...}: {
+{username, ...}: {
   imports = [
     ../../programs
   ];
@@ -10,6 +10,13 @@
       createDirectories = true;
     };
   };
+
+  home = {
+    username = username;
+    homeDirectory = "/home/${username}";
+  };
+
+  programs.home-manager.enable = true;
 
   home.stateVersion = "23.05";
 }
