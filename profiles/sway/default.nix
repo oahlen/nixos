@@ -24,10 +24,10 @@
       slurp
       swayimg
       swaylock
-      wdisplays
       wf-recorder
       wl-clipboard
       wl-mirror
+      wlr-randr
       xdg-utils
     ];
   };

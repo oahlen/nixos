@@ -27,6 +27,7 @@
       ps = "procs";
       sudo = "doas";
       vi = "nvim";
+      wlr = "wlr-randr";
     };
 
     functions = {
