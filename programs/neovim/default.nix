@@ -123,10 +123,12 @@
     '';
   };
 
+  # Language servers and linters
   home.packages = with pkgs; [
     alejandra
     nil
     sumneko-lua-language-server
+    zk
   ];
 
   xdg.configFile = {

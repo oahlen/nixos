@@ -12,6 +12,7 @@
     ./git.nix
     ./jq.nix
     ./rbw.nix
+    ./yazi.nix
   ];
 
   programs = {
@@ -48,9 +49,11 @@
     bandwhich
     cargo-make
     dogdns
+    dos2unix
     du-dust
     duf
     fastfetch
+    fd
     figlet
     gping
     hexyl
@@ -61,10 +64,10 @@
     onefetch
     procs
     rage
+    ripgrep
     sd
     tokei
     xsv
-    zk
   ];
 
   xdg.configFile = {

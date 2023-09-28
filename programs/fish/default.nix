@@ -17,11 +17,10 @@
 
     shellAliases = {
       cat = "bat";
-      df = "duf --theme ansi";
-      du = "dust";
+      duf = "duf --theme ansi";
       fetch = "fastfetch";
       gi = "gitui";
-      lf = "joshuto";
+      lf = "yazi";
       nix-edit = "tmuxp load -y nixos";
       ping = "gping";
       ps = "procs";
