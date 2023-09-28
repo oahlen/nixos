@@ -21,6 +21,6 @@
 
   home.sessionPath = [
     "$HOME/.dotnet/tools"
-    "/$XDG_DATA_HOME/cargo/bin"
+    "$XDG_DATA_HOME/cargo/bin"
   ];
 }
