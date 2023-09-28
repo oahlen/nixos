@@ -21,7 +21,7 @@
   };
 
   fonts.fontconfig.enable = true;
-  home.pkgs = with pkgs; [
+  home.packages = with pkgs; [
     (nerdfonts.override {fonts = ["JetBrainsMono"];})
   ];
 
