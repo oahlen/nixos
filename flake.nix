@@ -20,7 +20,6 @@
   outputs = {
     self,
     nixpkgs,
-    rust-overlay,
     ...
   } @ inputs: let
     system = "x86_64-linux";
