@@ -44,8 +44,6 @@
   services.dbus.enable = true;
 
   # Pipewire config
-  security.rtkit.enable = true;
-
   services.pipewire = {
     enable = true;
     alsa = {
@@ -55,6 +53,8 @@
     pulse.enable = true;
     jack.enable = true;
   };
+
+  security.rtkit.enable = true;
 
   sound.enable = false;
 

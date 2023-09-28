@@ -1,4 +1,8 @@
-{username, ...}: {
+{
+  pkgs,
+  username,
+  ...
+}: {
   imports = [
     ../../programs
   ];
@@ -15,6 +19,11 @@
     username = username;
     homeDirectory = "/home/${username}";
   };
+
+  fonts.fontconfig.enable = true;
+  home.pkgs = with pkgs; [
+    (nerdfonts.override {fonts = ["JetBrainsMono"];})
+  ];
 
   programs.home-manager.enable = true;
 
