@@ -98,6 +98,12 @@
               app_id = "pavucontrol";
             };
           }
+          {
+            command = "resize set 1000 600";
+            criteria = {
+              app_id = "iwgtk";
+            };
+          }
         ];
       };
 
@@ -107,6 +113,9 @@
         criteria = [
           {
             app_id = "pavucontrol";
+          }
+          {
+            app_id = "iwgtk";
           }
         ];
       };
