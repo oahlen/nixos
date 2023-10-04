@@ -25,12 +25,7 @@
       }
       {
         plugin = indent-blankline-nvim;
-        config = fromLua ''
-          require "indent_blankline".setup {
-              space_char_blankline = " ",
-              show_current_context = true,
-              show_current_context_start = true,
-          }'';
+        config = fromLua "require 'ibl'.setup()";
       }
       {
         plugin = leap-nvim;
@@ -141,7 +136,7 @@
     ".local/share/nvim/site/pack/plugins/start/iceberg.nvim".source = builtins.fetchGit {
       url = "https://github.com/oahlen/iceberg.nvim";
       ref = "main";
-      rev = "451508cc1e891179d224e48efcc1c94e87b6ffb5";
+      rev = "ae16f4b2e383333d599d12be693ec2df789e15e2";
     };
   };
 }
