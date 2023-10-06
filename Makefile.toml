@@ -12,8 +12,8 @@ args = ["flake", "update"]
 
 [tasks.gc]
 dependencies = [
-    "clean-system",
-    "clean-home"
+    "gc-system",
+    "gc-home"
 ]
 
 [tasks.gc-system]
