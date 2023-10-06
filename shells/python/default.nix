@@ -6,7 +6,7 @@
   pkgs = import nixpkgs {inherit system;};
 in
   pkgs.mkShell {
-    packages = with pkgs;
+    buildInputs = with pkgs;
       [
         python311
         virtualenv

@@ -24,6 +24,9 @@
   } @ inputs: let
     system = "x86_64-linux";
     username = "oahlen";
+    forAllSystems = nixpkgs.lib.genAttrs [
+      system
+    ];
   in {
     nixosConfigurations.desktop = import ./hosts/desktop {
       inherit self nixpkgs inputs system username;
@@ -41,16 +44,21 @@
       inherit self nixpkgs inputs system username;
     };
 
-    devShells = {
-      dotnet = import ./shells/dotnet {
-        inherit self nixpkgs system;
-      };
-      python = import ./shells/python {
-        inherit self nixpkgs system;
-      };
-      rust = import ./shells/rust {
-        inherit self nixpkgs inputs system;
-      };
-    };
+    devShells = forAllSystems (
+      system: {
+        dotnet = import ./shells/dotnet {
+          inherit self nixpkgs system;
+        };
+        python = import ./shells/python {
+          inherit self nixpkgs system;
+        };
+        rust = import ./shells/rust {
+          inherit self nixpkgs inputs system;
+        };
+        playground = import ./shells/playground {
+          inherit self nixpkgs system;
+        };
+      }
+    );
   };
 }

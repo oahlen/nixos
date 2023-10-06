@@ -19,7 +19,7 @@
   pkgs = import nixpkgs {inherit system overlays;};
 in
   pkgs.mkShell {
-    packages = with pkgs; [
+    buildInputs = with pkgs; [
       bacon
       cargo-deny
       cargo-edit
