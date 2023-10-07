@@ -17,11 +17,13 @@
   home.packages = with pkgs; [
     # factorio
     gnome-multi-writer
+    inkscape
     iwgtk
     keepassxc
     pinta
     podman-compose
     prismlauncher
+    steam-run
     xfce.mousepad
     xfce.ristretto
   ];
