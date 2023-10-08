@@ -70,7 +70,7 @@
 
       output = {
         "*" = {
-          bg = "~/Pictures/Wallpapers/nixos.png fit #1a1b26";
+          bg = "~/Pictures/Wallpapers/nixos.png fit #161821";
         };
       };
 

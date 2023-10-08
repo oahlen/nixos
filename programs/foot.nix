@@ -28,8 +28,8 @@
         foreground = "c6c8d1";
         background = "161821";
 
-        selection-foreground = "1e2132";
-        selection-background = "c6c8d1";
+        selection-foreground = "c6c8d1";
+        selection-background = "272c42";
 
         regular0 = "1e2132";
         regular1 = "e27878";
