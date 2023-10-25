@@ -61,10 +61,6 @@ cd /mnt/etc/nixos/
 sudo vim configuration.nix
 ```
 
-### Update or edit configuration.nix
-
-TODO
-
 ### Install NixOS
 
 ```bash

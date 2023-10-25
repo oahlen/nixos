@@ -136,7 +136,7 @@
     ".local/share/nvim/site/pack/plugins/start/iceberg.nvim".source = builtins.fetchGit {
       url = "https://github.com/oahlen/iceberg.nvim";
       ref = "main";
-      rev = "ae16f4b2e383333d599d12be693ec2df789e15e2";
+      rev = "eae74821df5a25ddd77ef3e8e338acefe419d034";
     };
   };
 }
