@@ -43,6 +43,14 @@
     };
 
     zoxide.enable = true;
+
+    translate-shell = {
+      enable = true;
+      settings = {
+        hl = "en";
+        tl = ["sv"];
+      };
+    };
   };
 
   home.packages = with pkgs; [
