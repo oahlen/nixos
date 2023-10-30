@@ -16,8 +16,9 @@
   environment.systemPackages = with pkgs; [
     calc
     curl
-    fd
     dos2unix
+    fd
+    libimobiledevice
     neovim
     ripgrep
     unzip

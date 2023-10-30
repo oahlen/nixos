@@ -5,7 +5,6 @@
 }: {
   imports = [
     ./hardware-configuration.nix
-    ./packages.nix
     ./../../devices
     ./../../system
     ./../../profiles/sway

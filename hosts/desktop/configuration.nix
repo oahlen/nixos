@@ -5,7 +5,6 @@
 }: {
   imports = [
     ./hardware-configuration.nix
-    ./packages.nix
     ./../../devices
     ./../../system
     ./../../profiles/sway
@@ -28,9 +27,14 @@
     driSupport32Bit = true;
 
     extraPackages = with pkgs; [
-      vaapiVdpau
       libvdpau-va-gl
+      mangohud
+      radeontop
+      vaapiVdpau
+      vulkan-tools
     ];
+
+    extraPackages32 = with pkgs; [mangohud];
   };
 
   time.timeZone = "Europe/Stockholm";
@@ -46,6 +50,8 @@
     dockerCompat = true;
     defaultNetwork.settings.dns_enabled = true;
   };
+
+  programs.steam.enable = true;
 
   users.users.${username} = {
     uid = 1000;

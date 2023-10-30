@@ -5,7 +5,6 @@
 }: {
   imports = [
     ./hardware-configuration.nix
-    ./packages.nix
     ./../../devices
     ./../../system
     ./../../profiles/sway
@@ -80,6 +79,10 @@
   programs.dconf.enable = true;
 
   services.flatpak.enable = true;
+
+  environment.systemPackages = with pkgs; [
+    openfortivpn
+  ];
 
   users.users.${username} = {
     uid = 1000;
