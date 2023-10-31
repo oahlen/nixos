@@ -7,6 +7,7 @@
     ./hardware-configuration.nix
     ./../../devices
     ./../../system
+    ./../../system/network
     ./../../profiles/sway
   ];
 

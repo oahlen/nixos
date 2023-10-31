@@ -5,6 +5,7 @@
 }: {
   imports = [
     ../../programs
+    ../../profiles/sway/home/foot.nix
   ];
 
   xdg = {

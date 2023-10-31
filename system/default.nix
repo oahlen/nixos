@@ -5,7 +5,6 @@
     ./fonts.nix
     ./kernel.nix
     ./locale.nix
-    ./network.nix
     ./nix.nix
   ];
 

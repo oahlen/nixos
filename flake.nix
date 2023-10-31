@@ -45,10 +45,12 @@
       inherit self nixpkgs inputs system username;
     };
 
+    # NixOS WSL configuration
     nixosConfigurations.nixos = import ./hosts/wsl {
       inherit self nixpkgs inputs system username;
     };
 
+    # Generic nix + home-manager configuration
     homeConfigurations."${username}@debian" = import ./hosts/generic {
       inherit self nixpkgs inputs system username;
     };
