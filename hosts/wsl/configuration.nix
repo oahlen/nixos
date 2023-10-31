@@ -4,9 +4,11 @@
   ...
 }: {
   imports = [
-    ./hardware-configuration.nix
     ./../../system
   ];
+
+  wsl.enable = true;
+  wsl.defaultUser = "${username}";
 
   time.timeZone = "Europe/Stockholm";
 
