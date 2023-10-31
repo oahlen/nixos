@@ -104,6 +104,25 @@
         ];
       };
 
+      vega-234 = {
+        outputs = [
+          {
+            criteria = "eDP-1";
+            status = "disable";
+          }
+          {
+            criteria = "Dell Inc. DELL U2722D 6C65X83";
+            status = "enable";
+            position = "0,0";
+          }
+          {
+            criteria = "Dell Inc. DELL U2722D 4B65X83";
+            status = "enable";
+            position = "2560,0";
+          }
+        ];
+      };
+
       vega-235 = {
         outputs = [
           {

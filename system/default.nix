@@ -7,7 +7,6 @@
     ./locale.nix
     ./network.nix
     ./nix.nix
-    ./tailscale.nix
   ];
 
   # Very important system packages

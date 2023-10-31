@@ -11,6 +11,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    nixos-wsl = {
+      url = "github:nix-community/home-manager/NixOS-WSL";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     rust-overlay = {
       url = "github:oxalica/rust-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -37,6 +42,10 @@
     };
 
     nixosConfigurations.xps15 = import ./hosts/xps15 {
+      inherit self nixpkgs inputs system username;
+    };
+
+    nixosConfigurations.nixos = import ./hosts/wsl {
       inherit self nixpkgs inputs system username;
     };
 

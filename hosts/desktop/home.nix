@@ -2,6 +2,7 @@
   imports = [
     ../../profiles/sway/home
     ../../programs
+    ../../programs/rbw.nix
   ];
 
   xdg = {

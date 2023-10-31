@@ -7,11 +7,9 @@
     ./bat.nix
     ./bottom.nix
     ./env.nix
-    ./foot.nix
     ./fzf.nix
     ./git.nix
     ./jq.nix
-    ./rbw.nix
     ./yazi.nix
   ];
 

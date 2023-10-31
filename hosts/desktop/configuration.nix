@@ -7,6 +7,7 @@
     ./hardware-configuration.nix
     ./../../devices
     ./../../system
+    ./../../system/tailscale.nix
     ./../../profiles/sway
   ];
 

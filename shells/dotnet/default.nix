@@ -29,5 +29,6 @@ in
         ])
       netcoredbg
       omnisharp-roslyn
+      openssl
     ];
   }
