@@ -2,6 +2,7 @@
   programs.neovim = let
     fromLua = str: "lua << EOF\n${str}\nEOF\n";
     fromLuaFile = file: "lua << EOF\n${builtins.readFile file}\nEOF\n";
+    iceberg-nvim = import ./iceberg.nix {inherit pkgs;};
   in {
     enable = true;
     vimAlias = true;
@@ -23,6 +24,7 @@
         plugin = gitsigns-nvim;
         config = fromLuaFile ./plugins/gitsigns.lua;
       }
+      iceberg-nvim
       {
         plugin = indent-blankline-nvim;
         config = fromLua "require 'ibl'.setup()";
@@ -130,13 +132,5 @@
     "nvim/ftdetect/avsc.vim".source = ./ftdetect/avsc.vim;
     "nvim/ftdetect/axaml.vim".source = ./ftdetect/axaml.vim;
     "nvim/lua/statusline/init.lua".source = ./lua/statusline/init.lua;
-  };
-
-  home.file = {
-    ".local/share/nvim/site/pack/plugins/start/iceberg.nvim".source = builtins.fetchGit {
-      url = "https://github.com/oahlen/iceberg.nvim";
-      ref = "main";
-      rev = "eae74821df5a25ddd77ef3e8e338acefe419d034";
-    };
   };
 }
