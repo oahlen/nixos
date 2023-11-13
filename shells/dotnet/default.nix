@@ -12,6 +12,7 @@ in
         fontconfig
         libGL
         libxkbcommon
+        mono # For certain tools like Microsoft sbom tool
         wayland
         xorg.libICE
         xorg.libSM
