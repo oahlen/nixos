@@ -85,6 +85,11 @@
     openfortivpn
   ];
 
+  networking.firewall = {
+    enable = true;
+    allowedTCPPorts = [1313];
+  };
+
   users.users.${username} = {
     uid = 1000;
     isNormalUser = true;
