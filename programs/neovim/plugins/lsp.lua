@@ -96,6 +96,14 @@ lsp_config.tsserver.setup {
     on_attach = on_attach
 }
 
+lsp_config.html.setup {
+    on_attach = on_attach
+}
+
+lsp_config.cssls.setup {
+    on_attach = on_attach
+}
+
 lsp_config.svelte.setup {
     on_attach = on_attach
 }
