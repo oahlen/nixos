@@ -37,6 +37,7 @@
     keepassxc
     libreoffice-fresh
     nodejs
+    pinta
     podman-compose
     pqrs
     prismlauncher
