@@ -5,7 +5,6 @@
 }: {
   imports = [
     ../../programs
-    ../../profiles/sway/home/foot.nix
   ];
 
   xdg = {
@@ -21,9 +20,12 @@
     homeDirectory = "/home/${username}";
   };
 
-  fonts.fontconfig.enable = true;
   home.packages = with pkgs; [
-    (nerdfonts.override {fonts = ["JetBrainsMono"];})
+    awscli2
+    dotnet-sdk_8
+    nodejs
+    podman-compose
+    pqrs
   ];
 
   programs.home-manager.enable = true;
