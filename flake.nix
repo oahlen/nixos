@@ -11,14 +11,32 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    flake-utils = {
+      url = "github:numtide/flake-utils";
+    };
+
     nixos-wsl = {
       url = "github:nix-community/NixOS-WSL";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        flake-utils.follows = "flake-utils";
+      };
     };
 
     rust-overlay = {
       url = "github:oxalica/rust-overlay";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        flake-utils.follows = "flake-utils";
+      };
+    };
+
+    iceberg = {
+      url = "github:oahlen/iceberg.nvim";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        flake-utils.follows = "flake-utils";
+      };
     };
   };
 
@@ -52,7 +70,7 @@
 
     # Generic nix + home-manager configuration
     homeConfigurations."${username}@debian" = import ./hosts/generic {
-      inherit self nixpkgs inputs system username;
+      inherit self nixpkgs inputs system;
     };
 
     devShells = forAllSystems (

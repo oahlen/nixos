@@ -2,7 +2,6 @@
   nixpkgs,
   inputs,
   system,
-  username,
   ...
 }:
 inputs.home-manager.lib.homeManagerConfiguration {
@@ -17,5 +16,5 @@ inputs.home-manager.lib.homeManagerConfiguration {
     ./home.nix
   ];
 
-  extraSpecialArgs = {inherit username;};
+  extraSpecialArgs = {inherit inputs system;};
 }

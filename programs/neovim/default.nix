@@ -1,8 +1,13 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  inputs,
+  system,
+  ...
+}: {
   programs.neovim = let
     fromLua = str: "lua << EOF\n${str}\nEOF\n";
     fromLuaFile = file: "lua << EOF\n${builtins.readFile file}\nEOF\n";
-    iceberg-nvim = import ./iceberg.nix {inherit pkgs;};
+    iceberg-nvim = inputs.iceberg.packages.${system}.default;
   in {
     enable = true;
     vimAlias = true;
