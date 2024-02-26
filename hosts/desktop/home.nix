@@ -16,7 +16,6 @@
   programs.firefox.enable = true;
 
   home.packages = with pkgs; [
-    # factorio
     gnome-multi-writer
     inkscape
     iwgtk
