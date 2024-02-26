@@ -4,8 +4,15 @@
   ...
 }: let
   pkgs = import nixpkgs {inherit system;};
+  combined = with pkgs.dotnetCorePackages;
+    combinePackages [
+      sdk_6_0
+      sdk_8_0
+    ];
 in
   pkgs.mkShell {
+    ASPNETCORE_ENVIRONMENT = "Development";
+    DOTNET_ROOT = "${combined}";
     # For GUI based applications
     LD_LIBRARY_PATH = with pkgs;
       lib.makeLibraryPath [
@@ -23,11 +30,7 @@ in
       ];
 
     buildInputs = with pkgs; [
-      (with dotnetCorePackages;
-        combinePackages [
-          sdk_6_0
-          sdk_8_0
-        ])
+      combined
       netcoredbg
       omnisharp-roslyn
       openssl

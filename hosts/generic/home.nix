@@ -22,7 +22,6 @@
 
   home.packages = with pkgs; [
     awscli2
-    dotnet-sdk_8
     nodejs
     podman-compose
     pqrs

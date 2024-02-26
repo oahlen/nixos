@@ -31,7 +31,6 @@
   home.packages = with pkgs; [
     awscli2
     dbeaver
-    dotnet-sdk_7
     iwgtk
     jetbrains.rider
     keepassxc
