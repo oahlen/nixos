@@ -38,3 +38,4 @@ set -g __fish_git_prompt_color purple --bold
 
 # Custom
 set -g fish_color_prefix green --bold
+set -g fish_color_special green --bold
