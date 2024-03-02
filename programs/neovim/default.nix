@@ -72,6 +72,10 @@
       omnisharp-extended-lsp-nvim
       plenary-nvim
       popup-nvim
+      {
+        plugin = tabby-nvim;
+        config = fromLuaFile ./plugins/tabby.lua;
+      }
       telescope-fzf-native-nvim
       {
         plugin = telescope-nvim;
