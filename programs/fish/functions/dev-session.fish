@@ -1,4 +1,4 @@
-function dev-session --argument-names "session" --description "Create a tmux dev session and attach to it"
+function dev-session --argument-names session --description "Create a tmux dev session and attach to it"
     if not test -n "$session"
         echo "Session name must be provided"
         return

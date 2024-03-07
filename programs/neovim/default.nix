@@ -5,14 +5,11 @@
   ...
 }: {
   programs.neovim = let
-    fromLua = str: "lua << EOF\n${str}\nEOF\n";
-    fromLuaFile = file: "lua << EOF\n${builtins.readFile file}\nEOF\n";
     iceberg-nvim = inputs.iceberg.packages.${system}.default;
   in {
     enable = true;
     vimAlias = true;
     defaultEditor = true;
-    withNodeJs = true;
 
     plugins = with pkgs.vimPlugins; [
       cmp-buffer
@@ -20,67 +17,28 @@
       cmp-nvim-lsp
       cmp-nvim-lua
       cmp-path
-      {
-        plugin = comment-nvim;
-        config = fromLua "require 'Comment'.setup()";
-      }
+      comment-nvim
+      conform-nvim
       friendly-snippets
-      {
-        plugin = gitsigns-nvim;
-        config = fromLuaFile ./plugins/gitsigns.lua;
-      }
+      gitsigns-nvim
       iceberg-nvim
-      {
-        plugin = indent-blankline-nvim;
-        config = fromLua "require 'ibl'.setup()";
-      }
-      {
-        plugin = leap-nvim;
-        config = fromLua "require 'leap'.add_default_mappings()";
-      }
+      indent-blankline-nvim
+      leap-nvim
       luasnip
-      {
-        plugin = nvim-autopairs;
-        config = fromLuaFile ./plugins/autopairs.lua;
-      }
-      {
-        plugin = nvim-cmp;
-        config = fromLuaFile ./plugins/cmp.lua;
-      }
-      {
-        plugin = nvim-colorizer-lua;
-        config = fromLua "require 'colorizer'.setup()";
-      }
-      {
-        plugin = nvim-dap;
-        config = fromLuaFile ./plugins/dap.lua;
-      }
+      nvim-autopairs
+      nvim-cmp
+      nvim-colorizer-lua
+      nvim-dap
       nvim-dap-virtual-text
-      {
-        plugin = nvim-lspconfig;
-        config = fromLuaFile ./plugins/lsp.lua;
-      }
-      {
-        plugin = nvim-surround;
-        config = fromLua "require 'nvim-surround'.setup()";
-      }
-      {
-        plugin = nvim-tree-lua;
-        config = fromLuaFile ./plugins/nvim-tree.lua;
-      }
+      nvim-lspconfig
+      nvim-surround
+      nvim-tree-lua
       nvim-web-devicons
       omnisharp-extended-lsp-nvim
       plenary-nvim
       popup-nvim
-      {
-        plugin = tabby-nvim;
-        config = fromLuaFile ./plugins/tabby.lua;
-      }
       telescope-fzf-native-nvim
-      {
-        plugin = telescope-nvim;
-        config = fromLuaFile ./plugins/telescope.lua;
-      }
+      telescope-nvim
       telescope-ui-select-nvim
       {
         plugin = nvim-treesitter.withPlugins (plugins:
@@ -116,15 +74,12 @@
             vimdoc
             yaml
           ]);
-        config = fromLuaFile ./plugins/treesitter.lua;
       }
+      which-key-nvim
     ];
 
     extraLuaConfig = ''
-      ${builtins.readFile ./options.lua}
-      ${builtins.readFile ./keymaps.lua}
-      ${builtins.readFile ./commands.lua}
-      require "statusline"
+      ${builtins.readFile ./init.lua}
     '';
   };
 
