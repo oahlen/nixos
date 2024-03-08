@@ -142,6 +142,8 @@ require("gitsigns").setup {
         local gs = package.loaded.gitsigns
         vim.keymap.set("n", "<space>hb", function() gs.blame_line { full = true } end,
             { desc = "[H]istory [B]lame", buffer = bufnr })
+        vim.keymap.set('n', '<space>ht', gs.toggle_current_line_blame,
+            { desc = "[H]istory [T]oggle blame", buffer = bufnr })
     end
 }
 
