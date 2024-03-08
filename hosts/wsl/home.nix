@@ -18,5 +18,9 @@
     pqrs
   ];
 
+  home.sessionVariables = {
+    COLORTERM = "truecolor"; # Windows Terminal fix
+  };
+
   home.stateVersion = "23.05";
 }
