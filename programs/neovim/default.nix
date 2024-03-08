@@ -94,6 +94,7 @@
   xdg.configFile = {
     "nvim/ftdetect/avsc.vim".source = ./ftdetect/avsc.vim;
     "nvim/ftdetect/axaml.vim".source = ./ftdetect/axaml.vim;
+    "nvim/ftdetect/flake.vim".source = ./ftdetect/flake.vim;
 
     "nvim/lua/plugins/cmp.lua".source = ./lua/plugins/cmp.lua;
     "nvim/lua/plugins/conform.lua".source = ./lua/plugins/conform.lua;
