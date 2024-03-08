@@ -94,6 +94,17 @@
   xdg.configFile = {
     "nvim/ftdetect/avsc.vim".source = ./ftdetect/avsc.vim;
     "nvim/ftdetect/axaml.vim".source = ./ftdetect/axaml.vim;
+
+    "nvim/lua/plugins/cmp.lua".source = ./lua/plugins/cmp.lua;
+    "nvim/lua/plugins/conform.lua".source = ./lua/plugins/conform.lua;
+    "nvim/lua/plugins/dap.lua".source = ./lua/plugins/dap.lua;
+    "nvim/lua/plugins/gitsigns.lua".source = ./lua/plugins/gitsigns.lua;
+    "nvim/lua/plugins/lsp.lua".source = ./lua/plugins/lsp.lua;
+    "nvim/lua/plugins/nvim-tree.lua".source = ./lua/plugins/nvim-tree.lua;
+    "nvim/lua/plugins/telescope.lua".source = ./lua/plugins/telescope.lua;
+    "nvim/lua/plugins/treesitter.lua".source = ./lua/plugins/treesitter.lua;
+    "nvim/lua/plugins/which-key.lua".source = ./lua/plugins/which-key.lua;
+
     "nvim/lua/statusline/init.lua".source = ./lua/statusline/init.lua;
   };
 }
