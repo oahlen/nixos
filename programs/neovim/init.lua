@@ -61,15 +61,6 @@ vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 -- vim.g.loaded_zipPlugin = 1
 
 -- Commands
-
--- Fix cursor in terminal on exiting
--- vim.cmd [[
---   augroup RestoreCursorShapeOnExit
---     autocmd!
---     autocmd VimLeave * set guicursor=a:ver24
---   augroup END
--- ]]
-
 vim.api.nvim_create_autocmd("TextYankPost", {
     desc = "Highlight when yanking text",
     group = vim.api.nvim_create_augroup("highlight-yank", { clear = true }),

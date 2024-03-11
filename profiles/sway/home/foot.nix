@@ -9,22 +9,13 @@
     settings = {
       main = {
         shell = "${lib.getExe pkgs.fish}";
-
         term = "xterm-256color";
         font = "JetBrainsMono Nerd Font:size=11";
         dpi-aware = "no";
-
         pad = "10x10";
-        initial-window-size-chars = "150x50";
-      };
-
-      cursor = {
-        style = "beam";
       };
 
       colors = {
-        alpha = "1";
-
         foreground = "c6c8d1";
         background = "161821";
 

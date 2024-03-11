@@ -4,6 +4,10 @@
 
     shellInit = ''
       set fish_greeting
+
+      set fish_vi_force_cursor
+      set fish_cursor_default block
+      set fish_cursor_insert line
     '';
 
     shellAbbrs = {
@@ -46,6 +50,7 @@
 
     "fish/functions/colors.fish".source = ./functions/colors.fish;
     "fish/functions/dev-session.fish".source = ./functions/dev-session.fish;
+    "fish/functions/fish_mode_prompt.fish".source = ./functions/fish_mode_prompt.fish;
     "fish/functions/fish_prompt.fish".source = ./functions/fish_prompt.fish;
   };
 }
