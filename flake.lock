@@ -115,11 +115,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1708978437,
-        "narHash": "sha256-eRtrC2sGotq/2qtVLnFw8/BDdYOTxqmP3aMT5qZHVvc=",
+        "lastModified": 1710182006,
+        "narHash": "sha256-ShXtVKhAgnQt3rNjVb6uE+Bm7/7vKvAWI1RoHWlCGuM=",
         "owner": "oahlen",
         "repo": "iceberg.nvim",
-        "rev": "a7f0eae2533d078f9e848a19bfba946242f710cb",
+        "rev": "366c48a6099410507f8f4208c4dcdc58ef6e7edc",
         "type": "github"
       },
       "original": {
