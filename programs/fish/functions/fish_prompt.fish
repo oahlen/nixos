@@ -14,6 +14,6 @@ function fish_prompt --description "Write out the prompt"
         set shell_prompt (set_color normal)" with" (set_color $fish_color_special)" (fhs)"
     end
 
-    echo -s " "(set_color $fish_color_cwd)(prompt_pwd) (set_color normal)" on"(fish_vcs_prompt) $shell_prompt $status_prompt
+    echo -s (set_color $fish_color_cwd)(prompt_pwd) (set_color normal)" on"(fish_vcs_prompt) $shell_prompt $status_prompt
     echo -n -s (set_color $fish_color_prefix)"> "
 end

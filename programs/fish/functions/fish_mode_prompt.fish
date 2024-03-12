@@ -1,7 +1,7 @@
 function fish_mode_prompt --description "Write out the mode prompt"
     switch $fish_bind_mode
         case default
-            set_color --bold white
+            set_color --bold red
             echo "[N]"
         case insert
             set_color --bold green
@@ -17,4 +17,5 @@ function fish_mode_prompt --description "Write out the mode prompt"
             echo "[?]"
     end
     set_color normal
+    echo " "
 end
