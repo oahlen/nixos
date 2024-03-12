@@ -30,14 +30,6 @@
         flake-utils.follows = "flake-utils";
       };
     };
-
-    iceberg = {
-      url = "github:oahlen/iceberg.nvim";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        flake-utils.follows = "flake-utils";
-      };
-    };
   };
 
   outputs = {

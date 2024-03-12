@@ -1,11 +1,6 @@
-{
-  pkgs,
-  inputs,
-  system,
-  ...
-}: {
+{pkgs, ...}: {
   programs.neovim = let
-    iceberg-nvim = inputs.iceberg.packages.${system}.default;
+    iceberg-nvim = import ./iceberg.nix {inherit pkgs;};
   in {
     enable = true;
     vimAlias = true;
