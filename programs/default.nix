@@ -53,7 +53,6 @@
 
   home.packages = with pkgs; [
     bandwhich
-    cargo-make
     dogdns
     dos2unix
     du-dust
