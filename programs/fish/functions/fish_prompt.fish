@@ -10,8 +10,8 @@ function fish_prompt --description "Write out the prompt"
     end
 
     set -l shell_prompt
-    if test $FHS
-        set shell_prompt (set_color normal)" with" (set_color $fish_color_special)" (fhs)"
+    if test $NIX_SHELL
+        set shell_prompt (set_color normal)" with" (set_color $fish_color_special)" ($NIX_SHELL)"
     end
 
     echo -s (set_color $fish_color_cwd)(prompt_pwd) (set_color normal)" on"(fish_vcs_prompt) $shell_prompt $status_prompt

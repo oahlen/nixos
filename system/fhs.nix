@@ -7,7 +7,7 @@
         // {
           name = "fhs";
           targetPkgs = pkgs: (base.targetPkgs pkgs) ++ [pkgs.pkg-config];
-          profile = "export FHS=1";
+          profile = "export NIX_SHELL=FHS";
           runScript = "fish";
           extraOutputsToInstall = ["dev"];
         }))
