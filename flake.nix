@@ -49,7 +49,7 @@
       inherit self nixpkgs inputs system;
     };
 
-    devShells.system.playground = import ./shells/playground {
+    devShells."x86_64-linux".playground = import ./shells/playground {
       inherit self nixpkgs system;
     };
   };
