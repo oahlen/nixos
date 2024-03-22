@@ -3,6 +3,7 @@
     ../../profiles/sway/home
     ../../programs
     ../../programs/rbw.nix
+    ../../programs/idea
     ./kanshi.nix
   ];
 
@@ -32,7 +33,6 @@
     awscli2
     dbeaver
     iwgtk
-    jetbrains.rider
     keepassxc
     libreoffice-fresh
     nodejs
