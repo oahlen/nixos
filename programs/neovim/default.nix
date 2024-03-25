@@ -83,7 +83,6 @@
     alejandra
     nil
     sumneko-lua-language-server
-    zk
   ];
 
   xdg.configFile = {
