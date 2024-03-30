@@ -14,7 +14,10 @@
   networking.hostName = "desktop";
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
+
   boot.initrd.kernelModules = ["amdgpu"];
+  boot.kernelParams = ["amdgpu.ppfeaturemask=0xffffffff"]; # To enable AMD undervolting
+
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
@@ -53,6 +56,9 @@
   };
 
   programs.steam.enable = true;
+
+  programs.corectrl.enable = true;
+
   programs.gamemode = {
     enable = true;
     settings = {
