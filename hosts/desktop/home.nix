@@ -5,6 +5,9 @@
     ../../programs/rbw.nix
   ];
 
+  sway.defaultDisplay = "DP-1";
+  sway.enableSwayIdle = false;
+
   xdg = {
     enable = true;
     userDirs = {
