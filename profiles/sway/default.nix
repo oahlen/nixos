@@ -84,13 +84,9 @@
   programs.ssh.startAgent = true;
 
   # File manager
-  programs.thunar = {
-    enable = true;
-    plugins = with pkgs.xfce; [
-      thunar-archive-plugin
-      thunar-volman
-    ];
-  };
+  environment.systemPackages = with pkgs; [
+    gnome.nautilus
+  ];
 
   programs.file-roller.enable = true;
 
