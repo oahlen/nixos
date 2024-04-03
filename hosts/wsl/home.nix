@@ -18,6 +18,8 @@
     pqrs
   ];
 
+  programs.git.lfs.enable = true;
+
   home.sessionVariables = {
     COLORTERM = "truecolor"; # Windows Terminal fix
   };
