@@ -19,6 +19,7 @@ in {
     ./fuzzel.nix
     ./i3status-rust.nix
     ./mako.nix
+    ./swayidle.nix
     ./swaylock.nix
     ./wl-sunset.nix
     ./zathura.nix
@@ -29,14 +30,6 @@ in {
     default = "eDP-1";
     description = lib.mdDoc ''
       The default display of the system
-    '';
-  };
-
-  options.sway.enableSwayIdle = lib.mkOption {
-    type = lib.types.bool;
-    default = true;
-    description = lib.mdDoc ''
-      Whether to enable swayidle or not
     '';
   };
 
@@ -262,6 +255,9 @@ in {
       };
 
       extraConfig = ''
+        # Inhibit swayidle when fullscreen
+        for_window [shell=".*"] inhibit_idle fullscreen
+
         # Screen brightness
         bindsym --locked XF86MonBrightnessUp exec brightnessctl set +5%
         bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
@@ -321,29 +317,6 @@ in {
           };
         };
       };
-    };
-
-    services.swayidle = {
-      enable = config.sway.enableSwayIdle;
-
-      events = [
-        {
-          event = "before-sleep";
-          command = swaylock;
-        }
-      ];
-
-      timeouts = [
-        {
-          timeout = 900;
-          command = swaylock;
-        }
-        {
-          timeout = 1800;
-          command = "${swaymsg} 'output * power off'";
-          resumeCommand = "${swaymsg} 'output * power on'";
-        }
-      ];
     };
   };
 }
