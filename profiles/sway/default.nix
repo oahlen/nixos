@@ -41,7 +41,11 @@
   };
 
   programs.dconf.enable = true;
-  services.dbus.enable = true;
+
+  services.dbus = {
+    enable = true;
+    packages = [pkgs.gcr];
+  };
 
   # Pipewire config
   services.pipewire = {

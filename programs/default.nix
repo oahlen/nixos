@@ -23,7 +23,6 @@
 
     eza = {
       enable = true;
-      enableAliases = true;
     };
 
     direnv = {
