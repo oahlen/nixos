@@ -10,7 +10,7 @@
       main = {
         shell = "${lib.getExe pkgs.fish}";
         term = "xterm-256color";
-        font = "JetBrainsMono Nerd Font:size=11";
+        font = "JetBrainsMono Nerd Font:size=11.5";
         dpi-aware = "no";
         pad = "10x10";
       };

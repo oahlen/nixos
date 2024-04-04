@@ -10,7 +10,6 @@ vim.o.breakindent = true
 vim.o.clipboard = "unnamedplus"
 vim.o.cursorline = true
 vim.o.expandtab = true
-vim.o.guifont = "JetBrains Mono Nerd Font:h11"
 vim.o.hlsearch = true
 vim.o.ignorecase = true
 vim.o.incsearch = true

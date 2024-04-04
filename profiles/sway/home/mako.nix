@@ -1,7 +1,7 @@
 {...}: {
   services.mako = {
     enable = true;
-    font = "JetBrainsMono Nerd Font 11";
+    font = "JetBrainsMono Nerd Font 11.5";
     anchor = "bottom-right";
 
     defaultTimeout = 10000;

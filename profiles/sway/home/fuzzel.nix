@@ -3,7 +3,7 @@
     enable = true;
     settings = {
       main = {
-        font = "JetBrainsMono Nerd Font:size=11";
+        font = "JetBrainsMono Nerd Font:size=11.5";
         terminal = "${pkgs.foot}/bin/foot -e";
         launch-prefix = "${pkgs.sway}/bin/swaymsg exec --";
         icons-enabled = "no";

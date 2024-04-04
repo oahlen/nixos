@@ -4,7 +4,7 @@
 
     options = {
       selection-clipboard = "clipboard";
-      font = "JetBrainsMono Nerd Font normal 11";
+      font = "JetBrainsMono Nerd Font normal 11.5";
 
       recolor-lightcolor = "#161821";
       recolor-darkcolor = "#c6c8d1";

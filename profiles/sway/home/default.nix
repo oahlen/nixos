@@ -75,7 +75,7 @@ in {
       config = {
         fonts = {
           names = ["JetBrainsMono Nerd Font"];
-          size = 11.0;
+          size = 11.5;
         };
 
         input = {
@@ -211,7 +211,7 @@ in {
 
             fonts = {
               names = ["JetBrainsMono Nerd Font"];
-              size = 11.0;
+              size = 11.5;
             };
 
             extraConfig = ''
@@ -285,7 +285,7 @@ in {
 
         settings = {
           "<config>" = {
-            font = "JetBrainsMono Nerd Font 11";
+            font = "JetBrainsMono Nerd Font 11.5";
             edge = "bottom";
 
             border-bottom-size = 0;
