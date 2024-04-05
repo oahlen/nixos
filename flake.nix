@@ -22,35 +22,69 @@
   outputs = {
     self,
     nixpkgs,
+    home-manager,
     ...
   } @ inputs: let
-    system = "x86_64-linux";
     username = "oahlen";
   in {
-    nixosConfigurations.desktop = import ./hosts/desktop {
-      inherit self nixpkgs inputs system username;
-    };
+    nixosConfigurations = let
+      makeHost = hostname: system:
+        nixpkgs.lib.nixosSystem {
+          system = system;
+          specialArgs = {inherit inputs username;};
 
-    nixosConfigurations.notebook = import ./hosts/notebook {
-      inherit self nixpkgs inputs system username;
-    };
+          modules = [
+            ./hosts/${hostname}/configuration.nix
 
-    nixosConfigurations.xps15 = import ./hosts/xps15 {
-      inherit self nixpkgs inputs system username;
-    };
+            home-manager.nixosModules.home-manager
+            {
+              nixpkgs.config.allowUnfree = true;
 
-    # NixOS WSL configuration
-    nixosConfigurations.nixos = import ./hosts/wsl {
-      inherit self nixpkgs inputs system username;
+              home-manager = {
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                users.${username} = import ./hosts/${hostname}/home.nix;
+                extraSpecialArgs.inputs = inputs;
+              };
+            }
+
+            inputs.nixos-wsl.nixosModules.wsl
+          ];
+        };
+    in {
+      desktop = makeHost "desktop" "x86_64-linux";
+      notebook = makeHost "notebook" "x86_64-linux";
+      xps15 = makeHost "xps15" "x86_64-linux";
+      nixos = makeHost "wsl" "x86_64-linux";
     };
 
     # Generic nix + home-manager configuration
-    homeConfigurations."${username}@debian" = import ./hosts/generic {
-      inherit self nixpkgs inputs system;
+    homeConfigurations = let
+      makeHost = system:
+        inputs.home-manager.lib.homeManagerConfiguration {
+          pkgs = import nixpkgs {
+            inherit system;
+            config = {
+              allowUnfree = true;
+            };
+          };
+
+          modules = [
+            ./generic/home.nix
+          ];
+
+          extraSpecialArgs = {inherit inputs system;};
+        };
+    in {
+      debian = makeHost "x86_64-linux";
     };
 
-    devShells."x86_64-linux".playground = import ./shells/playground {
-      inherit self nixpkgs system;
+    devShells = let
+      system = "x86_64-linux";
+    in {
+      system.playground = import ./shells/playground {
+        inherit self nixpkgs system;
+      };
     };
   };
 }
