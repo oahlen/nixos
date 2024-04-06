@@ -104,6 +104,8 @@ in {
 
         menu = "${pkgs.fuzzel}/bin/fuzzel";
 
+        defaultWorkspace = "workspace number 1";
+
         window = {
           border = 1;
           hideEdgeBorders = "smart";
