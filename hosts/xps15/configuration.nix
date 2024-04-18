@@ -58,13 +58,6 @@
 
   services.printing.enable = true;
 
-  services.pppd.enable = true;
-  # Workaround for openfortivpn
-  environment.etc."ppp/options".text = ''
-    ipcp-accept-local
-    ipcp-accept-remote
-  '';
-
   virtualisation.podman = {
     enable = true;
     dockerCompat = true;
@@ -79,9 +72,6 @@
 
   services.flatpak.enable = true;
 
-  environment.systemPackages = with pkgs; [
-    openfortivpn
-  ];
 
   networking.firewall = {
     enable = true;
