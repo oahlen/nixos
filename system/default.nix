@@ -1,5 +1,6 @@
 {pkgs, ...}: {
   imports = [
+    ./gaming
     ./doas.nix
     ./env.nix
     ./fhs.nix

@@ -15,9 +15,6 @@
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  boot.initrd.kernelModules = ["amdgpu"];
-  boot.kernelParams = ["amdgpu.ppfeaturemask=0xffffffff"]; # To enable AMD undervolting
-
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
@@ -27,18 +24,10 @@
 
   hardware.opengl = {
     enable = true;
-    driSupport = true;
-    driSupport32Bit = true;
-
     extraPackages = with pkgs; [
       libvdpau-va-gl
-      mangohud
-      radeontop
       vaapiVdpau
-      vulkan-tools
     ];
-
-    extraPackages32 = with pkgs; [mangohud];
   };
 
   time.timeZone = "Europe/Stockholm";
@@ -53,19 +42,11 @@
     defaultNetwork.settings.dns_enabled = true;
   };
 
-  programs.steam.enable = true;
-
-  programs.corectrl.enable = true;
-
-  programs.gamemode = {
+  gaming = {
     enable = true;
-    settings = {
-      custom = {
-        start = "${pkgs.libnotify}/bin/notify-send 'GameMode started'";
-        end = "${pkgs.libnotify}/bin/notify-send 'GameMode ended'";
-      };
-    };
+    gaming.amd.enable = true;
   };
+  programs.steam.enable = true;
 
   users.users.${username} = {
     uid = 1000;
