@@ -5,8 +5,8 @@ pkgs.vimUtils.buildVimPlugin {
   src = pkgs.fetchFromGitHub {
     owner = "oahlen";
     repo = "iceberg.nvim";
-    rev = "4458c397c15d9ca71e947de174d0ed3e318d7da4";
-    sha256 = "sha256-OA9T0K/PvBdSy5wzS5qkbFb4fQ9e9CEIp4mt2akZ/XA=";
+    rev = "1356f7979939782d383013c0c093530401693844";
+    sha256 = "sha256-MusE2mNnQ7VH8L/z68UIwKaSU/eEPyw3rkqOY9E/e/4=";
   };
 
   meta.homepage = "https://github.com/oahlen/iceberg.nvim/";
