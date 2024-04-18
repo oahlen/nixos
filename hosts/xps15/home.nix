@@ -32,6 +32,8 @@
   home.packages = with pkgs; [
     awscli2
     dbeaver
+    gnome-eog
+    gnome-text-editor
     iwgtk
     keepassxc
     libreoffice-fresh
@@ -42,8 +44,6 @@
     prismlauncher
     steam-run
     virt-manager
-    xfce.mousepad
-    xfce.ristretto
   ];
 
   home.stateVersion = "23.05";
