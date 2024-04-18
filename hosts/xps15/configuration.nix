@@ -50,8 +50,6 @@
 
   fileSystems."/".options = ["noatime" "nodiratime" "discard"];
 
-  services.journald.extraConfig = "SystemMaxUse=100M";
-
   services.thermald.enable = true;
 
   services.hardware.bolt.enable = true;

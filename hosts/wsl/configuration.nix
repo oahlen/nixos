@@ -8,8 +8,6 @@
 
   time.timeZone = "Europe/Stockholm";
 
-  services.journald.extraConfig = "SystemMaxUse=100M";
-
   virtualisation.podman = {
     enable = true;
     dockerCompat = true;

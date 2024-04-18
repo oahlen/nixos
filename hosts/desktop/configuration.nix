@@ -45,8 +45,6 @@
 
   fileSystems."/".options = ["noatime" "nodiratime" "discard"];
 
-  services.journald.extraConfig = "SystemMaxUse=100M";
-
   services.flatpak.enable = true;
 
   virtualisation.podman = {

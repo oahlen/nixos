@@ -45,8 +45,6 @@
 
   fileSystems."/".options = ["noatime" "nodiratime" "discard"];
 
-  services.journald.extraConfig = "SystemMaxUse=100M";
-
   users.users.${username} = {
     uid = 1000;
     isNormalUser = true;

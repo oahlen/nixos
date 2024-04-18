@@ -7,6 +7,7 @@
     ./kernel.nix
     ./locale.nix
     ./nix.nix
+    ./systemd.nix
   ];
 
   # Very important system packages
