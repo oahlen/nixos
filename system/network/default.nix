@@ -7,7 +7,7 @@
     useDHCP = false;
     useNetworkd = true;
     wireless.iwd.enable = true;
-    firewall = true; # Should be the default
+    firewall.enable = true; # Should be the default
   };
 
   systemd.network = {
