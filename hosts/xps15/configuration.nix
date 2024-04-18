@@ -72,11 +72,7 @@
 
   services.flatpak.enable = true;
 
-
-  networking.firewall = {
-    enable = true;
-    allowedTCPPorts = [1313];
-  };
+  networking.firewall. allowedTCPPorts = [1313];
 
   users.users.${username} = {
     uid = 1000;

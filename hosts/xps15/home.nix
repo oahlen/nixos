@@ -32,12 +32,11 @@
   home.packages = with pkgs; [
     awscli2
     dbeaver
-    gnome-eog
+    gnome.eog
     gnome-text-editor
     iwgtk
     keepassxc
     libreoffice-fresh
-    nodejs
     pinta
     podman-compose
     pqrs
