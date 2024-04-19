@@ -44,7 +44,7 @@
 
   gaming = {
     enable = true;
-    gaming.amd.enable = true;
+    amd.enable = true;
   };
   programs.steam.enable = true;
 
