@@ -16,7 +16,6 @@
       glib
       gnome3.adwaita-icon-theme
       grim
-      hyprpicker
       libnotify
       pavucontrol
       playerctl

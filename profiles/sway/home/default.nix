@@ -5,11 +5,9 @@
   ...
 }: let
   grim = "${pkgs.grim}/bin/grim}";
-  hyprpicker = "${pkgs.hyprpicker}/bin/hyprpicker";
   slurp = "${pkgs.slurp}/bin/slurp";
   swaylock = "${pkgs.swaylock}/bin/swaylock -f";
   swaymsg = "${pkgs.sway}/bin/swaymsg";
-  wl-copy = "${pkgs.wl-clipboard}/bin/wl-copy";
 in {
   imports = [
     ../../../misc/wallpapers
@@ -151,7 +149,6 @@ in {
             "${modifier}+p" = "exec ~/.config/scripts/password-picker.sh";
             "Print" = "exec ${grim} ~/Pictures/$(date +\"%Y-%m-%d-%H-%M-%S\").png";
             "${modifier}+Print" = "exec ${slurp} | ${grim} -g - ~/Pictures/$(date +\"%Y-%m-%d-%H-%M-%S\").png";
-            "${modifier}+Shift+Print" = "exec ${hyprpicker} | ${wl-copy}";
             "${modifier}+x" = "split none";
             "${modifier}+Tab" = "workspace next";
             "${modifier}+Shift+Tab" = "workspace prev";
