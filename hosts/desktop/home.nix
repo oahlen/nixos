@@ -27,6 +27,7 @@
     podman-compose
     prismlauncher
     steam-run
+    tutanota-desktop
     xfce.mousepad
     xfce.ristretto
   ];
