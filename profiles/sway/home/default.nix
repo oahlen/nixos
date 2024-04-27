@@ -23,12 +23,22 @@ in {
     ./zathura.nix
   ];
 
-  options.sway.defaultDisplay = lib.mkOption {
-    type = lib.types.str;
-    default = "eDP-1";
-    description = lib.mdDoc ''
-      The default display of the system
-    '';
+  options.sway = {
+    defaultDisplay = lib.mkOption {
+      type = lib.types.str;
+      default = "eDP-1";
+      description = lib.mdDoc ''
+        The default display of the system
+      '';
+    };
+
+    adaptiveSync = lib.mkOption {
+      type = lib.types.bool;
+      default = false;
+      description = lib.mdDoc ''
+        Whether to enable adaptive sync for all monitors or not
+      '';
+    };
   };
 
   config = {
@@ -87,6 +97,10 @@ in {
         output = {
           "*" = {
             bg = "~/Pictures/Wallpapers/nixos.png fit #161821";
+            adaptive_sync =
+              if config.sway.adaptiveSync
+              then "on"
+              else "off";
           };
         };
 
