@@ -106,6 +106,9 @@ vim.keymap.set("n", "<leader>tc", "<CMD>tabclose<CR>", { desc = "Close current t
 -- Clear highlights
 vim.keymap.set("n", "<leader>ch", "<CMD>nohl<CR>", { desc = "Clear search highlights" })
 
+-- Insert functions
+vim.keymap.set("n", "<leader>ii", "<CMD>r!uuidgen<CR>", { desc = "Insert UUID" })
+
 -- Plugins
 require("plugins.telescope")
 require("plugins.treesitter")
