@@ -45,6 +45,8 @@
 
   fileSystems."/".options = ["noatime" "nodiratime" "discard"];
 
+  programs.firefox.enable = true;
+
   users.users.${username} = {
     uid = 1000;
     isNormalUser = true;

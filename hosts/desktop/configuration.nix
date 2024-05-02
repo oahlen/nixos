@@ -48,6 +48,9 @@
   };
   programs.steam.enable = true;
 
+  programs.firefox.enable = true;
+  programs.chromium.enable = true;
+
   users.users.${username} = {
     uid = 1000;
     isNormalUser = true;

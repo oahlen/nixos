@@ -15,9 +15,6 @@
     };
   };
 
-  programs.firefox.enable = true;
-  programs.chromium.enable = true;
-
   # hidpi cursor setting
   home.pointerCursor = {
     name = "Adwaita";
@@ -34,6 +31,7 @@
     dbeaver
     gnome.eog
     gnome-text-editor
+    mgba
     iwgtk
     keepassxc
     libreoffice-fresh
