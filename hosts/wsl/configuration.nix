@@ -1,4 +1,8 @@
-{username, ...}: {
+{
+  pkgs,
+  username,
+  ...
+}: {
   imports = [
     ./../../system
   ];
@@ -12,6 +16,13 @@
     enable = true;
     dockerCompat = true;
     defaultNetwork.settings.dns_enabled = true;
+  };
+
+  programs.singularity = {
+    enable = true;
+    package = pkgs.apptainer;
+    enableSuid = true;
+    enableFakeroot = true;
   };
 
   users.users.${username} = {
