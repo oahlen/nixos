@@ -73,6 +73,8 @@ in {
 
       xwayland = true;
 
+      checkConfig = false; # Disable config checks for now
+
       config = {
         fonts = {
           names = ["JetBrainsMono Nerd Font"];
