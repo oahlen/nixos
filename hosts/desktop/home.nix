@@ -6,7 +6,7 @@
   ];
 
   sway.defaultDisplay = "DP-1";
-  sway.adaptiveSync = true;
+  sway.adaptiveSync = false;
 
   xdg = {
     enable = true;
