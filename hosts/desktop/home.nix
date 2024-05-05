@@ -17,7 +17,10 @@
   };
 
   home.packages = with pkgs; [
+    bitwarden-desktop
     gnome-multi-writer
+    gnome.eog
+    gnome-text-editor
     inkscape
     iwgtk
     keepassxc
@@ -26,8 +29,6 @@
     prismlauncher
     steam-run
     tutanota-desktop
-    xfce.mousepad
-    xfce.ristretto
   ];
 
   home.stateVersion = "22.11";
