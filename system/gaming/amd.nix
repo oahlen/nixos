@@ -14,7 +14,7 @@
   };
 
   config = lib.mkIf config.gaming.amd.enable {
-    boot.initrd.kernelModules = ["amdgpu"];
+    services.xserver.videoDrivers = ["amdgpu"];
     boot.kernelParams = ["amdgpu.ppfeaturemask=0xffffffff"]; # To enable AMD undervolting
   };
 }
