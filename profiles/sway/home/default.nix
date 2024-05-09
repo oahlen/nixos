@@ -4,7 +4,7 @@
   pkgs,
   ...
 }: let
-  grim = "${pkgs.grim}/bin/grim}";
+  grim = "${pkgs.grim}/bin/grim";
   slurp = "${pkgs.slurp}/bin/slurp";
   swaylock = "${pkgs.swaylock}/bin/swaylock -f";
   swaymsg = "${pkgs.sway}/bin/swaymsg";
