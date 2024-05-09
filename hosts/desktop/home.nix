@@ -18,8 +18,9 @@
 
   home.packages = with pkgs; [
     bitwarden-desktop
-    gnome-multi-writer
+    gimp
     gnome.eog
+    gnome-multi-writer
     gnome-text-editor
     inkscape
     iwgtk
