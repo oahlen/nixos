@@ -13,7 +13,6 @@ in {
     ../../../misc/wallpapers
     ./scripts
     ./dconf.nix
-    ./foot.nix
     ./fuzzel.nix
     ./i3status-rust.nix
     ./mako.nix
