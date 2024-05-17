@@ -31,7 +31,7 @@ nmap <leader>g <action>(FindInPath)
 nmap <leader>b <action>(RecentFiles)
 nmap <leader>rn <action>(RenameElement)
 nmap gi <action>(GotoImplementation)
-nmap gd <action>(GotoTypeDeclaration
+nmap gd <action>(GotoTypeDeclaration)
 nmap gr <action>(FindUsages))
 nmap gn <action>(GotoNextError)
 nmap K <action>(ShowHoverInfo)
