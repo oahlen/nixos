@@ -1,0 +1,91 @@
+{
+  "$help": "https://aka.ms/terminal-documentation",
+  "$schema": "https://aka.ms/terminal-profiles-schema",
+  "actions": [
+    {
+      "command": {
+        "action": "copy",
+        "singleLine": false
+      },
+      "keys": "ctrl+shift+c"
+    },
+    {
+      "command": "paste",
+      "keys": "ctrl+shift+v"
+    }
+  ],
+  "copyFormatting": "none",
+  "copyOnSelect": false,
+  "defaultProfile": "{c397f356-5e7b-55bc-956b-8cb4b9762c26}",
+  "launchMode": "maximized",
+  "newTabMenu": [
+    {
+      "type": "remainingProfiles"
+    }
+  ],
+  "profiles": {
+    "defaults": {
+      "defaults": {
+        "bellStyle": "none"
+      }
+    },
+    "list": [
+      {
+        "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+        "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+        "hidden": false,
+        "name": "Windows PowerShell"
+      },
+      {
+        "commandline": "%SystemRoot%\\System32\\cmd.exe",
+        "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+        "hidden": false,
+        "name": "Command Prompt"
+      },
+      {
+        "colorScheme": "Iceberg",
+        "commandline": "%SystemRoot%\\System32\\wsl.exe -d NixOS",
+        "font": {
+          "face": "JetBrainsMonoNL Nerd Font",
+          "features": {
+            "liga": 0,
+            "ss01": 1
+          },
+          "size": 11.0,
+          "weight": "normal"
+        },
+        "guid": "{c397f356-5e7b-55bc-956b-8cb4b9762c26}",
+        "hidden": false,
+        "name": "NixOS",
+        "source": "Windows.Terminal.Wsl"
+      }
+    ]
+  },
+  "schemes": [
+    {
+      "background": "#161821",
+      "black": "#1E2132",
+      "blue": "#84A0C6",
+      "brightBlack": "#6B7089",
+      "brightBlue": "#91ACD1",
+      "brightCyan": "#95C4CE",
+      "brightGreen": "#C0CA8E",
+      "brightPurple": "#ADA0D3",
+      "brightRed": "#E98989",
+      "brightWhite": "#D2D4DE",
+      "brightYellow": "#E9B189",
+      "cursorColor": "#C6C8D1",
+      "cyan": "#89B8C2",
+      "foreground": "#C6C8D1",
+      "green": "#B4BE82",
+      "name": "Iceberg",
+      "purple": "#A093C7",
+      "red": "#E27878",
+      "selectionBackground": "#272C42",
+      "white": "#C6C8D1",
+      "yellow": "#E2A478"
+    }
+  ],
+  "theme": "dark",
+  "themes": []
+}
