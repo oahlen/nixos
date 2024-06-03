@@ -72,7 +72,7 @@
 
   services.flatpak.enable = true;
 
-  networking.firewall. allowedTCPPorts = [1313];
+  networking.firewall.allowedTCPPorts = [1313];
 
   programs.firefox.enable = true;
   programs.chromium.enable = true;

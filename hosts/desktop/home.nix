@@ -29,6 +29,7 @@
     podman-compose
     prismlauncher
     steam-run
+    transmission-gtk
     tutanota-desktop
   ];
 
