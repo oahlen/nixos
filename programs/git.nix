@@ -93,27 +93,27 @@
 
     theme = ''
       (
-          selected_tab: Some(Gray),
-          command_fg: Some(Gray),
-          selection_bg: Some(Rgb(39, 44, 66)),
-          selection_fg: Some(Reset),
-          cmdbar_bg: Some(Rgb(39, 44, 66)),
-          cmdbar_extra_lines_bg: Some(Rgb(39, 44, 66)),
-          disabled_fg: Some(DarkGray),
-          diff_line_add: Some(Green),
-          diff_line_delete: Some(Red),
-          diff_file_added: Some(LightGreen),
-          diff_file_removed: Some(LightRed),
-          diff_file_moved: Some(LightMagenta),
-          diff_file_modified: Some(Yellow),
-          commit_hash: Some(Magenta),
-          commit_time: Some(Cyan),
-          commit_author: Some(Green),
-          danger_fg: Some(LightRed),
-          push_gauge_bg: Some(Blue),
-          push_gauge_fg: Some(Black),
-          tag_fg: Some(LightYellow),
-          branch_fg: Some(LightMagenta)
+          selected_tab: Some("Gray"),
+          command_fg: Some("Gray"),
+          selection_bg: Some("#272C42"),
+          selection_fg: Some("Reset"),
+          cmdbar_bg: Some("#272C42"),
+          cmdbar_extra_lines_bg: Some("#272C42"),
+          disabled_fg: Some("DarkGray"),
+          diff_line_add: Some("Green"),
+          diff_line_delete: Some("Red"),
+          diff_file_added: Some("LightGreen"),
+          diff_file_removed: Some("LightRed"),
+          diff_file_moved: Some("LightMagenta"),
+          diff_file_modified: Some("Yellow"),
+          commit_hash: Some("Magenta"),
+          commit_time: Some("Cyan"),
+          commit_author: Some("Green"),
+          danger_fg: Some("LightRed"),
+          push_gauge_bg: Some("Blue"),
+          push_gauge_fg: Some("Black"),
+          tag_fg: Some("LightYellow"),
+          branch_fg: Some("LightMagenta")
       )
     '';
   };
