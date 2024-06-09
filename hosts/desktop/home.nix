@@ -25,6 +25,7 @@
     inkscape
     iwgtk
     keepassxc
+    obsidian
     pinta
     podman-compose
     prismlauncher
