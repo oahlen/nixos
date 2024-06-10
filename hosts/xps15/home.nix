@@ -28,7 +28,7 @@
 
   home.packages = with pkgs; [
     awscli2
-    dbeaver
+    dbeaver-bin
     gnome.eog
     gnome-text-editor
     mgba
