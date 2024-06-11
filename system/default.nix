@@ -1,13 +1,13 @@
 {pkgs, ...}: {
   imports = [
-    ./gaming
-    ./doas.nix
     ./env.nix
     ./fhs.nix
     ./fonts.nix
+    ./gaming
     ./kernel.nix
     ./locale.nix
     ./nix.nix
+    ./security.nix
     ./systemd.nix
   ];
 

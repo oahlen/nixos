@@ -70,12 +70,12 @@ sudo nixos-install
 
 ## Common commands
 
-* Build a new generation: `doas nixos-rebuild switch --flake .`
-* Build a new generation with a specified hostname: `doas nixos-rebuild switch --flake .#HOSTNAME`
+* Build a new generation: `nixos-rebuild switch --use-remote-sudo --flake .`
+* Build a new generation with a specified hostname: `nixos-rebuild switch --use-remote-sudo --flake .#HOSTNAME`
 * Update flake lock file: `nix flake update`
 * Build a new generation and activate on next reboot `sudo nixos-rebuild boot --flake`
-* List system generations: `doas nix-env --list-generations --profile /nix/var/nix/profiles/system`
-* Delete generations older than 7 days: `doas nix-collect-garbage --delete-older-than 7d`
+* List system generations: `sudo nix-env --list-generations --profile /nix/var/nix/profiles/system`
+* Delete generations older than 7 days: `sudo nix-collect-garbage --delete-older-than 7d`
 * Show nix store roots: `nix-store --gc --print-roots`
 
 ## Development shells with direnv

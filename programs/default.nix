@@ -1,16 +1,16 @@
 {pkgs, ...}: {
   imports = [
-    ./fish
-    ./neovim
-    ./tmux
     ./bash.nix
     ./bat.nix
     ./bottom.nix
     ./env.nix
+    ./fish
     ./foot.nix
     ./fzf.nix
     ./git.nix
     ./jq.nix
+    ./neovim
+    ./tmux
     ./yazi.nix
   ];
 

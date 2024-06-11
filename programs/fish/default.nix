@@ -29,7 +29,6 @@
       nix-edit = "tmuxp load -y nixos";
       ping = "gping";
       ps = "procs";
-      sudo = "doas";
       vi = "nvim";
       wlr = "wlr-randr";
     };

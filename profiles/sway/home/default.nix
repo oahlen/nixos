@@ -11,11 +11,11 @@
 in {
   imports = [
     ../../../misc/wallpapers
-    ./scripts
     ./dconf.nix
     ./fuzzel.nix
     ./i3status-rust.nix
     ./mako.nix
+    ./scripts
     ./swayidle.nix
     ./swaylock.nix
     ./wl-sunset.nix
