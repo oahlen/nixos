@@ -13,7 +13,6 @@
 
   home.packages = with pkgs; [
     # awscli2
-    nodejs
     podman-compose
     pqrs
   ];
