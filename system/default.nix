@@ -25,5 +25,6 @@
     unzip
     wget
     zip
+    nfs-utils
   ];
 }
