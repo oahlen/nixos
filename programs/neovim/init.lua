@@ -131,6 +131,15 @@ require("nvim-autopairs").setup {
     ignored_next_char = "[%w%.#]"
 }
 
+require("obsidian").setup({
+    workspaces = {
+        {
+            name = "Notes",
+            path = "~/Documents/Notes",
+        }
+    }
+})
+
 require("Comment").setup()
 require("ibl").setup()
 require("nvim-surround").setup()

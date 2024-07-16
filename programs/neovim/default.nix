@@ -29,6 +29,7 @@
       nvim-surround
       nvim-tree-lua
       nvim-web-devicons
+      obsidian-nvim
       omnisharp-extended-lsp-nvim
       plenary-nvim
       popup-nvim
