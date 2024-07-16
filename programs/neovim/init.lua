@@ -7,7 +7,6 @@ vim.g.maplocalleader = ' '
 vim.o.autoindent = true
 vim.o.backup = false
 vim.o.breakindent = true
-vim.o.clipboard = "unnamedplus"
 vim.o.cursorline = true
 vim.o.expandtab = true
 vim.o.hlsearch = true
@@ -74,6 +73,11 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 -- Keymaps
 -- Yank to end of line
 vim.keymap.set("n", "Y", "y$")
+
+-- System clipboard
+vim.keymap.set({ "n", "v", "x" }, "<leader>y", '"+y', { noremap = true, silent = true, desc = "Yank to clipboard" })
+vim.keymap.set({ "n", "v", "x" }, "<leader>Y", '"+yy', { noremap = true, silent = true, desc = "Yank line to clipboard" })
+vim.keymap.set({ "n", "v", "x" }, "<leader>p", '"+p', { noremap = true, silent = true, desc = "Paste from clipboard" })
 
 -- Better window navigation
 vim.keymap.set("n", "<C-h>", "<C-w>h")
