@@ -21,5 +21,6 @@
   xdg.configFile = {
     "tmuxp/dev-session.yaml".source = ./dev-session.yaml;
     "tmuxp/nixos.yaml".source = ./nixos.yaml;
+    "tmuxp/notes.yaml".source = ./notes.yaml;
   };
 }

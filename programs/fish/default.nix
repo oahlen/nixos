@@ -27,6 +27,7 @@
       gi = "gitui";
       lf = "yazi";
       nix-edit = "tmuxp load -y nixos";
+      note-edit = "tmuxp load -y notes";
       ping = "gping";
       ps = "procs";
       vi = "nvim";
