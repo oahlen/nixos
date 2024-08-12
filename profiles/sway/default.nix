@@ -13,11 +13,9 @@
       polkit_gnome
       slurp
       swayimg
-      swaylock
       wf-recorder
       wl-clipboard
       wl-mirror
-      wlr-randr
       xdg-utils
     ];
   };
