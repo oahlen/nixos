@@ -12,6 +12,7 @@
     ./neovim
     ./tmux
     ./yazi.nix
+    ./zathura.nix
   ];
 
   programs = {

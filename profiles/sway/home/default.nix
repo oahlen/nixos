@@ -19,7 +19,6 @@ in {
     ./swayidle.nix
     ./swaylock.nix
     ./wl-sunset.nix
-    ./zathura.nix
   ];
 
   options.sway = {
