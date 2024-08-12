@@ -23,9 +23,7 @@
       ];
     };
 
-    eza = {
-      enable = true;
-    };
+    eza.enable = true;
 
     direnv = {
       enable = true;
