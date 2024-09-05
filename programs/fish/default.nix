@@ -38,6 +38,7 @@
       doscleanup = "fd . --type f --print0 | xargs -0 dos2unix";
       md = "lowdown -tterm $argv --term-columns 120 --term-hmargin 4 --term-vmargin 1 --term-shortlinks | less -R";
       myip = "curl ifconfig.co";
+      prune-branches = "git branch | grep -v 'main' | xargs git branch -D";
       skim = "fzf --preview='bat {} --color=always --style=numbers' | xargs -r bat";
       tree = "eza --tree";
       vio = "fzf --preview='bat {} --color=always --style=numbers' | xargs -r nvim";
