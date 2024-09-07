@@ -75,9 +75,13 @@
 
   programs.ssh.startAgent = true;
 
-  # File manager
+  # Common GNOME packages including file manager
   environment.systemPackages = with pkgs; [
+    gnome.eog
+    gnome.gnome-disk-utility
+    gnome-multi-writer
     gnome.nautilus
+    gnome-text-editor
   ];
 
   programs.file-roller.enable = true;

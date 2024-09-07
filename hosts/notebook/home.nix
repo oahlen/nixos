@@ -15,8 +15,6 @@
   home.packages = with pkgs; [
     iwgtk
     keepassxc
-    xfce.mousepad
-    xfce.ristretto
   ];
 
   home.stateVersion = "23.05";

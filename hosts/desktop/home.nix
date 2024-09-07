@@ -20,9 +20,6 @@
   home.packages = with pkgs; [
     bitwarden-desktop
     gimp
-    gnome.eog
-    gnome-multi-writer
-    gnome-text-editor
     inkscape
     iwgtk
     keepassxc

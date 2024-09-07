@@ -29,8 +29,6 @@
   home.packages = with pkgs; [
     awscli2
     dbeaver-bin
-    gnome.eog
-    gnome-text-editor
     iwgtk
     jetbrains.rider
     keepassxc
@@ -38,9 +36,7 @@
     mgba
     pinta
     podman-compose
-    pqrs
     prismlauncher
-    steam-run
     virt-manager
   ];
 
