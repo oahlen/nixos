@@ -7,7 +7,6 @@
   grim = "${pkgs.grim}/bin/grim";
   slurp = "${pkgs.slurp}/bin/slurp";
   swaylock = "${pkgs.swaylock}/bin/swaylock -f";
-  swaymsg = "${pkgs.sway}/bin/swaymsg";
 in {
   imports = [
     ../../../misc/wallpapers
@@ -22,14 +21,6 @@ in {
   ];
 
   options.sway = {
-    defaultDisplay = lib.mkOption {
-      type = lib.types.str;
-      default = "eDP-1";
-      description = lib.mdDoc ''
-        The default display of the system
-      '';
-    };
-
     adaptiveSync = lib.mkOption {
       type = lib.types.bool;
       default = false;
@@ -158,7 +149,6 @@ in {
         in
           pkgs.lib.mkOptionDefault {
             "${modifier}+Alt+l" = "exec ${swaylock} -f";
-            "${modifier}+Delete" = "exec ${swaymsg} 'output ${config.sway.defaultDisplay} power toggle'";
             "Ctrl+Alt+Delete" = "exec ~/.config/scripts/exit.sh";
             "${modifier}+y" = "exec ~/.config/scripts/emoji-picker.sh";
             "${modifier}+p" = "exec ~/.config/scripts/password-picker.sh";

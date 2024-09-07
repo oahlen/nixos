@@ -4,9 +4,6 @@
     ../../programs
   ];
 
-  sway.defaultDisplay = "DP-1";
-  sway.adaptiveSync = false;
-
   xdg = {
     enable = true;
     userDirs = {
