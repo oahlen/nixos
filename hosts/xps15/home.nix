@@ -3,7 +3,6 @@
     ../../profiles/sway/home
     ../../programs
     ../../programs/rbw.nix
-    ../../programs/idea
     ./kanshi.nix
   ];
 
@@ -31,10 +30,11 @@
     dbeaver-bin
     gnome.eog
     gnome-text-editor
-    mgba
     iwgtk
+    jetbrains.rider
     keepassxc
     libreoffice-fresh
+    mgba
     pinta
     podman-compose
     pqrs

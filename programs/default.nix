@@ -5,6 +5,7 @@
     ./bottom.nix
     ./env.nix
     ./fish
+    ./idea
     ./foot.nix
     ./fzf.nix
     ./git.nix
