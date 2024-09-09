@@ -2,7 +2,6 @@
   imports = [
     ../../profiles/sway/home
     ../../programs
-    ../../programs/rbw.nix
     ./kanshi.nix
   ];
 
@@ -24,6 +23,8 @@
       defaultCursor = "Adwaita";
     };
   };
+
+  programs.rbw.enable = true;
 
   home.packages = with pkgs; [
     awscli2

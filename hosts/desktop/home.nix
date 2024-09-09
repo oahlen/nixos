@@ -2,7 +2,6 @@
   imports = [
     ../../profiles/sway/home
     ../../programs
-    ../../programs/rbw.nix
   ];
 
   sway.defaultDisplay = "DP-1";
@@ -15,6 +14,8 @@
       createDirectories = true;
     };
   };
+
+  programs.rbw.enable = true;
 
   home.packages = with pkgs; [
     bitwarden-desktop

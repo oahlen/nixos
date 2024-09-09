@@ -10,6 +10,7 @@
     ./fzf.nix
     ./git.nix
     ./jq.nix
+    ./rbw.nix
     ./neovim
     ./tmux
     ./yazi.nix
