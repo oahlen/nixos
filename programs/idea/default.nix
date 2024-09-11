@@ -1,5 +1,5 @@
-{...}: {
+{config, ...}: {
   home.file = {
-    ".ideavimrc".source = ./.ideavimrc;
+    "${config.home.sessionVariables.XDG_CONFIG_HOME}/ideavim/ideavimrc".source = ./.ideavimrc;
   };
 }
