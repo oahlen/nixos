@@ -11,6 +11,7 @@
   wsl.defaultUser = "${username}";
 
   time.timeZone = "Europe/Stockholm";
+  services.timesyncd.enable = true;
 
   virtualisation.podman = {
     enable = true;
