@@ -8,7 +8,7 @@
     ./../../devices
     ./../../system
     ./../../system/network
-    ./../../profiles/sway
+    ./../../profiles/gnome
   ];
 
   networking.hostName = "xps15";

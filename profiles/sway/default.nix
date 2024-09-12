@@ -1,4 +1,8 @@
 {pkgs, ...}: {
+  imports = [
+    ../shared
+  ];
+
   programs.sway = {
     enable = true;
 
@@ -35,21 +39,6 @@
     packages = [pkgs.gcr];
   };
 
-  # Pipewire config
-  services.pipewire = {
-    enable = true;
-    alsa = {
-      enable = true;
-      support32Bit = true;
-    };
-    pulse.enable = true;
-    jack.enable = true;
-  };
-
-  security.rtkit.enable = true;
-
-  sound.enable = false;
-
   sound.mediaKeys.enable = true; # Should not be enabled in Gnome, KDE, etc
 
   # Security settings
@@ -83,9 +72,4 @@
     gnome.nautilus
     gnome-text-editor
   ];
-
-  programs.file-roller.enable = true;
-
-  services.gvfs.enable = true;
-  services.tumbler.enable = true;
 }

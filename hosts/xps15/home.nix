@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   imports = [
-    ../../profiles/sway/home
+    ../../profiles/gnome/home
     ../../programs
     ../../programs/firefox.nix
     ./kanshi.nix
@@ -29,16 +29,11 @@
   programs.rbw.enable = true;
 
   home.packages = with pkgs; [
-    awscli2
     dbeaver-bin
     iwgtk
     jetbrains.rider
-    keepassxc
     libreoffice-fresh
-    mgba
-    pinta
     podman-compose
-    prismlauncher
     virt-manager
   ];
 

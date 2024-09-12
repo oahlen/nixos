@@ -9,6 +9,7 @@
     ./fd.nix
     ./fish
     ./foot.nix
+    ./fuzzel.nix
     ./fzf.nix
     ./git.nix
     ./idea

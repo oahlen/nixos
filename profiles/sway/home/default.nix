@@ -11,7 +11,6 @@ in {
   imports = [
     ../../../misc/wallpapers
     ./dconf.nix
-    ./fuzzel.nix
     ./i3status-rust.nix
     ./mako.nix
     ./scripts
@@ -31,6 +30,11 @@ in {
   };
 
   config = {
+    programs.fuzzel.enable = true;
+    programs.fuzzel.settings.main.launch-prefix = "${pkgs.sway}/bin/swaymsg exec --";
+
+    programs.zathura.enable = true;
+
     programs.bash = {
       enable = true;
 
