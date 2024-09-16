@@ -17,10 +17,11 @@
     };
 
     aliases = {
-      gc = "git commit";
-      gp = "git push --origin";
-      gs = "git status";
-      gtree = "git log --graph --decorate --oneline";
+      c = "commit";
+      s = "status";
+      sw = "switch";
+      br = "branch";
+      tree = "log --graph --decorate --oneline";
     };
 
     delta = {
