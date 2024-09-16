@@ -35,6 +35,20 @@
       nix-direnv.enable = true;
     };
 
+    fastfetch.enable = true;
+
+    fd = {
+      enable = true;
+      ignores = [
+        ".cache/"
+        ".dotnet/"
+        ".git/"
+        ".mozilla/"
+      ];
+    };
+
+    ripgrep.enable = true;
+
     man.enable = true;
 
     ssh = {
@@ -61,8 +75,6 @@
     dos2unix
     du-dust
     duf
-    fastfetch
-    fd
     figlet
     gping
     hexyl
@@ -73,18 +85,8 @@
     onefetch
     procs
     rage
-    ripgrep
     sd
     tokei
     xsv
   ];
-
-  xdg.configFile = {
-    "fd/ignore".text = ''
-      .cache
-      .dotnet
-      .git
-      .mozilla
-    '';
-  };
 }
