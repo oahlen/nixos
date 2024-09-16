@@ -89,9 +89,5 @@
     ];
   };
 
-  environment.systemPackages = with pkgs; [
-    libimobiledevice
-  ];
-
   system.stateVersion = "23.05"; # Did you read the comment?
 }

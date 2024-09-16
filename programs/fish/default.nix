@@ -30,7 +30,6 @@
       note-edit = "tmuxp load -y notes";
       ping = "gping";
       ps = "procs";
-      vi = "nvim";
       wlr = "wlr-randr";
     };
 

@@ -17,7 +17,6 @@
     ./rbw.nix
     ./tmux
     ./ssh.nix
-    ./translate-shell.nix
     ./yazi.nix
     ./zathura.nix
   ];

@@ -12,6 +12,18 @@
   ];
 
   # Very important system packages
+  programs.neovim = {
+    enable = true;
+
+    defaultEditor = true;
+    viAlias = true;
+    vimAlias = true;
+
+    withNodeJs = false;
+    withPython3 = false;
+    withRuby = false;
+  };
+
   programs.git.enable = true;
 
   environment.systemPackages = with pkgs; [
@@ -19,8 +31,6 @@
     curl
     dos2unix
     fd
-    libimobiledevice
-    neovim
     ripgrep
     unzip
     wget
