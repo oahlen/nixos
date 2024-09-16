@@ -1,18 +1,23 @@
 {pkgs, ...}: {
   imports = [
+    ./atuin.nix
     ./bash.nix
     ./bat.nix
     ./bottom.nix
+    ./direnv.nix
     ./env.nix
+    ./fd.nix
     ./fish
-    ./idea
     ./foot.nix
     ./fzf.nix
     ./git.nix
+    ./idea
     ./jq.nix
-    ./rbw.nix
     ./neovim
+    ./rbw.nix
     ./tmux
+    ./ssh.nix
+    ./translate-shell.nix
     ./yazi.nix
     ./zathura.nix
   ];
@@ -20,53 +25,13 @@
   # Nix options
   nix.gc.automatic = true;
 
+  # Common programs
   programs = {
-    atuin = {
-      enable = true;
-      flags = [
-        "--disable-up-arrow"
-      ];
-    };
-
     eza.enable = true;
-
-    direnv = {
-      enable = true;
-      nix-direnv.enable = true;
-    };
-
     fastfetch.enable = true;
-
-    fd = {
-      enable = true;
-      ignores = [
-        ".cache/"
-        ".dotnet/"
-        ".git/"
-        ".mozilla/"
-      ];
-    };
-
-    ripgrep.enable = true;
-
     man.enable = true;
-
-    ssh = {
-      enable = true;
-      extraConfig = ''
-        AddKeysToAgent yes
-      '';
-    };
-
+    ripgrep.enable = true;
     zoxide.enable = true;
-
-    translate-shell = {
-      enable = true;
-      settings = {
-        hl = "en";
-        tl = ["sv"];
-      };
-    };
   };
 
   home.packages = with pkgs; [

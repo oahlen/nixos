@@ -1,8 +1,4 @@
-{
-  pkgs,
-  username,
-  ...
-}: {
+{username, ...}: {
   imports = [
     ../../programs
   ];
@@ -19,13 +15,6 @@
     username = username;
     homeDirectory = "/home/${username}";
   };
-
-  home.packages = with pkgs; [
-    awscli2
-    nodejs
-    podman-compose
-    pqrs
-  ];
 
   programs.home-manager.enable = true;
 
