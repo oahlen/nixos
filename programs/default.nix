@@ -17,6 +17,9 @@
     ./zathura.nix
   ];
 
+  # Nix options
+  nix.gc.automatic = true;
+
   programs = {
     atuin = {
       enable = true;
