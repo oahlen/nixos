@@ -42,10 +42,7 @@
     defaultNetwork.settings.dns_enabled = true;
   };
 
-  gaming = {
-    enable = true;
-    amd.enable = true;
-  };
+  gaming.enable = true;
   programs.steam.enable = true;
 
   programs.firefox.enable = true;

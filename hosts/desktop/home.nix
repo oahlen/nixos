@@ -12,6 +12,7 @@
     };
   };
 
+  programs.mangohud.enable = true;
   programs.rbw.enable = true;
 
   home.packages = with pkgs; [

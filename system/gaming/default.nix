@@ -4,10 +4,6 @@
   pkgs,
   ...
 }: {
-  imports = [
-    ./amd.nix
-  ];
-
   options = {
     gaming.enable = lib.mkOption {
       type = lib.types.bool;
@@ -19,20 +15,18 @@
   };
 
   config = lib.mkIf config.gaming.enable {
+    services.xserver.videoDrivers = ["amdgpu"];
+
     hardware.opengl = {
       enable = true;
       driSupport = true;
       driSupport32Bit = true;
-
-      extraPackages = with pkgs; [
-        mangohud
-        vulkan-tools
-      ];
-
-      extraPackages32 = with pkgs; [mangohud];
     };
 
-    programs.corectrl.enable = true;
+    programs.corectrl = {
+      enable = true;
+      gpuOverclock.enable = true;
+    };
 
     programs.gamemode = {
       enable = true;
