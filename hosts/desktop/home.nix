@@ -2,6 +2,7 @@
   imports = [
     ../../profiles/sway/home
     ../../programs
+    ../../programs/firefox.nix
   ];
 
   xdg = {
@@ -12,6 +13,7 @@
     };
   };
 
+  programs.chromium.enable = true;
   programs.mangohud.enable = true;
   programs.rbw.enable = true;
 

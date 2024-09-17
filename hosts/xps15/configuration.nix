@@ -74,9 +74,6 @@
 
   networking.firewall.allowedTCPPorts = [1313];
 
-  programs.firefox.enable = true;
-  programs.chromium.enable = true;
-
   users.users.${username} = {
     uid = 1000;
     isNormalUser = true;

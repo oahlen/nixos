@@ -2,6 +2,7 @@
   imports = [
     ../../profiles/sway/home
     ../../programs
+    ../../programs/firefox.nix
     ./kanshi.nix
   ];
 
@@ -24,6 +25,7 @@
     };
   };
 
+  programs.chromium.enable = true;
   programs.rbw.enable = true;
 
   home.packages = with pkgs; [

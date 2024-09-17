@@ -2,6 +2,7 @@
   imports = [
     ../../profiles/sway/home
     ../../programs
+    ../../programs/firefox.nix
   ];
 
   xdg = {
