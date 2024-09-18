@@ -10,4 +10,7 @@
   };
 
   security.rtkit.enable = true;
+
+  hardware.pulseaudio.enable = false;
+  sound.enable = false;
 }
