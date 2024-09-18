@@ -22,11 +22,9 @@
     nixpkgs,
     home-manager,
     ...
-  } @ inputs: let
-    username = "oahlen";
-  in {
+  } @ inputs: {
     nixosConfigurations = let
-      makeHost = hostname: system:
+      makeHost = hostname: username: system:
         nixpkgs.lib.nixosSystem {
           system = system;
           specialArgs = {inherit inputs username;};
@@ -50,10 +48,10 @@
           ];
         };
     in {
-      desktop = makeHost "desktop" "x86_64-linux";
-      notebook = makeHost "notebook" "x86_64-linux";
-      xps15 = makeHost "xps15" "x86_64-linux";
-      nixos = makeHost "wsl" "x86_64-linux";
+      desktop = makeHost "desktop" "oahlen" "x86_64-linux";
+      notebook = makeHost "notebook" "oahlen" "x86_64-linux";
+      xps15 = makeHost "xps15" "oahlen" "x86_64-linux";
+      nixos = makeHost "wsl" "oahlen" "x86_64-linux";
     };
 
     # Generic nix + home-manager configuration
