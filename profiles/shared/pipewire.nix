@@ -10,6 +10,4 @@
   };
 
   security.rtkit.enable = true;
-
-  sound.enable = false;
 }
