@@ -10,7 +10,7 @@
 in {
   imports = [
     ../../../misc/wallpapers
-    ./dconf.nix
+    ./../../shared/home
     ./i3status-rust.nix
     ./mako.nix
     ./scripts
