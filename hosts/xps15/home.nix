@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   imports = [
-    ../../profiles/gnome/home
+    ../../profiles/sway/home
     ../../programs
     ../../programs/firefox.nix
   ];
@@ -14,15 +14,15 @@
   };
 
   # hidpi cursor setting
-  # home.pointerCursor = {
-  #   name = "Adwaita";
-  #   package = pkgs.gnome.adwaita-icon-theme;
-  #   size = 24;
-  #   x11 = {
-  #     enable = true;
-  #     defaultCursor = "Adwaita";
-  #   };
-  # };
+  home.pointerCursor = {
+    name = "Adwaita";
+    package = pkgs.gnome.adwaita-icon-theme;
+    size = 24;
+    x11 = {
+      enable = true;
+      defaultCursor = "Adwaita";
+    };
+  };
 
   programs.chromium.enable = true;
   programs.rbw.enable = true;
