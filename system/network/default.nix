@@ -7,6 +7,7 @@
     useDHCP = false;
     useNetworkd = true;
     wireless.iwd.enable = true;
+    networkmanager.wifi.backend = "iwd";
     firewall.enable = true; # Should be the default
   };
 
