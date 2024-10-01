@@ -3,6 +3,7 @@
     ../../profiles/sway/home
     ../../programs
     ../../programs/firefox.nix
+    ./kanshi.nix
   ];
 
   xdg = {
