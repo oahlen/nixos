@@ -19,7 +19,10 @@
   ];
 
   # Nix options
-  nix.gc.automatic = true;
+  nix.gc = {
+    automatic = true;
+    frequency = "weekly";
+  };
 
   # Common programs
   programs = {
