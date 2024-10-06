@@ -5,10 +5,10 @@
 }: {
   imports = [
     ./hardware-configuration.nix
-    ./../../devices
-    ./../../system
-    ./../../system/network
-    ./../../profiles/sway
+    ../shared/core
+    ../shared/optional/desktops/sway.nix
+    ../shared/optional/network/tailscale.nix
+    ../shared/optional/yubikey.nix
   ];
 
   networking.hostName = "notebook";

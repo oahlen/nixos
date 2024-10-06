@@ -4,7 +4,7 @@
   ...
 }: {
   imports = [
-    ./../../system
+    ../shared/core
   ];
 
   wsl.enable = true;

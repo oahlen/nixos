@@ -39,7 +39,7 @@
               home-manager = {
                 useGlobalPkgs = true;
                 useUserPackages = true;
-                users.${username} = import ./hosts/${hostname}/home.nix;
+                users.${username} = import ./home/${username}/${hostname}/home.nix;
                 extraSpecialArgs.inputs = inputs;
               };
             }
@@ -56,7 +56,7 @@
 
     # Generic nix + home-manager configuration
     homeConfigurations = let
-      makeHost = system:
+      makeHost = hostname: username: system:
         inputs.home-manager.lib.homeManagerConfiguration {
           pkgs = import nixpkgs {
             inherit system;
@@ -66,13 +66,13 @@
           };
 
           modules = [
-            ./generic/home.nix
+            ./home/${username}/${hostname}/home.nix
           ];
 
           extraSpecialArgs = {inherit inputs system;};
         };
     in {
-      debian = makeHost "x86_64-linux";
+      debian = makeHost "generic" "oahlen" "x86_64-linux";
     };
 
     devShells = let
