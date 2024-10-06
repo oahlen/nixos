@@ -78,7 +78,7 @@
     devShells = let
       system = "x86_64-linux";
     in {
-      system.playground = import ./shells/playground {
+      ${system}.playground = import ./shells/playground {
         inherit self nixpkgs system;
       };
     };
