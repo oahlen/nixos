@@ -10,6 +10,7 @@
 in {
   imports = [
     ../../programs/foot.nix
+    ../../programs/zathura.nix
     ./fuzzel.nix
     ./i3status-rust.nix
     ./mako.nix
