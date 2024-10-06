@@ -10,11 +10,9 @@
 in {
   imports = [
     ../../programs/foot.nix
-    ../../wallpapers
     ./fuzzel.nix
     ./i3status-rust.nix
     ./mako.nix
-    ./scripts
     ./swayidle.nix
     ./swaylock.nix
     ./wl-sunset.nix
@@ -63,8 +61,6 @@ in {
 
       xwayland = true;
 
-      checkConfig = false; # Disable config checks for now
-
       config = {
         fonts = {
           names = ["JetBrainsMono Nerd Font"];
@@ -88,7 +84,7 @@ in {
 
         output = {
           "*" = {
-            bg = "~/Pictures/Wallpapers/nixos.png fit #161821";
+            bg = "${../../wallpapers/nixos.png} fit #161821";
             adaptive_sync =
               if config.sway.adaptiveSync
               then "on"
@@ -149,9 +145,9 @@ in {
         in
           pkgs.lib.mkOptionDefault {
             "${modifier}+Alt+l" = "exec ${swaylock} -f";
-            "Ctrl+Alt+Delete" = "exec ~/.config/scripts/exit.sh";
-            "${modifier}+y" = "exec ~/.config/scripts/emoji-picker.sh";
-            "${modifier}+p" = "exec ~/.config/scripts/password-picker.sh";
+            "Ctrl+Alt+Delete" = "exec ${./scripts/exit.sh}";
+            "${modifier}+y" = "exec ${./scripts/emoji-picker.sh}";
+            "${modifier}+p" = "exec ${./scripts/password-picker.sh}";
             "Print" = "exec ${grim} ~/Pictures/$(date +\"%Y-%m-%d-%H-%M-%S\").png";
             "${modifier}+Print" = "exec ${slurp} | ${grim} -g - ~/Pictures/$(date +\"%Y-%m-%d-%H-%M-%S\").png";
             "${modifier}+x" = "split none";
