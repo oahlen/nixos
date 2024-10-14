@@ -31,11 +31,12 @@ nmap <leader>g <action>(FindInPath)
 nmap <leader>b <action>(RecentFiles)
 nmap <leader>rn <action>(RenameElement)
 nmap gi <action>(GotoImplementation)
-nmap gd <action>(GotoTypeDeclaration)
+nmap gd <action>(GotoDeclaration)
 nmap gr <action>(FindUsages))
 nmap gn <action>(GotoNextError)
 nmap K <action>(ShowHoverInfo)
 nmap == <action>(ReformatCode)
+vmap gc <action>(CommentByLineComment)
 
 set NERDTree
 let g:NERDTreeMapActivateNode='o'
