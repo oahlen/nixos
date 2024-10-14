@@ -20,7 +20,16 @@ nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
 
-nmap <leader>ch <CMD>nohl<CR>
+nmap <C-d> <C-d>zz
+nmap <C-u> <C-u>zz
+
+nmap n nzzzv
+nmap N Nzzzv
+
+vmap < <gv
+vmap > >gv
+
+nmap <leader>ch :nohl<CR>
 
 nmap H <action>(PreviousTab)
 nmap L <action>(NextTab)
@@ -37,6 +46,7 @@ nmap gn <action>(GotoNextError)
 nmap K <action>(ShowHoverInfo)
 nmap == <action>(ReformatCode)
 vmap gc <action>(CommentByLineComment)
+vmap gb <action>(CommentByBlockComment)
 
 set NERDTree
 let g:NERDTreeMapActivateNode='o'
