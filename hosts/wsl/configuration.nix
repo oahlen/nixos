@@ -13,6 +13,8 @@
   time.timeZone = "Europe/Stockholm";
   services.timesyncd.enable = true;
 
+  programs.dconf.enable = true; # Needed by home-manager ...
+
   virtualisation.podman = {
     enable = true;
     dockerCompat = true;
