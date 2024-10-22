@@ -10,7 +10,7 @@
 
 ### Connect to a wireless network
 
-Enable and start wpa_supplicant:
+Enable and start `wpa_supplicant`:
 
 ```bash
 sudo systemctl start wpa_supplicant
