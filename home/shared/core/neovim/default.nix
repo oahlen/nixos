@@ -45,34 +45,44 @@
       {
         plugin = nvim-treesitter.withPlugins (plugins:
           with plugins; [
+            angular
             c
             cmake
             comment
             c_sharp
             css
+            csv
             dockerfile
             fish
+            gitattributes
+            gitcommit
+            git_config
             gitignore
+            git_rebase
             go
+            helm
             html
+            java
             javascript
             json
+            kotlin
             lua
             make
-            markdown
+            markdown_inline
             nix
+            pem
             proto
             python
             query
+            regex
             rust
             scss
             sql
             svelte
+            tmux
             toml
-            tree-sitter-nix
             typescript
             vim
-            vimdoc
             vimdoc
             yaml
           ]);
